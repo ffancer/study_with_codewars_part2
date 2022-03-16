@@ -4,7 +4,12 @@
 
 def remove(s):
     cnt = 0
-    return s.split()
+
+    for i in s.split()[:-1]:
+        if '!' in i:
+            cnt += 1
+
+    return cnt
 
 
 print(remove("Hi!"), "Hi!")
