@@ -3,7 +3,8 @@
 
 
 def remove(s):
-    pass
+    cnt = 0
+    return s.split()
 
 
 print(remove("Hi!"), "Hi!")
