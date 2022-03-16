@@ -7,7 +7,10 @@ def remove(s):
     for i in s[::-1].lstrip('!'):
         if i == '!':
             cnt += 1
-    return s + '!' * cnt
+
+    # s.strip()[:-1].replace('!', '')
+    return s.strip()[:-1].replace('!', '')
+    # return s + '!' * cnt
 
 
 print(remove("Hi!"), "Hi!")
