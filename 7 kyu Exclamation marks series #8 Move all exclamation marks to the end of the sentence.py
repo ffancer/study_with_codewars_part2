@@ -3,13 +3,7 @@
 
 
 def remove(s):
-    cnt = 0
-
-    for i in s.split()[:-1]:
-        if '!' in i:
-            cnt += 1
-
-    return ('Hi ' * len(s.split()))[:-1] + '!' * cnt
+    return s[::-1].lstrip('!')
 
 
 print(remove("Hi!"), "Hi!")
