@@ -9,7 +9,7 @@ def remove(s):
         if '!' in i:
             cnt += 1
 
-    return cnt
+    return ('Hi ' * len(s.split()))[:-1] + '!' * cnt
 
 
 print(remove("Hi!"), "Hi!")
