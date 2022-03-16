@@ -3,14 +3,9 @@
 
 
 def remove(s):
-    cnt = 0
-    for i in s[::-1].lstrip('!'):
-        if i == '!':
-            cnt += 1
+    clear_s = s.replace('!', '')
 
-    # s.strip()[:-1].replace('!', '')
-    return s.strip()[:-1].replace('!', '')
-    # return s + '!' * cnt
+    return clear_s
 
 
 print(remove("Hi!"), "Hi!")
