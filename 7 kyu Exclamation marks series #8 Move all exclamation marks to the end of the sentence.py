@@ -3,9 +3,7 @@
 
 
 def remove(s):
-    clear_s = s.replace('!', '')
-
-    return clear_s + '!' * (len(s) - len(clear_s))
+    return s.replace('!','') + s.count('!') * '!'
 
 
 print(remove("Hi!"), "Hi!")
