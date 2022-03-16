@@ -1,5 +1,9 @@
 def odd_one(arr):
-    pass
+    for i,j in enumerate(arr):
+        if j % 2 != 0:
+            return i
+        else:
+            return -1
 
 
 # test.it("Expected '[2,4,6,7,10]' = 3")
