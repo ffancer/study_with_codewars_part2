@@ -1,5 +1,9 @@
 def mirror(data: list) -> list:
-    pass
+    if not data:
+        return []
+    lst = data.copy()
+    middle_lst = [max(lst)]
+    return middle_lst
 
 
 print(mirror([]), [])
