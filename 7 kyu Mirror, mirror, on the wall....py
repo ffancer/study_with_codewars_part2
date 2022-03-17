@@ -1,12 +1,6 @@
 def mirror(data: list) -> list:
-    if not data:
-        return []
-
-    lst = data.copy()
-    middle = max(lst)
-    lst.remove(max(lst))
-
-    return sorted(lst) + [middle] + sorted(lst, reverse=True)
+    arr = sorted(data)
+    return arr + arr[-2::-1]
 
 
 print(mirror([]), [])
