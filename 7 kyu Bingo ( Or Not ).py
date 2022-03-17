@@ -1,10 +1,11 @@
 def bingo(array):
-    cnt_bingo = 5
+    cnt_bingo = 0
     for i in array:
         if chr(i+96) in 'bingo':
-            cnt_bingo -= 1
+            cnt_bingo += 1
+            # print(chr(i+96), end=' ')
 
-    return 'WIN' if cnt_bingo == 0 else 'LOSE'
+    return 'WIN' if cnt_bingo >= 5 else 'LOSE'
 
 
 print(bingo([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]), "LOSE")
