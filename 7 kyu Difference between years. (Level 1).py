@@ -1,5 +1,5 @@
 def how_many_years(date1, date2):
-    return date1 + date2
+    return int(date1.split('/')[0])
 
 
 print(how_many_years('1997/10/10', '2015/10/10'), 18)
