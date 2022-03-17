@@ -1,10 +1,11 @@
 def pyramid(balls):
-    ans = 0
-    var = 1
+    ans, var = 0, 1
+
     while balls > 0:
         ans += 1
         var += 1
         balls -= var
+
     return ans
 
 print(pyramid(1), 1)
