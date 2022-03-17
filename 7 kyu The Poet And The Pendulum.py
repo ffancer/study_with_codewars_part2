@@ -1,6 +1,7 @@
 def pendulum(values):
-    pass
-
+    lst_middle = [min(values)]
+    values.remove(min(values))
+    return values, lst_middle
 
 print(pendulum([4, 6, 8, 7, 5]), [8, 6, 4, 5, 7])
 print(pendulum([19, 30, 16, 19, 28, 26, 28, 17, 21, 17]), [28, 26, 19, 17, 16, 17, 19, 21, 28, 30])
