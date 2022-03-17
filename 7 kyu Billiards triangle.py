@@ -1,6 +1,6 @@
 def pyramid(balls):
     ans = 0
-    var = 0
+    var = 1
     while balls > 0:
         ans += 1
         var += 1
