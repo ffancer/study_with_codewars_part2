@@ -1,9 +1,9 @@
 def bingo(array):
     cnt_bingo = 0
-    for i in array:
-        if chr(i+96) in 'bingo':
+
+    for i in [2, 7, 9, 14, 15]:
+        if i in array:
             cnt_bingo += 1
-            # print(chr(i+96), end=' ')
 
     return 'WIN' if cnt_bingo >= 5 else 'LOSE'
 
