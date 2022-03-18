@@ -1,5 +1,7 @@
 def battle(x, y):
-    print(ord('A')-64)
+    cnt_x, cnt_y = 0, 0
+    cnt_x = sum(ord(i) - 64 for i in x)
+    print(cnt_x)
 
 
 print(battle("AAA", "Z"), "Z", "Unfair fight!")
