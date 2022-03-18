@@ -1,10 +1,5 @@
 def nth_char(words):
-    s = ''
-
-    for i,j in enumerate(words):
-        s += j[i]
-
-    return s
+    return ''.join(j[i] for i, j in enumerate(words))
 
 
 print(nth_char(['yoda', 'best', 'has']), 'yes')
