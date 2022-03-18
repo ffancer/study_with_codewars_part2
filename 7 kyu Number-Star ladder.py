@@ -1,9 +1,14 @@
 def pattern(n):
     s = ''
 
-    for i in range(1, n+1):
-        s += f'{i}{"*"}{i+1}'
-    return s
+    for i in range(1, n + 1):
+        if i == 1:
+            s += f'{i}\n'
+        else:
+            s += f'{1}{"*" * (i - 1)}{i}\n'
+
+    return s[:-1]
+
 
 print(pattern(3), "1\n1*2\n1**3")
 print(pattern(7), "1\n1*2\n1**3\n1***4\n1****5\n1*****6\n1******7")
