@@ -3,21 +3,17 @@ def owned_cat_and_dog(cat_years, dog_years):
 
     if cat_years < 15:
         cat_ans = 0
-    elif cat_years == 15:
-        cat_ans += 1
-    elif cat_years == 24:
-        cat_ans += 2
-    else:
-        cat_ans = (cat_years - 24) // 4 + 2
+    cat_years -= 15
+    if cat_years < 9:
+        cat_ans = 1
+    cat_ans = 2 + (cat_years - 9) // 4
 
     if dog_years < 15:
         dog_ans = 0
-    elif dog_years == 15:
-        dog_ans += 1
-    elif dog_years == 24:
-        dog_ans += 2
-    else:
-        dog_ans = (dog_years - 24) // 5 + 2
+    dog_years -= 15
+    if dog_years < 9:
+        dog_ans = 1
+    dog_ans = 2 + (dog_years - 9) // 5
 
     return [cat_ans, dog_ans]
 
