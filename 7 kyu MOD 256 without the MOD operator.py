@@ -1,5 +1,5 @@
 def mod256_without_mod(number):
-    pass
+    return number - number // 256 * 256
 
 
 print(mod256_without_mod(254), 254)
