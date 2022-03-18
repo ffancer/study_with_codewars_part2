@@ -1,6 +1,5 @@
 def battle(x, y):
-    # Let the battle begin!
-    pass
+    print(ord('A')-64)
 
 
 print(battle("AAA", "Z"), "Z", "Unfair fight!")
