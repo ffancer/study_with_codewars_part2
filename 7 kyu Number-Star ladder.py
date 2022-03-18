@@ -1,6 +1,9 @@
 def pattern(n):
-    raise NotImplementedError("TODO: pattern")
+    s = ''
 
+    for i in range(n):
+        s += f'{i}{"*"*(i-1)}'
+    return s
 
 print(pattern(3), "1\n1*2\n1**3")
 print(pattern(7), "1\n1*2\n1**3\n1***4\n1****5\n1*****6\n1******7")
