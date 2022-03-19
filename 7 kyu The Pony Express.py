@@ -1,6 +1,8 @@
+from math import ceil
+
+
 def riders(stations):
-    # Your code here!
-    pass
+    return ceil(sum(stations) / 100)
 
 
 print(riders([18, 15]), 1)
