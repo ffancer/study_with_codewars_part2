@@ -1,5 +1,12 @@
 def arr2bin(arr):
-    pass
+    ans = 0
+
+    for i in arr:
+        if type(i) != int:
+            return False
+        ans += i
+
+    return ans
 
 
 print(arr2bin([1, 2]), "11")
