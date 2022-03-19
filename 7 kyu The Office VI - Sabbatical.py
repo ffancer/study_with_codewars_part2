@@ -1,5 +1,10 @@
 def sabb(s, val, happiness):
-    return
+    word = 'sabbatical'
+    cnt = 0
+    for i in word:
+        if i in s:
+            cnt += 1
+    return cnt
 
 
 print(sabb("Can I have a sabbatical?", 5, 5), "Sabbatical! Boom!")
