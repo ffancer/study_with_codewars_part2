@@ -6,7 +6,7 @@ def arr2bin(arr):
             return False
         ans += i
 
-    return ans
+    return bin(ans)[2:]
 
 
 print(arr2bin([1, 2]), "11")
