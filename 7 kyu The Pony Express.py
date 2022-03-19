@@ -1,16 +1,15 @@
 def riders(stations):
     riders = 1
-    ostatok = 0
-    summa = 0
-    for i in stations:
-        summa += i
+    total = 0
+    i = 0
 
-        if summa > 100:
+    while i < len(stations):
+        total += stations[i]
+        if total > 100:
+            total = 0
+            i -= 1
             riders += 1
-            ostatok += summa - 100
-            summa = 0
-    if summa + ostatok >= 100:
-        riders += (summa + ostatok) // 100
+        i += 1
 
     return riders
 
