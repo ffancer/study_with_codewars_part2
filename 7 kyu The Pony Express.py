@@ -1,13 +1,16 @@
 def riders(stations):
     riders = 1
-    temp = 0
-
+    ostatok = 0
+    summa = 0
     for i in stations:
-        temp += i
-        if temp > 90:
-            temp -= 90
-            riders += 1
+        summa += i
 
+        if summa > 100:
+            riders += 1
+            ostatok += summa - 100
+            summa = 0
+    if summa + ostatok >= 100:
+        riders += (summa + ostatok) // 100
 
     return riders
 
