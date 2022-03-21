@@ -1,5 +1,5 @@
 def solve(eq):
-    pass
+    return eq[::-1]
 
 
 print(solve("100*b/y"), "y/b*100")
