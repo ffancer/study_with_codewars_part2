@@ -1,18 +1,11 @@
 def all_non_consecutive(arr):
-    lst = []
+    answer = []
 
-    if len(arr) <= 1:
-        return lst
+    for i in range(len(arr)-1):
+        if arr[i + 1] - arr[i] != 1:
+            answer.append({'i': i + 1, 'n': arr[i + 1]})
 
-    first = arr[0]
-
-    for i, j in enumerate(arr):
-        if first != j:
-            lst.append({'i': i, 'n': j})
-            first = j
-        first += 1
-
-    return lst
+    return answer
 
 
 print(all_non_consecutive([1, 2, 3, 4, 6, 7, 8, 10]), [{'i': 4, 'n': 6}, {'i': 7, 'n': 10}])
