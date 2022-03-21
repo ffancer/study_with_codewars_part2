@@ -1,5 +1,10 @@
 def convert_bits(a, b):
-    print(bin(a)[2:], bin(b)[2:], sep='\n')
+    a = abs(len(bin(a)[2:]) - len(bin(b)[2:]))
+    cnt = 0
+    for i in bin(a)[2:]:
+        if i not in bin(b)[2:]:
+            cnt += 1
+    return cnt
 
 
 print(convert_bits(31, 14), 2)
