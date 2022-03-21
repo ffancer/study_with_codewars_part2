@@ -1,12 +1,5 @@
 def odd_ones_out(numbers):
-    lst = []
-
-    for i in numbers:
-        if numbers.count(i) % 2 == 0:
-            lst.append(i)
-
-    return lst
-
+    return [i for i in numbers if numbers.count(i) % 2 == 0]
 
 
 print(odd_ones_out([1, 2, 3, 1, 3, 3]), [1, 1])
