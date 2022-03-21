@@ -2,9 +2,10 @@ def histogram(results):
     lst = []
 
     for i, j in enumerate(results):
-        # print(i, j)
         lst.append(f'{i+1}| {"#" * j} {j}')
-    return lst
+
+    return '\n'.join(lst[::-1])
+
 
 res = """6|##### 5
 5|
