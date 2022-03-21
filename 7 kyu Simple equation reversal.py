@@ -1,5 +1,20 @@
 def solve(eq):
-    return eq[::-1]
+    lst = []
+    s1 = ''
+    s2 = ''
+
+    for i in eq:
+        if i.isalnum():
+            s1 += i
+        elif i in '*+-/':
+            s2 = i
+            lst.append(s1)
+            lst.append(s2)
+            s1 = ''
+            s2 = ''
+    lst.append(s1)
+
+    return ''.join(lst[::-1])
 
 
 print(solve("100*b/y"), "y/b*100")
