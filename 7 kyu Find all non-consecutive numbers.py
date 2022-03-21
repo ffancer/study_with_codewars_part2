@@ -1,8 +1,16 @@
 def all_non_consecutive(arr):
     lst = []
 
-    for i in range(min(arr), max(arr) + 1):
-        lst.append(i)
+    if len(arr) <= 1:
+        return lst
+
+    first = arr[0]
+
+    for i, j in enumerate(arr):
+        if first != j:
+            lst.append({'i': i, 'n': j})
+            first = j
+        first += 1
 
     return lst
 
