@@ -3,7 +3,15 @@
 
 
 def testit(s):
-    return s.swapcase()
+    ans = ''
+
+    for i in s:
+        if i.islower():
+            ans += i.upper()
+        else:
+            ans += i
+
+    return ans
 
 
 print(testit(""), "")
