@@ -4,10 +4,7 @@
 
 def testit(s):
     s = s.split()
-    return ' '.join(i[:-1] + s[-1].upper() for i in s)
-
-
-
+    return ' '.join(i[:-1] + i[-1].upper() for i in s)
 
 
 print(testit(""), "")
