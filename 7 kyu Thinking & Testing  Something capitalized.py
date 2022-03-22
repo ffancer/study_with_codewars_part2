@@ -3,7 +3,7 @@
 
 
 def testit(s):
-    pass
+    return s.swapcase()
 
 
 print(testit(""), "")
