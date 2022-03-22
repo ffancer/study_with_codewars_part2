@@ -3,16 +3,9 @@
 
 
 def testit(s):
-    if all(i.lower() for i in s) and len(s) < 6:
-        return s.swapcase()
-    else:
-        s = s.split()
-        s = [i.replace("'", '') for i in s]
+    s = s.split()
+    return ' '.join(i[:-1] + s[-1].upper() for i in s)
 
-        if len(s[0]) == 2:
-            return ' '.join(i[0].lower() + i[1].upper() for i in s)
-        if len(s[0]) == 4:
-            return ' '.join(i[:3].lower() + i[3].upper() for i in s)
 
 
 
