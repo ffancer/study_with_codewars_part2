@@ -1,5 +1,12 @@
 def minMinMax(arr):
-    pass
+    big, small = max(arr), min(arr)
+    ans = small + 1
+
+    for i in range(small+1, big+1, 1):
+        if ans not in arr:
+            break
+
+    return [small, ans, big]
 
 
 print(minMinMax([-1, 4, 5, -23, 24]), [-23, -22, 24])
