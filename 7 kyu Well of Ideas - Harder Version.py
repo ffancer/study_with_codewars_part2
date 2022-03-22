@@ -1,5 +1,7 @@
 def well(arr):
-    pass
+    for i,j in enumerate(arr):
+        for k in j:
+            print(k)
 
 
 print(well([['bad', 'bAd', 'bad'], ['bad', 'bAd', 'bad'], ['bad', 'bAd', 'bad']]), 'Fail!')
