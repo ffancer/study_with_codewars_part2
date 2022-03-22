@@ -3,8 +3,7 @@
 
 
 def testit(s):
-    s = s.split()
-    return ' '.join(i[:-1] + i[-1].upper() for i in s)
+    return ' '.join(i[:-1] + i[-1].upper() for i in s.split())
 
 
 print(testit(""), "")
