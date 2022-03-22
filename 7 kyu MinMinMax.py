@@ -5,6 +5,8 @@ def minMinMax(arr):
     for i in range(small+1, big+1, 1):
         if ans not in arr:
             break
+        else:
+            ans = i
 
     return [small, ans, big]
 
