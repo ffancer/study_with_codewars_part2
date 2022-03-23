@@ -1,12 +1,6 @@
 def is_triangular(t):
-    lst = [1]
-    n = 2
-
-    while lst[-1] < t:
-        lst.append(n * (n + 1) // 2)
-        n += 1
-
-    return lst[-1] == t
+    x = int((t * 2) ** 0.5)
+    return t == x * (x + 1) / 2
 
 
 print(is_triangular(1), True, "Failed when t = 1")
