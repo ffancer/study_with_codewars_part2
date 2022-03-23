@@ -1,10 +1,12 @@
 def replace_all(obj, find, replace):
-    if obj is []:
+    if len(obj) < 2:
         return []
+
     if type(obj[0]) == str:
         obj = str(obj)
         obj = obj.replace(str(find), str(replace))
         return obj
+
     if type(obj[0]) == int:
         lst = []
         for i in obj:
