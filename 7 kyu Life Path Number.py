@@ -1,9 +1,5 @@
-def sum_of_digits(n):
-    return n if n < 10 else sum_of_digits(sum(map(int, str(n))))
-
-
-def life_path_number(birthdate):
-    return sum_of_digits(sum(sum_of_digits(int(date)) for date in birthdate.split('-')))
+def life_path_number(s):
+    return int(s.replace("-", "")) % 9 or 9
 
 
 print(life_path_number("1955-10-28"), 4)
