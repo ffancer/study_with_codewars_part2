@@ -3,10 +3,27 @@
 
 
 def who_is_online(friends):
+    if not friends:
+        return {}
+
     dct = {}
+
     for i in friends:
-        dct = {i["status"], i["username"]}
+        if i['status'] == 'online':
+            if i['last_activity'] > 10:
+                if 'away' not in dct.keys():
+                    dct['away'] = []
+                dct['away'].append(i['username'])
+            else:
+                if 'online' not in dct.keys():
+                    dct['online'] = []
+                dct['online'].append(i['username'])
+        elif i['status'] == 'offline':
+            if 'offline' not in dct.keys():
+                dct['offline'] = []
+            dct['offline'].append(i['username'])
     return dct
+
 
 friends = [{"username": "David", "status": "online", "last_activity": 10},
            {"username": "Lucy", "status": "offline", "last_activity": 22},
