@@ -3,8 +3,10 @@
 
 
 def who_is_online(friends):
-    return
-
+    dct = {}
+    for i in friends:
+        dct = {i["status"], i["username"]}
+    return dct
 
 friends = [{"username": "David", "status": "online", "last_activity": 10},
            {"username": "Lucy", "status": "offline", "last_activity": 22},
