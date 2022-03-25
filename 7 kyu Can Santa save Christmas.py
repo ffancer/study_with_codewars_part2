@@ -1,6 +1,17 @@
+# 7 kyu
+# Can Santa save Christmas?
+
+
 def determine_time(arr):
+    total, hours, minutes, seconds = 0, 0, 0, 0
+
     for i in arr:
-        print(i.split(':')[0])
+        hours += i.split(':')[0]
+        minutes += i.split(':')[1]
+        seconds += i.split(':')[2]
+        total +=
+
+    return total <= 24 * 3600
 
 
 print(determine_time(["01:00:00", "02:30:00"]), True)
