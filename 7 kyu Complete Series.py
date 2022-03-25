@@ -1,7 +1,6 @@
 def complete_series(seq):
-    # your code here
-    pass
-
+    second_seq = list(set(seq))
+    return second_seq
 
 print(complete_series([0, 1]), [0, 1])
 print(complete_series([1, 4, 6]), [0, 1, 2, 3, 4, 5, 6])
