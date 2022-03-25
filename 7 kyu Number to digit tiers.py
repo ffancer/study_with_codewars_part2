@@ -2,9 +2,10 @@ def create_array_of_tiers(n):
     lst = []
 
     while n:
-        lst.append(n)
+        lst.append(str(n))
         n //= 10
-    return lst
+
+    return lst[::-1] or ['0']
 
 
 
