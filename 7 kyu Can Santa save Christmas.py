@@ -6,10 +6,11 @@ def determine_time(arr):
     total, hours, minutes, seconds = 0, 0, 0, 0
 
     for i in arr:
-        hours += i.split(':')[0]
-        minutes += i.split(':')[1]
-        seconds += i.split(':')[2]
-        total +=
+        hours += int(i.split(':')[0])
+        minutes += int(i.split(':')[1])
+        seconds += int(i.split(':')[2])
+
+    total = hours * 3600 + minutes * 60 + seconds
 
     return total <= 24 * 3600
 
