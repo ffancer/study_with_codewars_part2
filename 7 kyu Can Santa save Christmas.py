@@ -1,5 +1,6 @@
 def determine_time(arr):
-    pass
+    for i in arr:
+        print(i.split(':')[0])
 
 
 print(determine_time(["01:00:00", "02:30:00"]), True)
