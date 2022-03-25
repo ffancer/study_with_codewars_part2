@@ -1,5 +1,11 @@
 def decode(code, key):
-    pass
+    lst = []
+
+    for i in code:
+        lst.append(chr(i+97))
+
+    return lst
+    # return chr(97)
 
 
 print(decode([20, 12, 18, 30, 21], 1939), "scout")
