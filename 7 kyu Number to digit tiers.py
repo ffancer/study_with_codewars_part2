@@ -1,6 +1,6 @@
 def create_array_of_tiers(n):
     # your awesome code here
-    return []
+    return n // 10
 
 
 print(create_array_of_tiers(420), ["4", "42", "420"])
