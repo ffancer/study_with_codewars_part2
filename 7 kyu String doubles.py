@@ -1,5 +1,6 @@
 def doubles(s):
-    pass
+    for i in s:
+        print(s.count(i))
 
 
 print(doubles('abbbzz'), 'ab')
