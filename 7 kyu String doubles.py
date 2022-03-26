@@ -1,7 +1,9 @@
 def doubles(s):
-    for i in s:
-        print(s.count(i))
-
+    lst = []
+    for i in range(len(s)-1):
+        if s[i] != s[i+1]:
+            lst.append(s[:i+1])
+    return list(s)
 
 print(doubles('abbbzz'), 'ab')
 print(doubles('zzzzykkkd'), 'ykd')
