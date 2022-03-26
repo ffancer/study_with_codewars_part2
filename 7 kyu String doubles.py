@@ -1,9 +1,14 @@
 def doubles(s):
     lst = []
-    for i in range(len(s)-1):
-        if s[i] != s[i+1]:
-            lst.append(s[:i+1])
-    return list(s)
+
+    for i in s:
+        if lst and lst[-1] == i:
+            lst.pop()
+        else:
+            lst.append(i)
+
+    return ''.join(lst)
+
 
 print(doubles('abbbzz'), 'ab')
 print(doubles('zzzzykkkd'), 'ykd')
