@@ -3,7 +3,8 @@
 
 
 def reverse_by_center(s):
-    return
+    if len(s) % 2 == 0:
+        return s[len(s)//2]
 
 
 print(reverse_by_center("secret"), "retsec")
