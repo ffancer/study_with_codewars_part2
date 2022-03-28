@@ -1,5 +1,5 @@
 def multiple(x):
-    pass
+    return "BangBoom" if x % 15 == 0 else "Boom" if x % 5 == 0 else "Bang" if x % 3 == 0 else "Miss"
 
 
 print(multiple(30), "BangBoom")
