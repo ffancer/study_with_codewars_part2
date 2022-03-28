@@ -4,8 +4,8 @@
 
 def reverse_by_center(s):
     if len(s) % 2 == 0:
-        return s[:len(s)//2], s[len(s)//2:]
-
+        return s[len(s)//2:] + s[:len(s)//2]
+    return s[len(s)//2+1:] + s[len(s)//2] + s[:len(s)//2]
 
 print(reverse_by_center("secret"), "retsec")
 print(reverse_by_center("agent"), "nteag")
