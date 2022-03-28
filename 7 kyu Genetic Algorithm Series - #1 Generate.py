@@ -1,5 +1,13 @@
+from random import randint
+
+
 def generate(length):
-    pass
+    res = ''
+
+    while len(res) < length:
+        res += str(round(randint(0, 1)))
+
+    return res
 
 
 print(generate(16), 16)
