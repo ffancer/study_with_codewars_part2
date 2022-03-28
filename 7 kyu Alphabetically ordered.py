@@ -1,5 +1,10 @@
 def alphabetic(s):
-    pass
+    lst = []
+
+    for i in s:
+        lst.append(ord(i))
+
+    return sorted(lst) == lst
 
 
 print(alphabetic('asd'), False)
