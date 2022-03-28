@@ -1,5 +1,8 @@
 def hello_world():
-    pass
+    s = 'Hello, World!'
+
+    for i in s:
+        print(ord(i))
 
 
 print(hello_world(), 'Hello, World!')
