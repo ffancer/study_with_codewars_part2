@@ -1,5 +1,7 @@
 def sum_or_product(array, n):
-    pass
+    three_biggest = sum(sorted(array, reverse=True)[:3])
+    three_smallest = sum(sorted(array)[:3])
+    return three_biggest, three_smallest
 
 
 print(sum_or_product([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 4), "sum")
