@@ -1,5 +1,5 @@
 def rake_garden(garden):
-    return garden.replace('slug', '')
+    return garden.replace('slug', 'gravel').replace('snail', 'gravel').replace('spider', 'gravel')
 
 
 garden1 = 'slug spider rock gravel gravel gravel gravel gravel gravel gravel'
