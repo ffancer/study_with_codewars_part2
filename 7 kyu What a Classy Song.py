@@ -14,7 +14,7 @@ class Song:
         for i in listeners_today:
             if i.lower() not in self.listeners:
                 cnt += 1
-                self.listeners += i.lower()
+                self.listeners.add(i.lower())
 
         return cnt
 
