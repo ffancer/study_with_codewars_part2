@@ -1,14 +1,11 @@
+from math import prod
+
 
 def sum_or_product(array, n):
-    three_biggest = sum(sorted(array, reverse=True)[:3])
-    three_smallest = sum(sorted(array)[:3])
-    # return 'sum' if three_biggest > three_smallest else 'product' if three_smallest > three_biggest else 'same'
-    # if three_biggest > three_smallest:
-    #     return "sum"
-    # elif three_biggest < three_smallest:
-    #     return "product"
-    # return "same"
-    return three_biggest, three_smallest
+    three_biggest = sum(sorted(array, reverse=True)[:n])
+    three_smallest = prod(sorted(array)[:n])
+    return 'sum' if three_biggest > three_smallest else 'product' if three_smallest > three_biggest else 'same'
+
 
 print(sum_or_product([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 4), "sum")
 print(sum_or_product([10, 41, 8, 16, 20, 36, 9, 13, 20], 3), "product")
