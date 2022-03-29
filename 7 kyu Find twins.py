@@ -1,10 +1,5 @@
 def elimination(arr):
-    dct = {}
-
-    for i in arr:
-        dct.update({arr.count(i): i})
-
-    return dct.get(2)
+    return {arr.count(i): i for i in arr}.get(2)
 
 
 print(elimination([2, 5, 34, 1, 22, 1]), 1, "twins are 1s")
