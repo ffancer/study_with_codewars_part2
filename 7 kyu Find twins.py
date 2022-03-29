@@ -1,5 +1,7 @@
 def elimination(arr):
-    return {arr.count(i): i for i in arr}.get(2)
+    for x in arr:
+        if arr.count(x) == 2:
+            return x
 
 
 print(elimination([2, 5, 34, 1, 22, 1]), 1, "twins are 1s")
