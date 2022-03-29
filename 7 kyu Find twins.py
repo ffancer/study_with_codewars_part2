@@ -1,5 +1,8 @@
 def elimination(arr):
-    pass
+    try:
+        return int(''.join(str(i) for i in arr if arr.count(i) == 2)[0])
+    except IndexError:
+        return None
 
 
 print(elimination([2, 5, 34, 1, 22, 1]), 1, "twins are 1s")
