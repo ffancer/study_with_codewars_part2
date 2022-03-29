@@ -22,13 +22,14 @@ def get_turkish_number(num):
     }
     ans = ''
 
-
     if num < 10:
         ans = dct.get(num)
     elif num % 10 != 0:
-        # ans = f'{int(dct.get(num)) - int(dct.get(num % 10))}{int(dct.get(num % 10))}'
         ans = f'{dct[num - num % 10]} {dct[num % 10]}'
+    else:
+        ans = dct.get(num)
     return ans
+
 
 print(get_turkish_number(1), "bir")
 print(get_turkish_number(13), "on üç")
