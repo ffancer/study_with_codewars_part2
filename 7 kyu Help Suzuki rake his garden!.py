@@ -1,9 +1,14 @@
 def rake_garden(garden):
-    for i in garden.split():
-        if i != 'rock' or i != 'gravel':
-            garden.replace(i, 'gravel')
+    garden = garden.split()
+    lst = []
 
-    return garden
+    for i in garden:
+        if i == 'rock' or i == 'gravel':
+            lst.append(i)
+        else:
+            lst.append('gravel')
+
+    return ' '.join(lst)
 
 
 garden1 = 'slug spider rock gravel gravel gravel gravel gravel gravel gravel'
