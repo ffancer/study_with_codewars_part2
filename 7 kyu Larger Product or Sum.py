@@ -2,9 +2,9 @@ from math import prod
 
 
 def sum_or_product(array, n):
-    three_biggest = sum(sorted(array, reverse=True)[:n])
-    three_smallest = prod(sorted(array)[:n])
-    return 'sum' if three_biggest > three_smallest else 'product' if three_smallest > three_biggest else 'same'
+    big_num_sum = sum(sorted(array, reverse=True)[:n])
+    small_num_prod = prod(sorted(array)[:n])
+    return 'sum' if big_num_sum > small_num_prod else 'product' if small_num_prod > big_num_sum else 'same'
 
 
 print(sum_or_product([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 4), "sum")
