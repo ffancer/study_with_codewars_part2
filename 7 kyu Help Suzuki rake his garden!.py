@@ -1,5 +1,9 @@
 def rake_garden(garden):
-    return garden.replace('slug', 'gravel').replace('snail', 'gravel').replace('spider', 'gravel')
+    for i in garden.split():
+        if i != 'rock' or i != 'gravel':
+            garden.replace(i, 'gravel')
+
+    return garden
 
 
 garden1 = 'slug spider rock gravel gravel gravel gravel gravel gravel gravel'
