@@ -1,5 +1,5 @@
 def kooka_counter(laughing):
-    return laughing.count('Hah') + laughing.count('haH') + 1
+    return laughing.count('Hah') + laughing.count('haH') + 1 if laughing else 0
 
 
 print(kooka_counter(""), 0)
