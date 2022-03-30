@@ -1,5 +1,5 @@
 def pak(s):
-    return 'pak'.join(s.split())
+    return ' pak '.join(s.split())
 
 
 print(pak("Man I need a taxi up to Ubud"), "Man pak I pak need pak a pak taxi pak up pak to pak Ubud")
