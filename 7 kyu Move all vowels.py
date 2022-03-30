@@ -2,8 +2,13 @@ def move_vowels(input):
     five_vowels = 'aeiou'
     not_vowels, vowels = '', ''
 
+    for i in input:
+        if i in five_vowels:
+            vowels +=i
+        else:
+            not_vowels += i
 
-
+    return not_vowels + vowels
 
 
 print(move_vowels('day'), 'dya')
