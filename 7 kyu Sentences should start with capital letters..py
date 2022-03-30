@@ -2,13 +2,12 @@ def fix(paragraph):
     lst = []
 
     for i in paragraph.split('. '):
-        print(i.capitalize())
-        # lst.append(i.capitalize())
+        lst.append(i.capitalize())
 
-    # return '.'.join(lst)
+    return '. '.join(lst)
 
 
-# print(fix(""), "")
+print(fix(""), "")
 print(fix("hi."), "Hi.")
 print(
     fix("hello. my name is inigo montoya. you killed my father. prepare to die."),
