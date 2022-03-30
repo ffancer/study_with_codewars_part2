@@ -1,5 +1,5 @@
 def fix(paragraph):
-    pass
+    return paragraph.split('.')
 
 
 print(fix(""), "")
