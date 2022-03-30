@@ -1,6 +1,7 @@
 def test(r):
-    pass
-
+    ans = []
+    average_mark = round(sum(r) / len(r), 3)
+    return average_mark
 
 print(test([10, 9, 9, 10, 9, 10, 9]), [9.429, {'h': 7, 'a': 0, 'l': 0}, 'They did well'])
 print(test([5, 6, 4, 8, 9, 8, 9, 10, 10, 10]), [7.9, {'h': 5, 'a': 2, 'l': 3}])
