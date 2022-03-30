@@ -1,5 +1,4 @@
 def test(r):
-    ans = []
     average_mark = round(sum(r) / len(r), 3)
     lst1 = ['h', 'a', 'l']
     h = r.count(10) + r.count(9)
@@ -7,7 +6,12 @@ def test(r):
     l = r.count(6) + r.count(5) + r.count(4) + r.count(3) + r.count(2) + r.count(1)
     lst2 = [h, a, l]
     dct = dict(zip(lst1, lst2))
-    return dct
+
+    if a == 0 and l == 0:
+        return [average_mark, dct, 'They did well']
+    return [average_mark, dct]
+
+
 print(test([10, 9, 9, 10, 9, 10, 9]), [9.429, {'h': 7, 'a': 0, 'l': 0}, 'They did well'])
 print(test([5, 6, 4, 8, 9, 8, 9, 10, 10, 10]), [7.9, {'h': 5, 'a': 2, 'l': 3}])
 print(test([5, 6, 5, 7, 4, 5, 6, 6, 5]), [5.444, {'h': 0, 'a': 1, 'l': 8}])
