@@ -1,5 +1,11 @@
 def pak(s):
-    pass
+    lst = []
+
+    for i in s.split():
+        lst.append(i)
+        lst.append('pak')
+
+    return ' '.join(lst[:-1])
 
 
 print(pak("Man I need a taxi up to Ubud"), "Man pak I pak need pak a pak taxi pak up pak to pak Ubud")
