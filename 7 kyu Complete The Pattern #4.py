@@ -1,5 +1,10 @@
 def pattern(n):
-    pass
+    ans = ''
+
+    for i in range(1, n+1):
+        ans += str(i) + '\n'
+
+    return ans
 
 
 print(pattern(1), "1")
