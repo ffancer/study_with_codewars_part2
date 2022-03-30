@@ -1,10 +1,9 @@
-def pattern(n):
-    ans = ''
+def pattern(n, x = ''):
+    if n <= 0:
+        return ''
 
-    for i in range(1, n+1):
-        ans += str(i) + '\n'
-
-    return ans
+    x = str(n) + x
+    return x if n == 1 else pattern(n-1, x) + '\n' + x
 
 
 print(pattern(1), "1")
