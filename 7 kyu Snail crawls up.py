@@ -1,5 +1,11 @@
 def snail(column, day, night):
-    pass
+    cnt = 0
+    while column > 0:
+        column -= day
+        column += night
+        cnt += 1
+
+    return cnt
 
 
 print(snail(3, 2, 1), 2)
