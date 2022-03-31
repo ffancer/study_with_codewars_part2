@@ -5,7 +5,9 @@ def initials(name):
     for i in name[:-1]:
         lst.append(i[0].upper())
 
-    return lst
+    lst.append(name[-1].title())
+
+    return '.'.join(lst)
 
 
 print(initials('code wars'), 'C.Wars')
