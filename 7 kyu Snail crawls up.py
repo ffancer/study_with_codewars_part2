@@ -2,9 +2,7 @@ from math import ceil
 
 
 def snail(column, day, night):
-    if day >= column:
-        return 1
-    return ceil((column - day) / (day - night)) + 1
+    return 1 if day >= column else ceil((column - day) / (day - night)) + 1
 
 
 print(snail(3, 2, 1), 2)
