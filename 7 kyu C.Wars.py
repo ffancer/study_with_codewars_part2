@@ -1,5 +1,11 @@
 def initials(name):
-    pass
+    name = name.split()
+    lst = []
+
+    for i in name[:-1]:
+        lst.append(i[0].upper())
+
+    return lst
 
 
 print(initials('code wars'), 'C.Wars')
