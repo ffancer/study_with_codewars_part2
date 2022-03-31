@@ -1,13 +1,12 @@
 def spacey(array):
-    # i = 0
-    # first = array[i]
-    # lst = []
-    # while array:
-    #     lst.append(first)
-    #     first = array[0] + array[:i+1]
-    #     i += 1
-    # return lst
-    return array[:1+1+1]
+    i = 1
+    lst = [array[0]]
+
+    while len(array) != len(lst):
+        first = ''.join(array[:i+1])
+        lst.append(first)
+        i += 1
+    return lst
 
 
 print(spacey(['kevin', 'has', 'no', 'space']), ['kevin', 'kevinhas', 'kevinhasno', 'kevinhasnospace'])
