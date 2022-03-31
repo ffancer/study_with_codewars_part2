@@ -3,15 +3,12 @@
 
 
 def inverse_slice(items, a, b):
-    lst = []
+    return items[:a] + items[b:]
 
-    for i in items:
-        if i in items[a:b]:
-            continue
-        else:
-            lst.append(i)
 
-    return lst
+def inverse_slice(items, a, b):
+    del items[a:b]
+    return items
 
 
 print(inverse_slice([12, 14, 63, 72, 55, 24], 2, 4), [12, 14, 55, 24])
