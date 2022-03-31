@@ -1,11 +1,8 @@
-def snail(column, day, night):
-    cnt = 0
-    while column > 0:
-        column -= day
-        column += night
-        cnt += 1
+from math import ceil
 
-    return cnt
+
+def snail(column, day, night):
+    return ceil((column - day) / (day - night)) + 1
 
 
 print(snail(3, 2, 1), 2)
