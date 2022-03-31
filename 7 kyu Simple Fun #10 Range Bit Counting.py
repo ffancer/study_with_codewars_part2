@@ -3,8 +3,7 @@
 
 
 def range_bit_count(a, b):
-    lst = [bin(i)[2:] for i in range(a, b+1)]
-    return ''.join(lst).count('1')
+    return ''.join([bin(i)[2:] for i in range(a, b+1)]).count('1')
 
 
 print(range_bit_count(2, 7), 11)
