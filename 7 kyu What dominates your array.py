@@ -2,13 +2,16 @@
 # What dominates your array?
 
 
-from collections import Counter
-
-
 def dominator(arr):
     if not arr:
         return -1
-    for i, j in Counter(arr).items():
+
+    dct = {}
+
+    for i in arr:
+        dct.update({i: arr.count(i)})
+
+    for i, j in dct.items():
         if j > len(arr) // 2:
             return i
     return -1
