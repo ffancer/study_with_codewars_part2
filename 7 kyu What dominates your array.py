@@ -9,7 +9,9 @@ def dominator(arr):
     if not arr:
         return -1
     for i, j in Counter(arr).items():
-        print(i, j)
+        if j > len(arr) // 2:
+            return i
+    return -1
 
 
 print(dominator([3, 4, 3, 2, 3, 1, 3, 3]), 3)
