@@ -3,7 +3,12 @@
 
 
 def dominator(arr):
-    pass
+    dct = {}
+
+    for i in arr:
+        dct.update({i: arr.count(i)})
+
+    return dct
 
 
 print(dominator([3, 4, 3, 2, 3, 1, 3, 3]), 3)
