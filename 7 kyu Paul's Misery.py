@@ -5,13 +5,12 @@ def paul(x):
         'life': 0,
         'eating': 1
     }
-    total = 0
-
-    for i in x:
-        if i in dct.keys():
-            total += dct.get(i)
+    total = sum([dct.get(i) for i in x])
 
     return total
+
+    # return 'Super happy!' if total < 40 else 'Happy!' if total < 70 else 'Sad!' if total < 100 else 'Miserable!'
+
 
 print(paul(['life', 'eating', 'life']), 'Super happy!')
 print(paul(['life', 'Petes kata', 'Petes kata', 'Petes kata', 'eating']), 'Super happy!')
