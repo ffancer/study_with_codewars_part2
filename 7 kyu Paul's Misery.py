@@ -1,6 +1,10 @@
 def paul(x):
-    # your code here
-    return ''
+    dct = {
+        'Petes kata': 5,
+        'kata': 10,
+        'life': 0,
+        'eating': 1
+    }
 
 
 print(paul(['life', 'eating', 'life']), 'Super happy!')
