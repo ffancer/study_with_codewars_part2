@@ -5,7 +5,13 @@ def paul(x):
         'life': 0,
         'eating': 1
     }
+    total = 0
 
+    for i in x:
+        if i in dct.keys():
+            total += dct.get(i)
+
+    return total
 
 print(paul(['life', 'eating', 'life']), 'Super happy!')
 print(paul(['life', 'Petes kata', 'Petes kata', 'Petes kata', 'eating']), 'Super happy!')
