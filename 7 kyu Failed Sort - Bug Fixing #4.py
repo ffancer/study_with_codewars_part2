@@ -1,5 +1,5 @@
 def sort_array(value):
-    return "".join(sorted(value, key=lambda a: -int(a)))
+    return "".join(sorted(value, key=lambda a: -int(a)))[::-1]
 
 
 print(sort_array('12345'), '12345', 'Return a descending sorted array')
