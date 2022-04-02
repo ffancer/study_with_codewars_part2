@@ -1,23 +1,6 @@
 def scoreboard(string):
-    dct = {
-        'nil': 0,
-        'one': 1,
-        'two': 2,
-        'three': 3,
-        'four': 4,
-        'five': 5,
-        'six': 6,
-        'seven': 7,
-        'eight': 8,
-        'nine': 9
-    }
-    lst = []
-
-    for i in string.split():
-        if i in dct.keys():
-            lst.append(dct.get(i))
-
-    return lst
+    dct = {'nil': 0, 'one': 1, 'two': 2, 'three': 3, 'four': 4, 'five': 5, 'six': 6, 'seven': 7, 'eight': 8, 'nine': 9}
+    return [dct.get(i) for i in string.split() if i in dct.keys()]
 
 
 print(scoreboard("The score is four nil"), [4, 0])
