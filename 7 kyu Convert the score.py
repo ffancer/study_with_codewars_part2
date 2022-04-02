@@ -11,6 +11,13 @@ def scoreboard(string):
         'eight': 8,
         'nine': 9
     }
+    lst = []
+
+    for i in string.split():
+        if i in dct.keys():
+            lst.append(dct.get(i))
+
+    return lst
 
 
 print(scoreboard("The score is four nil"), [4, 0])
