@@ -1,15 +1,8 @@
-from random import randint
+import random
 
 
 def random_case(x):
-    res = ''
-    for i in x:
-        our_random = randint(0, 1)
-        if our_random == 0:
-            res += i.upper()
-        else:
-            res += i.lower()
-    return res
+    return "".join([random.choice([c.lower(), c.upper()]) for c in x])
 
 
 v = [
@@ -22,7 +15,7 @@ v = [
 
 for i in v:
   r = random_case(i)
-  # print(r.lower(), i.lower())
+  print(r.lower(), i.lower())
   print(r, i)
   print(r, i.upper())
   print(r, i.lower())
