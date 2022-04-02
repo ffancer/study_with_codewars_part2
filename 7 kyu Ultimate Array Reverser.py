@@ -1,5 +1,7 @@
 def reverse(a):
-    return
+
+    for i in a:
+        print(chr(ord(i)-40))
 
 
 print(reverse(["I", "like", "big", "butts", "and", "I", "cannot", "lie!"]),
