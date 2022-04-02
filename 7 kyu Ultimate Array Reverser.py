@@ -1,7 +1,14 @@
 def reverse(a):
+    lst, i = [], 0
+    letters = ''.join(a)[::-1]
 
-    for i in a:
-        print(chr(ord(i)-40))
+    for k in a:
+        lst.append(letters[i:i + len(k)])
+        i += len(k)
+
+    return lst
+
+
 
 
 print(reverse(["I", "like", "big", "butts", "and", "I", "cannot", "lie!"]),
