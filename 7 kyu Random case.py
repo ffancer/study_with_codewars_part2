@@ -1,5 +1,15 @@
+from random import randint
+
+
 def random_case(x):
-    pass
+    res = ''
+    for i in x:
+        our_random = randint(0, 1)
+        if our_random == 0:
+            res += i.upper()
+        else:
+            res += i.lower()
+    return res
 
 
 v = [
