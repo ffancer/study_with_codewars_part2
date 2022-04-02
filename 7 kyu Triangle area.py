@@ -1,5 +1,5 @@
 def t_area(t_str):
-    pass
+    return t_str.count('\n')
 
 
 print(t_area('\n.\n. .\n'), .5)
