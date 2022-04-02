@@ -1,6 +1,7 @@
 def bald(s):
     cnt_stray = s.count('/')
-    return s.replace('/', '-')
+    lst = [s.replace('/', '-')]
+    return lst
 
 print(bald("/---------"), "Unicorn!", )
 print(bald("/-----/-"), "Homer!", )
