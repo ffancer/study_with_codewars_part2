@@ -3,13 +3,7 @@
 
 
 def count_animals(sentence):
-    lst = []
-
-    for i in sentence.split():
-        if i.isdigit():
-            lst.append(int(i))
-
-    return sum(lst)
+    return sum(int(i) for i in sentence.split() if i.isdigit())
 
 
 print(count_animals("I see 3 zebras, 5 lions and 6 giraffes."), 'Live from the Savannah')
