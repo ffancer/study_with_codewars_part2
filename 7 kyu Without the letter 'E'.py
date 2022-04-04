@@ -1,5 +1,13 @@
 def find_e(s):
-    pass
+    if not s:
+        return s
+    cnt = 0
+
+    for i in s.lower():
+        if i == 'e':
+            cnt += 1
+
+    return str(cnt) if cnt != 0 else "There is no \"e\"."
 
 
 print(find_e('actual'), "There is no \"e\".")
