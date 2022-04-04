@@ -1,11 +1,8 @@
 def find_e(s):
     if not s:
         return s
-    cnt = 0
 
-    for i in s.lower():
-        if i == 'e':
-            cnt += 1
+    cnt = s.lower().count('e')
 
     return str(cnt) if cnt != 0 else "There is no \"e\"."
 
