@@ -1,5 +1,10 @@
 def geometric_sequence_elements(a, r, n):
-    pass
+    lst = [a]
+
+    for i in range(n-1):
+        lst.append(lst[-1] * r)
+
+    return lst
 
 
 print(geometric_sequence_elements(2, 3, 5), '2, 6, 18, 54, 162')
