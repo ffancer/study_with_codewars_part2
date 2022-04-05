@@ -1,6 +1,10 @@
-def scramble(strng, array):
-    ret = ['_'] * len(strng)
-    return ret
+def scramble(string, array):
+    lst = ['_'] * len(string)
+
+    for i, j in enumerate(string):
+        lst[array[i]] = j
+
+    return ''.join(lst)
 
 
 print(scramble('abcd', [0, 3, 1, 2]), 'acdb', "Should return acdb")
