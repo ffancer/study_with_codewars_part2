@@ -1,5 +1,6 @@
-def scramble(string, array):
-    pass
+def scramble(strng, array):
+    ret = ['_'] * len(strng)
+    return ret
 
 
 print(scramble('abcd', [0, 3, 1, 2]), 'acdb', "Should return acdb")
