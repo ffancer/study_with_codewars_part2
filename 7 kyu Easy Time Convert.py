@@ -1,11 +1,12 @@
 def time_convert(num):
-    # if num <= 0:
-    #     return '00:00'
-    #
-    # minute = num % 60
-    #
-    # return f'00:{minute}'
-    return num * 60 // 3600
+    if num <= 0:
+        return '00:00'
+
+    hour = num * 60 // 3600
+    minute = num % 60
+
+    return f'{str(hour).zfill(2)}:{str(minute).zfill(2)}'
+
 
 
 print(time_convert(0), '00:00', 'Test at 0')
