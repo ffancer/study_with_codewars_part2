@@ -1,6 +1,7 @@
 def gap(num):
-    return len(max(bin(num)[2:].split('1'), key=len))
-    # return bin(num)[2:]
+    num = bin(num)[2:].rstrip('0')
+    return len(max(num.split('1'), key=len))
+
 
 print(gap(9), 2)
 print(gap(529), 4)
