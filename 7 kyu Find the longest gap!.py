@@ -1,5 +1,5 @@
 def gap(num):
-    pass
+    return bin(num)[2:]
 
 
 print(gap(9), 2)
