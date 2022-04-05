@@ -1,5 +1,10 @@
 def time_convert(num):
-    pass
+    if num <= 0:
+        return '00:00'
+
+    minute = num % 60
+
+    return f'00:{minute}'
 
 
 print(time_convert(0), '00:00', 'Test at 0')
