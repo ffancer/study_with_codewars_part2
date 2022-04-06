@@ -1,5 +1,14 @@
 def vowel_one(s):
-    pass
+    vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
+    ans = ''
+
+    for i in s:
+        if i in vowels:
+            ans += '1'
+        else:
+            ans += '0'
+
+    return ans
 
 
 print(vowel_one("vowelOne"), "01010101")
