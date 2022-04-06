@@ -3,7 +3,7 @@
 
 
 def string_counter(string, char):
-    pass
+    return string.count(char)
 
 
 print(string_counter("Hello world", "o"), 2)
