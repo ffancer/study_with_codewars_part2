@@ -1,0 +1,8 @@
+def vowel_one(s):
+    pass
+
+
+print(vowel_one("vowelOne"), "01010101")
+print(vowel_one("123, arou"), "000001011")
+print(vowel_one("Codewars"), "01010100")
+print(vowel_one("Python"), "000010")
