@@ -1,5 +1,6 @@
 def calculate(string):
-    pass
+    lst = []
+    return string.split()
 
 
 print(calculate("Panda has 48 apples and loses 4"), 44)
