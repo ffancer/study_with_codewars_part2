@@ -1,8 +1,13 @@
 def get_larger_numbers(a, b):
     lst = []
-    lst.append(map(lambda x, y: x> y ,a,b))
-    return lst
 
+    for i in range(len(a)):
+        if a[i] > b[i]:
+            lst.append(a[i])
+        else:
+            lst.append(b[i])
+
+    return lst
 
 
 a = [13, 64, 15, 17, 88]
