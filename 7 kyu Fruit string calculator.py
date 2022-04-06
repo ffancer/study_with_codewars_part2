@@ -1,6 +1,12 @@
 def calculate(string):
     lst = []
-    return string.split()
+
+
+    for i in string.split():
+        if i.isdigit():
+            lst.append(int(i))
+
+    return sum(lst)
 
 
 print(calculate("Panda has 48 apples and loses 4"), 44)
