@@ -1,5 +1,13 @@
 def ones_complement(binary_number):
-    pass
+    ans = ''
+
+    for i in binary_number:
+        if i == '1':
+            ans += '0'
+        else:
+            ans += '1'
+
+    return ans
 
 
 print(ones_complement("0"), "1")
