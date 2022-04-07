@@ -1,5 +1,6 @@
 def distinct_digit_year(year):
-    pass
+    while True:
+        return set(str(year))
 
 
 print(distinct_digit_year(1987), 2013)
