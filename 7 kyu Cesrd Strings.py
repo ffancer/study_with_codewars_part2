@@ -4,7 +4,7 @@
 
 def uncensor(infected, discovered):
     discovered_iter = iter(discovered)
-    return ''.join(next(discovered_iter) if i == '*' else i for i in discovered_iter)
+    return ''.join(next(discovered_iter) if i == '*' else i for i in infected)
 
 
 print(uncensor('*h*s *s v*ry *tr*ng*', 'Tiiesae'), 'This is very strange')
