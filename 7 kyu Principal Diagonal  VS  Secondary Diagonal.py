@@ -3,8 +3,12 @@
 
 
 def diagonal(matrix):
-    pass
+    principal_diagonal, secondary_diagonal = 0, 0
 
+    for i in range(len(matrix)):
+        principal_diagonal += matrix[i][i]
+        secondary_diagonal += matrix[len(matrix) - 1 - i][i]
+    return principal_diagonal, secondary_diagonal
 
 print(diagonal([[2, 2, 2],
                 [4, 2, 6],
