@@ -1,5 +1,5 @@
 def multiply_and_filter(seq, multiplier):
-    return list(map(lambda n: n * multiplier, filter(lambda item: (isinstance(item, int) or isinstance(item, float)) and not isinstance(item, bool), seq)))
+    return [num * multiplier for num in seq if type(num) in (int, float)]
 
 
 print(multiply_and_filter([1, 2, 3, 4], 1.5), [1.5, 3, 4.5, 6])
