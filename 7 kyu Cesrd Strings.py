@@ -3,7 +3,10 @@
 
 
 def uncensor(infected, discovered):
-    pass
+    s = ''
+    a = iter(discovered)
+    s += str(a)
+    return s
 
 
 print(uncensor('*h*s *s v*ry *tr*ng*', 'Tiiesae'), 'This is very strange')
