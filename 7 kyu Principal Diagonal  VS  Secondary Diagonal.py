@@ -8,7 +8,10 @@ def diagonal(matrix):
     for i in range(len(matrix)):
         principal_diagonal += matrix[i][i]
         secondary_diagonal += matrix[len(matrix) - 1 - i][i]
-    return principal_diagonal, secondary_diagonal
+
+    return "Secondary Diagonal win!" if principal_diagonal < secondary_diagonal else "Principal Diagonal win!" \
+        if principal_diagonal > secondary_diagonal else "Draw!"
+
 
 print(diagonal([[2, 2, 2],
                 [4, 2, 6],
