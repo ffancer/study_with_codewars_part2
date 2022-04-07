@@ -3,10 +3,8 @@
 
 
 def uncensor(infected, discovered):
-    s = ''
-    a = iter(discovered)
-    s += str(a)
-    return s
+    discovered_iter = iter(discovered)
+    return ''.join(next(discovered_iter) if i == '*' else i for i in discovered_iter)
 
 
 print(uncensor('*h*s *s v*ry *tr*ng*', 'Tiiesae'), 'This is very strange')
