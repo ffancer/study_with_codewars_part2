@@ -1,11 +1,5 @@
 def match_arrays(v, r):
-    lst = []
-
-    for i in v:
-        if i in r:
-            lst.append(i)
-
-    return len(lst)
+    return len([i for i in v if i in r])
 
 
 # DON'T remove
