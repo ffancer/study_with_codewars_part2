@@ -1,9 +1,11 @@
 def convert(number):
-    lst = []
-    i = 0
+    lst, i = [], 0
+
     while i < len(number):
-        lst.append(number[i: i+2])
+        lst.append(number[i: i + 2])
         i += 2
+
+    lst = [int(i) for i in lst]
 
     return lst
 
