@@ -1,5 +1,10 @@
 def grid_map(inp, op):
-    pass
+    lst = []
+
+    for i in inp:
+        lst.append(list(map(op, i)))
+
+    return lst
 
 
 num_grid = [[1, 2, 3, 4], [5, 6, 7, 8, 9], [0, 2, 4]]
