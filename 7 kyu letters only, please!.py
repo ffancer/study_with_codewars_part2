@@ -1,11 +1,5 @@
 def remove_chars(s):
-    ans = ''
-
-    for i in s:
-        if i.isalpha() or i == ' ':
-            ans += i
-
-    return ans
+    return ''.join(i for i in s if i.isalpha() or i == ' ')
 
 
 print(remove_chars("test for error!"), "test for error", 'remove_chars("test for error!") did not return correct value')
