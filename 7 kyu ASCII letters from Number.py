@@ -7,7 +7,8 @@ def convert(number):
 
     lst = [int(i) for i in lst]
 
-    return lst
+    return ''.join(chr(i) for i in lst)
+
 
 print(convert("65"), "A")
 print(convert("656667"), "ABC")
