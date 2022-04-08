@@ -1,5 +1,5 @@
 def repeater(string, n):
-    pass
+    return f'"{string}" repeated {n} times is: "{string * n}"'
 
 
 print(repeater('yo', 3), '"yo" repeated 3 times is: "yoyoyo"')
