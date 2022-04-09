@@ -1,18 +1,18 @@
 def password(string):
-    cnt = 0
+    cnt_upper, cnt_lower, cnt_digit = 0, 0, 0
 
-    if len(string) == 8:
-        cnt += 1
+    if len(string) < 8:
+        return False
 
     for i in string:
         if i.isupper():
-            cnt += 1
+            cnt_upper += 1
         elif i.islower():
-            cnt += 1
+            cnt_lower += 1
         elif i.isdigit():
-            cnt += 1
+            cnt_digit += 1
 
-    return cnt >= 4
+    return cnt
 
 
 print(password("Abcd1234"), True)
