@@ -12,7 +12,9 @@ def password(string):
         elif i.isdigit():
             cnt_digit += 1
 
-    return cnt
+    if cnt_upper > 0 and cnt_lower > 0 and cnt_digit > 0:
+        return True
+    return False
 
 
 print(password("Abcd1234"), True)
