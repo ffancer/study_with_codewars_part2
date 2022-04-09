@@ -1,5 +1,9 @@
 def testit(n):
-    pass
+    if n < 2:
+        return 0
+    elif 7 > n >= 2:
+        return n -1
+    elif
 
 
 # n ?
