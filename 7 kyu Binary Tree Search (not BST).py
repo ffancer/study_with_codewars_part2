@@ -11,4 +11,5 @@ class Node:
 
 def search(n: int, root: Optional[Node]) -> bool:
     """ Determines if a value is in a binary tree (NOT bst) """
-    # Your code here!
+
+    return root is not None and (n == root.value or search(n, root.left) or search(n, root.right))
