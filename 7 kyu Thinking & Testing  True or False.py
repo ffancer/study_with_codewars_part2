@@ -1,5 +1,6 @@
 def testit(n):
-    return f'{n:b}'.count('1')
+    return bin(n).count('1')
+
 
 # n ?
 print(testit(0), 0)
