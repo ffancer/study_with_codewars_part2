@@ -1,10 +1,5 @@
 def testit(n):
-    if n < 2:
-        return 0
-    elif 7 > n >= 2:
-        return n -1
-    elif
-
+    return f'{n:b}'.count('1')
 
 # n ?
 print(testit(0), 0)
