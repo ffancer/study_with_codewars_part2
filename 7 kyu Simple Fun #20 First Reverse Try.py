@@ -2,7 +2,7 @@
 # Simple Fun #20: First Reverse Try
 
 def first_reverse_try(arr):
-    pass
+    return arr[1:-1]
 
 
 print(first_reverse_try([1, 2, 3, 4, 5]), [5, 2, 3, 4, 1])
