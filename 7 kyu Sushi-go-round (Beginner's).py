@@ -1,5 +1,5 @@
 def total_bill(s):
-    pass
+    return s.count('r')
 
 
 print(total_bill('rr'), 4)
