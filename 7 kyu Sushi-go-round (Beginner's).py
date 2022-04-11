@@ -1,5 +1,5 @@
 def total_bill(s):
-    return s.count('r')
+    return (s.count('r') - s.count('r') // 5) * 2
 
 
 print(total_bill('rr'), 4)
