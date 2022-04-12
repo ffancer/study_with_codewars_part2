@@ -3,7 +3,8 @@
 
 
 def remove(s):
-    pass
+    symbol_cnt = s.count('H') + s.count('i') + s.count('!')
+    return symbol_cnt
 
 
 print(remove('Hi!'), '')
