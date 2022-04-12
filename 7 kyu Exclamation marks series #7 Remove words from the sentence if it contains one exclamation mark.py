@@ -3,18 +3,7 @@
 
 
 def remove(s):
-    s_copy = s[:]
-    s = s.split()
-    lst = []
-
-    for i in s:
-        lst.append(i.count('H') + i.count('i') + i.count('!'))
-
-    lst = [i % 3 for i in lst]
-
-    if list(set(lst)) == [0]:
-        return ''
-    return s_copy
+    return ' '.join(i for i in s.split() if i.count('!') != 1)
 
 
 print(remove('Hi!'), '')
