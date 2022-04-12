@@ -3,6 +3,7 @@
 
 
 def remove(s):
+    s_copy = s[:]
     s = s.split()
     lst = []
 
@@ -11,7 +12,9 @@ def remove(s):
 
     lst = [i % 3 for i in lst]
 
-    return lst
+    if list(set(lst)) == [0]:
+        return ''
+    return s_copy
 
 
 print(remove('Hi!'), '')
