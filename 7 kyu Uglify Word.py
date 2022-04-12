@@ -1,15 +1,16 @@
 def uglify_word(s):
-    s_lower, s_upper = s.lower(), s.upper()
-    lst = []
-    if s == s.lower() and '-' in s:
-        s = s.split('-')
-        for i in s:
-            for j in range(len(i)):
-                if j % 2 == 0:
-                    lst.append(i[j].upper())
-                else:
-                    lst.append(i[j].lower())
-    return lst
+    flag, lst = True, []
+
+    for i in s:
+        if not i.isalpha():
+            flag = False
+        else:
+            i = i.upper() if flag else i.lower()
+        flag = not flag
+        lst.append(i)
+
+    return ''.join(lst)
+
 
 print(uglify_word("AAA"), "AaA")
 print(uglify_word("AaA"), "AaA")
