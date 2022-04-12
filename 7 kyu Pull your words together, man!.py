@@ -1,5 +1,5 @@
 def sentencify(words):
-    pass
+    return ' '.join(words) + '.'
 
 
 print(sentencify(["i", "am", "an", "AI"]), "I am an AI.")
