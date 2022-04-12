@@ -1,5 +1,7 @@
 def sentencify(words):
     for i in words:
+        if words[0] == "i'm":
+            words[0] = "I'm"
         if words[0].islower():
             words[0] = words[0].title()
     return ' '.join(words) + '.'
