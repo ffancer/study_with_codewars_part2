@@ -1,7 +1,7 @@
 def eliminate_unset_bits(number):
     if number.count('1') < 1:
         return 0
-    return number.replace('0', '')
+    return int(number.replace('0', ''), 2)
 
 
 print(eliminate_unset_bits("11010101010101"), 255)
