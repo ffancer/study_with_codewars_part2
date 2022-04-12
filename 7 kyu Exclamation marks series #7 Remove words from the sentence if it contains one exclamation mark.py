@@ -3,8 +3,11 @@
 
 
 def remove(s):
-    symbol_cnt = s.count('H') + s.count('i') + s.count('!')
-    return symbol_cnt
+    s = s.split()
+    lst = []
+    for i in s:
+        lst.append(i.count('H') + i.count('i') + i.count('!'))
+    return lst
 
 
 print(remove('Hi!'), '')
