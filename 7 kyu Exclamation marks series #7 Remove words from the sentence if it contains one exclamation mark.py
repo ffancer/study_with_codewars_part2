@@ -5,8 +5,12 @@
 def remove(s):
     s = s.split()
     lst = []
+
     for i in s:
         lst.append(i.count('H') + i.count('i') + i.count('!'))
+
+    lst = [i % 3 for i in lst]
+
     return lst
 
 
