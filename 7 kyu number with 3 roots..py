@@ -1,6 +1,5 @@
 def perfect_roots(n):
-    # your code here
-    pass
+    return pow(n, 2)
 
 
 print(perfect_roots(256), True)
