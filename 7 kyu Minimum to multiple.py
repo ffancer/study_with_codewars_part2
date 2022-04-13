@@ -1,9 +1,5 @@
 def minimum(a, x):
-    i = 1
-    while a % x != 0:
-        a += i
-        # i += 1
-    return a - i
+    return abs(a - round(a / x) * x)
 
 
 print(minimum(1, 1), 0)
