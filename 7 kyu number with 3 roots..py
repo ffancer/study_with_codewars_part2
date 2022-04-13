@@ -1,10 +1,8 @@
+from math import sqrt
+
+
 def perfect_roots(n):
-    i,j = 1, 1
-    while i != n:
-        i=** j
-        if i < n:
-            j += 1
-    return i, j
+    return (sqrt(sqrt(sqrt(n)))) % 1 == 0
 
 
 print(perfect_roots(256), True)
