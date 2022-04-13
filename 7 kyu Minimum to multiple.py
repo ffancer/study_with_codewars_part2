@@ -1,5 +1,9 @@
 def minimum(a, x):
-    pass
+    i = 1
+    while a % x != 0:
+        a += i
+        # i += 1
+    return a - i
 
 
 print(minimum(1, 1), 0)
