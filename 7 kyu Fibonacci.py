@@ -1,7 +1,9 @@
-def fibonacci(n: int) -> int:
-    """Given a positive argument n, returns the nth term of the Fibonacci Sequence.
-    """
-    return 0
+def fibonacci(n):
+    total = 0
+
+    for i in range(2, n):
+        total += i
+    return total
 
 
 print(fibonacci(0), 0)
