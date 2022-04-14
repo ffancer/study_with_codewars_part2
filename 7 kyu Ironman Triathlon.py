@@ -1,5 +1,6 @@
 def i_tri(s):
-    pass
+    if s <= 2:
+        return {'Swim': f'{str(140.6 - s).ljust(6, "0")} to go!'}
 
 
 print(i_tri(36), {'Bike': '104.60 to go!'})
