@@ -1,5 +1,12 @@
 def is_pronic(n):
-    pass
+    flag = False
+
+    for j in range(1, n + 1):
+        if j * (j + 1) == n:
+            flag = True
+            break
+
+    return flag
 
 
 print(is_pronic(0), True, '0 is a Pronic Number')
