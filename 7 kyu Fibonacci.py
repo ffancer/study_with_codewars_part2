@@ -1,9 +1,9 @@
 def fibonacci(n):
-    total = 0
+    fib1, fib2 = 1, 1
 
     for i in range(2, n):
-        total += i
-    return total
+        fib1, fib2 = fib2, fib1 + fib2
+    return fib2
 
 
 print(fibonacci(0), 0)
