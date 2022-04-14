@@ -1,13 +1,5 @@
 def vowel_change(txt, vow):
-    s = ''
-
-    for i in txt:
-        if i in 'aeiou':
-            s += vow
-        else:
-            s += i
-
-    return s
+    return ''.join(i if i not in 'aeiou' else vow for i in txt)
 
 
 print(vowel_change("hannah hannah bo-bannah banana fanna fo-fannah fee, fy, mo-mannah. hannah!", 'i'),
