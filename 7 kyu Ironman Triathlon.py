@@ -1,9 +1,12 @@
 def i_tri(s):
-    if s <= 2.4:
-        return {'Swim': f'{str(140.6 - s).ljust(6, "0")} to go!'}
-    if 112 >= s > 2.4:
-        return {'Bike': f'{str(round(140.6 - s, 2)).ljust(6, "0")}'}
-    if s > 112:
+    if not s:
+        return 'Starting Line... Good Luck!'
+    elif s >= 140.6:
+        return "You're done! Stop running!"
+
+    item_1 = 'Swim' if s <= 2.4 else 'Bike' if s <= 114.4 else 'Run'
+    item_2 = 'Nearly there!' if s >= 130.6 else '{0:.2f} to go!'.format(140.6 - s)
+    return {item_1: item_2}
 
 
 print(i_tri(36), {'Bike': '104.60 to go!'})
