@@ -1,5 +1,4 @@
 def vowel_change(txt, vow):
-    # vowels = 'aeiou'
     s = ''
 
     for i in txt:
