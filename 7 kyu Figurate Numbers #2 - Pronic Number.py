@@ -1,4 +1,7 @@
 def is_pronic(n):
+    if n == 0:
+        return True
+
     flag = False
 
     for j in range(1, n + 1):
