@@ -1,8 +1,8 @@
 class Node(object):
-    def __init__(self, data):
+    def __init__(self, data, next=None):
         self.data = data
-        self.next = None
+        self.next = next
+
 
 def append(listA, listB):
-    # Your code goes here.
-    # Remember to return the head of the list.
+    return Node(listA.data, append(listA.next, listB)) if listA else listB
