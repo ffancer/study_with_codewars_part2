@@ -3,14 +3,8 @@
 
 
 def sc(apple):
-    lst = []
+    return [[i, j.index('B')] for i, j in enumerate(apple) if 'B' in j][0]
 
-    for i,j in enumerate(apple):
-        if 'B' in j:
-            lst.append(i)
-            lst.append(j.index('B'))
-
-    return lst
 
 apple = [
     ["B", "A", "A", "A", "A"],
