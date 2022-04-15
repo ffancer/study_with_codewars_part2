@@ -1,5 +1,5 @@
 def filter_numbers(string):
-    return "".join(x for x in string if int(x))
+    return "".join(x for x in string if x.isalpha() or x == ' ')
 
 
 print(filter_numbers("test123"), 'test', 'Just return the string')
