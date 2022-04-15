@@ -3,8 +3,12 @@
 
 
 def sc(apple):
-    pass
-
+    lst = []
+    for i,j in enumerate(apple):
+        if 'B' in j:
+            lst.append(i)
+        # print(i, j)
+    return lst
 
 apple = [
     ["B", "A", "A", "A", "A"],
