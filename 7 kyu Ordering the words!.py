@@ -1,5 +1,5 @@
 def order_word(s):
-    return ''.join(sorted(s))
+    return "Invalid String!" if not s else ''.join(sorted(s))
 
 
 print(order_word("Hello, World!"), " !,HWdellloor")
