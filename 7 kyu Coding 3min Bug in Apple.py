@@ -4,10 +4,12 @@
 
 def sc(apple):
     lst = []
+
     for i,j in enumerate(apple):
         if 'B' in j:
             lst.append(i)
-        # print(i, j)
+            lst.append(j.index('B'))
+
     return lst
 
 apple = [
