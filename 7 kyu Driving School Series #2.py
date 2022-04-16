@@ -1,5 +1,7 @@
+from math import floor
 def cost(mins):
-    return 10 * ((mins + 54) // 30)
+    a = 0 if mins % 30 <= 5 else 1
+    return a
 
 
 print(cost(45), 30)
