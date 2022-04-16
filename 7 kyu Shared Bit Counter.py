@@ -1,5 +1,8 @@
 def shared_bits(a, b):
-    return bin(a)[2:], bin(b)[2:]
+    lst_a, lst_b = [], []
+    # bin(b)[2:]
+    # for i in bin(a)[2:]:
+    return list(bin(a)[2:]), list(bin(b)[2:])
 
 
 print(shared_bits(1, 2), False)
