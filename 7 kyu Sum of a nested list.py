@@ -1,5 +1,8 @@
 def sum_nested(lst):
-    return  # the sum of every numerical value in the list and its sublists
+    flat_list = [item for sublist in lst for item in sublist]
+    return flat_list
+
+
 
 
 print(sum_nested([1]), 1)
