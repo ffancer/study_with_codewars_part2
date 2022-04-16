@@ -13,10 +13,9 @@
 
 
 def shared_bits(a, b):
-  b_set = set(list(bin(b)[2:]))
-  return [i for i, v in enumerate(list(bin(a)[2:])) if v in b_set and v == '1']
-
-
+  a, b = bin(a)[2:], bin(b)[2:]
+  dct_a, dct_b = {i: a[i] for i in range(len(a))}, {i: b[i] for i in range(len(b))}
+  return dct_a, dct_b
 
 print(shared_bits(1, 2), False)
 print(shared_bits(16, 8), False)
