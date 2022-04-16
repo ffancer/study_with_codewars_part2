@@ -1,8 +1,5 @@
-from math import floor
-
-
 def remainder(dividend, divisor):
-    return dividend - (floor(dividend / divisor) * divisor)
+    return dividend - (dividend // divisor) * divisor
 
 
 print(remainder(3, 2), 1)
