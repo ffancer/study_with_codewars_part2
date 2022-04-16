@@ -1,16 +1,20 @@
+# def shared_bits(a, b):
+#     lst_a, lst_b = list(bin(a)[2:]), list(bin(b)[2:])
+#     # lst_a = [int(i) for i in lst_a]
+#     # lst_b = [int(i) for i in lst_b]
+#     cnt = 0
+#     # for i in range(len(lst_a)):
+#     #     for j in range(len(lst_b)):
+#     #         if lst_a[i] == lst_b[j] == 1:
+#     #             cnt += 1
+#
+#     # matches = list(i for i in zip(lst_a, lst_b))
+#     # return matches
+
+
 def shared_bits(a, b):
-    lst_a, lst_b = list(bin(a)[2:]), list(bin(b)[2:])
-    # lst_a = [int(i) for i in lst_a]
-    # lst_b = [int(i) for i in lst_b]
-    cnt = 0
-    # for i in range(len(lst_a)):
-    #     for j in range(len(lst_b)):
-    #         if lst_a[i] == lst_b[j] == 1:
-    #             cnt += 1
-
-    matches = list(i for i in zip(lst_a, lst_b))
-
-    return matches
+  b_set = set(list(bin(b)[2:]))
+  return [i for i, v in enumerate(list(bin(a)[2:])) if v in b_set and v == '1']
 
 
 
