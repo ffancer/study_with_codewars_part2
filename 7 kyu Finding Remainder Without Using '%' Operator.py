@@ -1,5 +1,6 @@
 def remainder(dividend, divisor):
-    pass
+    # return dividend - (dividend / divisor)
+    return divisor - (dividend / divisor)
 
 
 print(remainder(3, 2), 1)
