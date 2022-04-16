@@ -1,8 +1,10 @@
 from math import floor
+
+
 def cost(mins):
     a = 0 if mins % 30 <= 5 else 1
     total = floor(mins / 30) + a
-    return total
+    return max(30, 30 + (total - 2) * 10)
 
 
 print(cost(45), 30)
