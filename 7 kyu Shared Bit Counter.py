@@ -1,26 +1,5 @@
-# def shared_bits(a, b):
-#     lst_a, lst_b = list(bin(a)[2:]), list(bin(b)[2:])
-#     # lst_a = [int(i) for i in lst_a]
-#     # lst_b = [int(i) for i in lst_b]
-#     cnt = 0
-#     # for i in range(len(lst_a)):
-#     #     for j in range(len(lst_b)):
-#     #         if lst_a[i] == lst_b[j] == 1:
-#     #             cnt += 1
-#
-#     # matches = list(i for i in zip(lst_a, lst_b))
-#     # return matches
-
-
 def shared_bits(a, b):
-    a, b = bin(a)[2:], bin(b)[2:]
-    dct_a, dct_b = {i: a[i] for i in range(len(a))}, {i: b[i] for i in range(len(b))}
-    lst = []
-    for i in dct_a.values():
-        for j in dct_b.values():
-            if i == j:
-              print('gg')
-    return lst
+    return bin(a & b).count('1') > 1
 
 
 print(shared_bits(1, 2), False)
