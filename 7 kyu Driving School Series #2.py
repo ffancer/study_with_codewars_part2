@@ -1,5 +1,5 @@
 def cost(mins):
-    return
+    return 10 * ((mins + 54) // 30)
 
 
 print(cost(45), 30)
