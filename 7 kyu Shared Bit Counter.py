@@ -1,5 +1,5 @@
 def shared_bits(a, b):
-    return
+    return bin(a)[2:], bin(b)[2:]
 
 
 print(shared_bits(1, 2), False)
