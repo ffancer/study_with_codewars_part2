@@ -13,9 +13,15 @@
 
 
 def shared_bits(a, b):
-  a, b = bin(a)[2:], bin(b)[2:]
-  dct_a, dct_b = {i: a[i] for i in range(len(a))}, {i: b[i] for i in range(len(b))}
-  return dct_a, dct_b
+    a, b = bin(a)[2:], bin(b)[2:]
+    dct_a, dct_b = {i: a[i] for i in range(len(a))}, {i: b[i] for i in range(len(b))}
+    lst = []
+    for i in dct_a.values():
+        for j in dct_b.values():
+            if i == j:
+              print('gg')
+    return lst
+
 
 print(shared_bits(1, 2), False)
 print(shared_bits(16, 8), False)
