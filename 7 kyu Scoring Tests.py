@@ -4,6 +4,8 @@ def score_test(tests, right, omit, wrong):
     for i in tests:
         if i == 0:
             total += right
+        elif i == 1:
+            total += omit
         elif i == 2:
             total -= wrong
 
