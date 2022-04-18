@@ -2,7 +2,7 @@ from math import factorial as fact
 
 
 def factorial(n):
-    return fact(n)
+    return fact(n) if n >= 0 else None
 
 
 print(factorial(1), 1)
