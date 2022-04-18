@@ -1,6 +1,8 @@
+from math import factorial as fact
+
+
 def factorial(n):
-    # do it
-    return None
+    return fact(n)
 
 
 print(factorial(1), 1)
