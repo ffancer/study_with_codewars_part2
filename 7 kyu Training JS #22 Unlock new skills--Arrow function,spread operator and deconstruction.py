@@ -2,8 +2,10 @@
 # Training JS #22: Unlock new skills--Arrow function,spread operator and deconstruction
 
 
-def shuffle_it(*args):
-    pass
+def shuffle_it(lst, *args):
+    for i in args:
+        lst[i[0]], lst[i[1]] = lst[i[1]], lst[i[0]]
+    return lst
 
 
 print(shuffle_it([1, 2, 3, 4, 5], [1, 2]), [1, 3, 2, 4, 5])
