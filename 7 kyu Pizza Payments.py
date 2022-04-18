@@ -2,7 +2,7 @@ def michael_pays(costs):
     if costs <= 5 or costs >= 15:
         return costs
     else:
-        return round(costs + (costs / 0.3), 2)
+        return round(costs - (costs * (1/3)), 2)
 
 
 
