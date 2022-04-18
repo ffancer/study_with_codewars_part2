@@ -1,5 +1,9 @@
 def michael_pays(costs):
-    pass
+    if costs <= 5 or costs >= 15:
+        return costs
+    else:
+        return round(costs + (costs / 0.3), 2)
+
 
 
 print(michael_pays(15), 10)
