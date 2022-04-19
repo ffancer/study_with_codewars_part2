@@ -1,6 +1,10 @@
 def add(*args):
-    for i,j in enumerate(args, 1):
-        print(i, j)
+    total = 0
+
+    for i, j in enumerate(args, 1):
+        total += i * j
+
+    return total
 
 
 print(add(), 0, 'No arguments should return 0')
