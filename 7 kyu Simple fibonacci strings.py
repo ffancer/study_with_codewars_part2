@@ -1,5 +1,10 @@
 def solve(n):
-    pass
+    ans = ''
+
+    for i in range(0, n+1):
+        ans += bin(i)[2:]
+
+    return ans
 
 
 print(solve(0), '0')
