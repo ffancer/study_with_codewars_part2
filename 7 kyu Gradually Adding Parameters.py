@@ -1,5 +1,6 @@
 def add(*args):
-    pass
+    for i,j in enumerate(args, 1):
+        print(i, j)
 
 
 print(add(), 0, 'No arguments should return 0')
