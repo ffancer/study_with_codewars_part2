@@ -1,10 +1,10 @@
 def solve(n):
-    ans = ''
+    i, j = '01'
 
-    for i in range(0, n+1):
-        ans += bin(i)[2:]
+    for k in range(n):
+        i, j = i + j, i
 
-    return ans
+    return i
 
 
 print(solve(0), '0')
