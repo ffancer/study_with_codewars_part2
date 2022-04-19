@@ -1,8 +1,5 @@
 def avg_array(arrs):
-    lst = []
-
-    for i,j in enumerate(arrs):
-        print(i, j)
+    return [sum(a)/len(a) for a in zip(*arrs)]
 
 
 print(avg_array([[1, 2, 3, 4], [5, 6, 7, 8]]), [3, 4, 5, 6])
