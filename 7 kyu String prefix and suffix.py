@@ -1,5 +1,8 @@
 def solve(st):
-    pass
+    s = len(st)
+
+    for i in range(s // 2, 0, -1):
+        print(i)
 
 
 print(solve("abcd"), 0)
