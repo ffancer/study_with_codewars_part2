@@ -1,6 +1,6 @@
 # return a sorted set with the difference
 def diff(a, b):
-    return sorted(set(a).symmetric_difference(b))
+    return sorted(set(a) ^ set(b))
 
 
 print(diff(['a', 'b'], ['a', 'b']), [])
