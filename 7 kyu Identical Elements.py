@@ -1,5 +1,9 @@
 def duplicate_elements(m, n):
-    pass
+    for i in m:
+        for j in n:
+            if i == j:
+                return True
+    return False
 
 
 print(duplicate_elements([1, 2, 3, 4, 5], [1, 6, 7, 8, 9]), True)
