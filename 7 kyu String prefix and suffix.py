@@ -2,7 +2,9 @@ def solve(st):
     s = len(st)
 
     for i in range(s // 2, 0, -1):
-        print(i)
+        prefix = st[:i]
+        suffix = st[i:]
+        print(suffix)
 
 
 print(solve("abcd"), 0)
