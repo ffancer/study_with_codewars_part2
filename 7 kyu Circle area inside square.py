@@ -1,6 +1,10 @@
+from cmath import pi
+from math import sqrt
+
+
 def square_area_to_circle(size):
-    pass
+    return (sqrt(size) / 2) ** 2 * pi
 
 
-print(square_area_to_circle(9), 8), round(7.0685834705770345, 8)
-print(square_area_to_circle(20), 8), round(15.70796326794897, 8)
+print(square_area_to_circle(9))
+print(square_area_to_circle(20))
