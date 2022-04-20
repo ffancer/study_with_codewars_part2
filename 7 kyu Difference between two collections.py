@@ -1,12 +1,7 @@
 # return a sorted set with the difference
 def diff(a, b):
-    lst = []
-    for i in list(set(a)):
-        if i in list(set(b)):
-            pass
-        else:
-            lst.append(i)
-    return lst
+    return sorted(set(a).symmetric_difference(b))
+
 
 print(diff(['a', 'b'], ['a', 'b']), [])
 a = ['a', 'b']
