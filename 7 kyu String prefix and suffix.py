@@ -3,12 +3,12 @@ def solve(st):
 
     for i in range(s // 2, 0, -1):
         prefix = st[:i]
-        suffix = st[s-i:s]
-        print(suffix)
-    #     if prefix == suffix:
-    #         return i
-    #
-    # return 0
+        suffix = st[s - i:s]
+
+        if prefix == suffix:
+            return i
+
+    return 0
 
 
 print(solve("abcd"), 0)
