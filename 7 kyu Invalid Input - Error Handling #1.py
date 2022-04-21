@@ -1,16 +1,14 @@
 def get_count(words):
-    if not words:
-        return '"vowels": 0, "consonants": 0'
-    cnt_vowels, cnt_consonants = 0, 0
-    vowels = 'aeiouAEIOU'
-    ans = f'"vowels": {cnt_vowels}, "consonants": {cnt_consonants}'
+    ans = {'vowels': 0, 'consonants': 0}
+    if not words or not isinstance(words, str):
+        return ans
 
-    for i in words:
-        if i in vowels:
-            cnt_vowels += 1
-        else:
-            cnt_consonants += 1
-    return ans
+    # for i in words:
+    #     if i in vowels:
+    #         cnt_vowels += 1
+    #     else:
+    #         cnt_consonants += 1
+    # return ans
 
 
 
