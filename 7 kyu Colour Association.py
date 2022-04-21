@@ -1,5 +1,8 @@
 def colour_association(arr):
-    pass
+    dct = {}
+
+    for i in arr:
+        print(i[0])
 
 
 print(colour_association([["white", "goodness"], ["blue", "tranquility"]]),
