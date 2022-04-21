@@ -1,5 +1,7 @@
 def get_count(words):
-    pass
+    cnt_vowels, cnt_consonants = 0, 0
+    vowels = 'aeiouAEIOU'
+    ans = f'"vowels": {cnt_vowels}, "consonants": {cnt_consonants}'
 
 
 print(get_count('Test'), {"vowels": 1, "consonants": 3}, 'Should return 1 vowel and 3 consonants')
