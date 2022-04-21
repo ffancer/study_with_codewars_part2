@@ -1,5 +1,5 @@
 def find_missing(arr1, arr2):
-    pass
+    return list(set(arr1)), list(set(arr2))
 
 
 print(find_missing([1, 2, 3], [1, 3]), 2)
