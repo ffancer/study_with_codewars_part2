@@ -1,5 +1,10 @@
 def find_missing(arr1, arr2):
-    return list(set(arr1)), list(set(arr2))
+    k, j = 0, 0
+    for i in list(set(arr1)):
+        if i not in list(set(arr2)):
+            k = i
+
+    return k
 
 
 print(find_missing([1, 2, 3], [1, 3]), 2)
