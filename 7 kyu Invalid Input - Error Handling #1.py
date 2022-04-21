@@ -1,14 +1,14 @@
 def get_count(words):
-    ans = {'vowels': 0, 'consonants': 0}
-    if not words or not isinstance(words, str):
-        return ans
+    try:
+        if not words or not isinstance(words, str):
+            return {'vowels': 0, 'consonants': 0}
+        ans = {'vowels': 0, 'consonants': 0}
 
-    # for i in words:
-    #     if i in vowels:
-    #         cnt_vowels += 1
-    #     else:
-    #         cnt_consonants += 1
-    # return ans
+        ans['vowels'] = sum(1 for i in words if i in 'aeiouAEIOU')
+        ans['consonants'] = sum(1 for i in words if i not in 'aeiouAEIOU' and i.isalpha())
+        return ans
+    except:
+        return {'vowels': 0, 'consonants': 0}
 
 
 
