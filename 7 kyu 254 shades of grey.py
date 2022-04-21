@@ -1,5 +1,6 @@
 def shades_of_grey(n):
-    return '''n shades of grey in an array'''
+    if n <= 0:
+        return []
 
 
 print(shades_of_grey(-2), [])
