@@ -3,14 +3,7 @@
 
 
 def format_poem(poem):
-    lst = []
-
-    for i in poem.split('.'):
-        lst.append(i.lstrip())
-
-    if '!' in poem:
-        '.\n'.join(lst) + '!'
-    return '.\n'.join(lst)[:-1]
+    return poem.replace('. ', '.\n')
 
 
 print(format_poem(
