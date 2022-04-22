@@ -14,9 +14,12 @@ def skiponacci(n):
         else:
             ans.append('skip')
 
+    if n == 1:
+        return '1'
     return ' '.join(str(i) for i in ans)
 
 
 print(skiponacci(1), "1")
+print(skiponacci(2), "1 skip")
 print(skiponacci(5), "1 skip 2 skip 5")
 print(skiponacci(7), "1 skip 2 skip 5 skip 13")
