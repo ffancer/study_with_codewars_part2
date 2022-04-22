@@ -1,8 +1,9 @@
 def combine(*args):
     dct = {}
 
-    for i in args:
-        dct.update(i)
+    for b in args:
+        for i, j in b.items():
+            dct[i] = j + dct.get(i, 0)
 
     return dct
 
