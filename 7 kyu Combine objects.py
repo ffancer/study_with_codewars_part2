@@ -1,6 +1,10 @@
 def combine(*args):
-    # your code here
-    pass
+    dct = {}
+
+    for i in args:
+        dct.update(i)
+
+    return dct
 
 
 objA = {'a': 10, 'b': 20, 'c': 30}
