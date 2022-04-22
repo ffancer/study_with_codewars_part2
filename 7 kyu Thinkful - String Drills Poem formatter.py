@@ -4,9 +4,13 @@
 
 def format_poem(poem):
     lst = []
+
     for i in poem.split('.'):
         lst.append(i.lstrip())
-    return lst
+
+    if '!' in poem:
+        '.\n'.join(lst) + '!'
+    return '.\n'.join(lst)[:-1]
 
 
 print(format_poem(
