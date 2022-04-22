@@ -1,14 +1,14 @@
 def skiponacci(n):
-    fib1, fib2 = 1, 1
-    s = ''
-    i = 0
+    fib1, fib2, lst, i, ans = 1, 1, [], 0, [1]
+
     while i < n - 2:
         fib_sum = fib1 + fib2
         fib1 = fib2
         fib2 = fib_sum
+        lst.append(fib2)
         i = i + 1
-        s += str(fib2) + ' '
-    return s
+
+    return lst
 
 
 print(skiponacci(1), "1")
