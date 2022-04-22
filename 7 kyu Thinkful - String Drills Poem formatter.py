@@ -3,7 +3,7 @@
 
 
 def format_poem(poem):
-    return poem.split('.')
+    return '.\n'.join(poem.split('.'))
 
 
 print(format_poem(
