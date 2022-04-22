@@ -1,5 +1,7 @@
 def computer_to_phone(numbers):
-    pass
+    dct = {'1': '7', '2': '8', '3': '9', '7': '1', '8': '2', '9': '3'}
+
+
 
 
 print(computer_to_phone("0789456123"), "0123456789")
