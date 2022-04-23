@@ -1,5 +1,8 @@
 def am_I_afraid(day, num):
-    pass
+    dct = {'Monday': num == 12, 'Tuesday': num > 95, 'Wednesday': num == 34, 'Thursday': num == 0,
+           'Friday': num % 2 == 0, 'Saturday': num == 56, 'Sunday': abs(num) == 666}
+
+    return dct.get(day)
 
 
 print(am_I_afraid("Monday", 13), False, 'Should return false')
