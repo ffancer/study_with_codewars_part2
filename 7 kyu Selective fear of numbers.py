@@ -1,6 +1,5 @@
 def am_I_afraid(day, num):
-    dct = {'Monday': 12, 'Tuesday': num > 95, 'Wednesday': 34, 'Thursday': 0,
-           'Friday': num % 2 == 0, 'Saturday': 56, 'Sunday': abs(num) == 666}
+    pass
 
 
 print(am_I_afraid("Monday", 13), False, 'Should return false')
