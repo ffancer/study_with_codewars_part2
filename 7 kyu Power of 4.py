@@ -1,5 +1,8 @@
+from math import log
+
+
 def powerof4(n):
-    pass
+    return log(n) / log(4)
 
 
 print(powerof4(4), True, "Wrong result for 4")
