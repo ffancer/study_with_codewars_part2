@@ -1,5 +1,7 @@
 def add(a):
-    return
+    def add_b(b):
+        return a + b
+    return add_b
 
 
 print(callable(add(32)), "The first call did not return a function")
