@@ -1,5 +1,5 @@
 def words_to_sentence(words):
-    pass
+    return ' '.join(words)
 
 
 print(words_to_sentence(['bacon', 'is', 'delicious']), 'bacon is delicious')
