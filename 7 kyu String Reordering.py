@@ -1,11 +1,12 @@
-def sentence(List):
-    lst = []
-    for i in List:
-        for j in i.keys():
-            j = int(j)
+def sentence(lst):
+    return sorted(lst)
 
-    for i in List:
-        print(i)
+
+def sentence(input):
+    pairs = [list(*x.items()) for x in input]
+    ordered = sorted(pairs, key=lambda k: int(k[0]))
+    return ' '.join(word for i, word in ordered)
+
 
 List = [
     {'4': 'dog'}, {'2': 'took'}, {'3': 'his'},
