@@ -1,6 +1,11 @@
 def sentence(List):
-    pass
+    lst = []
+    for i in List:
+        for j in i.keys():
+            j = int(j)
 
+    for i in List:
+        print(i)
 
 List = [
     {'4': 'dog'}, {'2': 'took'}, {'3': 'his'},
