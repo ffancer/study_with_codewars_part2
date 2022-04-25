@@ -1,12 +1,5 @@
-def sentence(lst):
-    return sorted(lst)
-
-
-def sentence(input):
-    pairs = [list(*x.items()) for x in input]
-    ordered = sorted(pairs, key=lambda k: int(k[0]))
-    return ' '.join(word for i, word in ordered)
-
+def sentence(ds):
+    return ' '.join(v for _, v in sorted((int(k), v) for d in ds for k, v in d.items()))
 
 List = [
     {'4': 'dog'}, {'2': 'took'}, {'3': 'his'},
