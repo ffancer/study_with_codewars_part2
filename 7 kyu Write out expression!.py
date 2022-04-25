@@ -1,13 +1,13 @@
 def expression_out(exp):
-    dct = {'1': 'One', '2': 'Two', '3': 'Three', '4': 'Four', '5': 'Five', '6': 'Six', '7': 'Seven', '8': 'Eight',
-           '9': 'Nine', 0: 'Zero', "+": "Plus", "-": "Minus", "*": "Times", "/": "Divided By", "**": "To The Power Of",
+    dct = {'0': 'Zero', '1': 'One', '2': 'Two', '3': 'Three', '4': 'Four', '5': 'Five', '6': 'Six', '7': 'Seven', '8': 'Eight',
+           '9': 'Nine', '10': 'Ten', "+": "Plus", "-": "Minus", "*": "Times", "/": "Divided By", "**": "To The Power Of",
            "=": "Equals", "!=": "Does Not Equal"}
-    s = ''
+    lst = []
 
-    for i in exp:
+    for i in exp.split():
         if i in dct.keys():
-            s += dct[i]
-    return s
+            lst.append(dct[i])
+    return ' '.join(lst)
 
 
 print(expression_out('1 + 3'), 'One Plus Three')
