@@ -1,13 +1,10 @@
-from math import pow
-
-
 def strong_enough(earthquake, age):
     total = 1
 
     for i in earthquake:
         total *= sum(i)
 
-    return "Safe!" if total <= 1000 * pow(0.99, age) else "Needs Reinforcement!"
+    return "Safe!" if total <= 1000 * 0.99 ** age else "Needs Reinforcement!"
 
 
 print(strong_enough([[2, 3, 1], [3, 1, 1], [1, 1, 2]], 2), "Safe!")
