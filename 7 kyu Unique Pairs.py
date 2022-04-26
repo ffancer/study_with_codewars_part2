@@ -1,5 +1,9 @@
+"""
+Сегодня 40 дней
+"""
+
 def projectPartners(n):
-    pass
+    return (n * (n - 1)) // 2
 
 
 print(projectPartners(2), 1)
