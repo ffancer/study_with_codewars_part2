@@ -1,6 +1,13 @@
 def alternate_sq_sum(arr):
+    total = 0
+
     for i, j in enumerate(arr):
-        print(i, j)
+        if i % 2 == 0:
+            total += j
+        else:
+            total += j ** 2
+
+    return total
 
 
 print(alternate_sq_sum([]), 0)
