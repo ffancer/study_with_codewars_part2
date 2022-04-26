@@ -1,5 +1,6 @@
 def alternate_sq_sum(arr):
-    return
+    for i, j in enumerate(arr):
+        print(i, j)
 
 
 print(alternate_sq_sum([]), 0)
