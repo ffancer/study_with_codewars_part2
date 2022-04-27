@@ -5,8 +5,9 @@ from math import hypot
 
 
 def vector_length(vector):
-    return hypot((vector[0]-vector[2]),(vector[1]-vector[3]))
-
+    # x1, x2, y1, y2 = vector[0], vector[2], vector[1], vector[3]
+    # return hypot(x1)
+    return vector[1]
 
 print(vector_length([[0, 1], [0, 0]]), 1)
 print(vector_length([[0, 3], [4, 0]]), 5)
