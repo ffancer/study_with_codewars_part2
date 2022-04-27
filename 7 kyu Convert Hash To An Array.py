@@ -1,5 +1,8 @@
 def convert_hash_to_array(hash):
-    pass
+    lst = []
+
+    for i, j in hash.items():
+        print(i, j)
 
 
 print(convert_hash_to_array({"name": "Jeremy"}), [["name", "Jeremy"]])
