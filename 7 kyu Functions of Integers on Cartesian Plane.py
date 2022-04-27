@@ -17,7 +17,7 @@ def sumax(n):
 
 
 def sumsum(n):
-    pass
+    return sumin(n) + sumax(n)
 
 
 print(sumin(5), 55)
