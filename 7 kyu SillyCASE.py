@@ -1,9 +1,6 @@
-from math import ceil
-
-
 def sillycase(silly):
-    mid = ceil(len(silly) / 2)
-    return silly[:mid].lower() + silly[mid:].upper()
+    half = (len(silly) + 1) // 2
+    return silly[:half].lower() + silly[half:].upper()
 
 
 print(sillycase('foobar'), "fooBAR")
