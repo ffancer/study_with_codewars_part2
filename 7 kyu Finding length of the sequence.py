@@ -1,5 +1,7 @@
 def length_of_sequence(arr, n):
-    pass
+    if arr.count(n) == 1:
+        return 0
+    return arr.index(n)
 
 
 print(length_of_sequence([1, 1], 1), 2, 'Returns two when there are only two elements in the array')
