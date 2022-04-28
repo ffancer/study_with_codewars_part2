@@ -1,5 +1,5 @@
 def sillycase(silly):
-    pass
+    return silly[:len(silly)//2]
 
 
 print(sillycase('foobar'), "fooBAR")
