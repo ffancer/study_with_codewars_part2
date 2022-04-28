@@ -1,14 +1,14 @@
 def length_of_sequence(arr, n):
-    if arr.count(n) == 1:
+    if arr.count(n) != 2:
         return 0
 
     cnt = []
+
     for i in range(len(arr)):
         if arr[i] == n:
             cnt.append(i)
 
-    # return count[1] - count[0] + 1
-    return cnt
+    return cnt[1] - cnt[0] + 1
 
 
 print(length_of_sequence([1, 1], 1), 2, 'Returns two when there are only two elements in the array')
