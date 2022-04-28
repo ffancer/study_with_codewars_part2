@@ -1,5 +1,7 @@
 def sillycase(silly):
-    return silly[:len(silly)//2]
+    if len(silly) % 2 != 0:
+        return silly[:(len(silly) // 2)].lower() + silly[len(silly) // 2:].upper()
+    return silly[:len(silly) // 2].lower() + silly[len(silly) // 2:].upper()
 
 
 print(sillycase('foobar'), "fooBAR")
