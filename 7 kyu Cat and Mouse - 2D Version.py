@@ -1,5 +1,5 @@
 def cat_mouse(map_, moves):
-    pass
+    return map_.split()
 
 
 map_ = '''\
