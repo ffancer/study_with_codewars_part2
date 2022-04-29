@@ -1,5 +1,6 @@
 def star_sign(date):
-    pass
+    month, day = str(date.month), str(date.day)
+    return month, day
 
 
 print(star_sign(date(1970, 6, 5)), 'Gemini')
