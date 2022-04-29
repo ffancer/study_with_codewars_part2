@@ -1,8 +1,9 @@
 def calculate(n1, n2, o):
-    # return {
-    #     'add': bin(n1) + bin(n2)
-    # }
-    return bin(int(n1)*int(n2))[2:]
+    return {
+        'add': bin(int(n1) + int(n2))[2:],
+        'subtract': bin(int(n1) - int(n2))[2:],
+        'multiply': bin(int(n1) * int(n2))[2:]
+    }[o]
 
 
 print(calculate('1', '1', 'add'), '10')
