@@ -1,6 +1,5 @@
 def append_arrays(seq1, seq2):
-    # your code here
-    pass
+    return seq1 + seq2
 
 
 print(append_arrays([1, 2], [2, 4]), [1, 2, 2, 4])
