@@ -1,5 +1,5 @@
 def replicate(times, number):
-    pass
+    return [number] * times
 
 
 print(replicate(3, 5), [5, 5, 5])
