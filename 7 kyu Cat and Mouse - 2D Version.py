@@ -8,7 +8,11 @@ def cat_mouse(map_, moves):
                 cat = [i, j]
             elif road[i][j] == 'm':
                 mouse = [i, j]
-    return cat, mouse
+
+    if cat and mouse:
+        return 'Caught!' if abs(cat[0] - mouse[0]) + abs(cat[1] - mouse[1]) <= moves else 'Escaped!'
+    return 'boring without two animals'
+
 
 map_ = '''\
 ..C......
