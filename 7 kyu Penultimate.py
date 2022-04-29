@@ -1,5 +1,5 @@
 def penultimate(a):
-    pass
+    return a[-2]
 
 
 print(penultimate([1, 2, 3, 4]), 3)
