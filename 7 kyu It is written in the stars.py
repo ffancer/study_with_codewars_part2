@@ -1,34 +1,12 @@
 def star_sign(date):
-    month, day = str(date.month), str(date.day)
+    limits = ['', 20, 19, 20, 20, 21, 21, 22, 23, 23, 23, 22, 21]
+    signs = ['Aquarius', 'Pisces', 'Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 'Libra', 'Scorpio',
+             'Sagittarius', 'Capricorn']
 
-    if len(day) < 2:
-        day = '0' + day
-    birth = int(month + day)
-
-    if 121 <= birth <= 219:
-        return 'Aquarius'
-    elif 220 <= birth <= 320:
-        return 'Pisces'
-    elif 321 <= birth <= 420:
-        return 'Aries'
-    elif 421 <= birth <= 521:
-        return 'Taurus'
-    elif 522 <= birth <= 621:
-        return 'Gemini'
-    elif 622 <= birth <= 722:
-        return 'Cancer'
-    elif 723 <= birth <= 823:
-        return 'Leo'
-    elif 824 <= birth <= 923:
-        return 'Virgo'
-    elif 924 <= birth <= 1023:
-        return 'Libra'
-    elif 1024 <= birth <= 1122:
-        return 'Scorpio'
-    elif 1123 <= birth <= 1221:
-        return 'Sagittarius'
+    if date.day > limits[date.month]:
+        return signs[date.month - 1]
     else:
-        return 'Capricorn'
+        return signs[date.month - 2]
 
 # print(star_sign(date(1970, 6, 5)), 'Gemini')
 # print(star_sign(date(2000, 2, 15)), 'Aquarius')
