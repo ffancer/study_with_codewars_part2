@@ -1,12 +1,13 @@
 # 7 kyu
 # Thinkful - Number Drills: Congo warehouses
+from math import ceil
 
 
 def box_capacity(length, width, height):
-    boxes_len = 1.3 * length
-    boxes_wid = 1.3 * width
-    boxes_hgt = 1.3 * height
-    return boxes_len, boxes_wid, boxes_hgt
+    boxes_len = length / 1.3
+    boxes_wid =  width / 1.3
+    boxes_hgt =  height/ 1.3
+    return boxes_len * boxes_wid * boxes_hgt
 
 
 print(box_capacity(32, 64, 16), 13824)
