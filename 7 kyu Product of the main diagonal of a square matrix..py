@@ -1,6 +1,7 @@
 def main_diagonal_product(mat):
-    for i, j in enumerate(mat):
-        print(i, j)
+    for i in range(len(mat)):
+        print(mat[i][i])
+
 
 
 res1 = main_diagonal_product([[1, 0], [0, 1]])
