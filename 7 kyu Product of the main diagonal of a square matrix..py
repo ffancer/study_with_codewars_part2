@@ -1,5 +1,6 @@
 def main_diagonal_product(mat):
-    pass
+    for i, j in enumerate(mat):
+        print(i, j)
 
 
 res1 = main_diagonal_product([[1, 0], [0, 1]])
