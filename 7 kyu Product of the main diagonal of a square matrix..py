@@ -1,6 +1,10 @@
 def main_diagonal_product(mat):
+    total = 1
+
     for i in range(len(mat)):
-        print(mat[i][i])
+        total *= mat[i][i]
+
+    return total
 
 
 
