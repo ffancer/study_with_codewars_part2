@@ -3,10 +3,7 @@
 
 
 def box_capacity(length, width, height):
-    boxes_len = length * 12 // 16
-    boxes_wid = width * 12 // 16
-    boxes_hgt = height * 12 // 16
-    return boxes_len * boxes_wid * boxes_hgt
+    return (length * 12 // 16) * (width * 12 // 16) * (height * 12 // 16)
 
 
 print(box_capacity(32, 64, 16), 13824)
