@@ -1,10 +1,6 @@
 def pattern(n):
-    s = ''
+    return '\n'.join(str(i) * i for i in range(1, n+1, 2))
 
-    for i in range(1, n+1, 2):
-        s += str(i) * i + '\n'
-
-    return s[:-1]
 
 print(pattern(4), "1\n333")
 print(pattern(1), "1")
