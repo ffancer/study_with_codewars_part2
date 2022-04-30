@@ -1,11 +1,8 @@
+from math import prod
+
+
 def main_diagonal_product(mat):
-    total = 1
-
-    for i in range(len(mat)):
-        total *= mat[i][i]
-
-    return total
-
+    return prod(mat[i][i] for i in range(len(mat)))
 
 
 res1 = main_diagonal_product([[1, 0], [0, 1]])
