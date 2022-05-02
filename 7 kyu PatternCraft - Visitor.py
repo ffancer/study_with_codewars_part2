@@ -1,17 +1,17 @@
 class Marine:
     def __init__(self):
-        pass
+        self.heakth = 100
 
     def accept(self, visitor):
-        pass
+        return visitor.visit_light(self)
 
 
 class Marauder:
     def __init__(self):
-        pass
+        self.health = 125
 
     def accept(self, visitor):
-        pass
+        return visitor.visit_armored(self)
 
 
 class TankBullet:
