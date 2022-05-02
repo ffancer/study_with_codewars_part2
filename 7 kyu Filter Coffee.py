@@ -1,5 +1,5 @@
 def search(budget, prices):
-    return ','.join(str(i) for i in sorted(i for i in prices if budget >= i))
+    return ','.join(sorted(str(i) for i in prices if budget >= i))
 
 
 print(search(3, [6, 1, 2, 9, 2]), "1,2,2")
