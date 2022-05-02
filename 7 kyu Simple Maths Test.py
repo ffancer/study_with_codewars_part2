@@ -1,30 +1,29 @@
+import math
+
+
 def number_property(n):
-    lst = []
+    return [isPrime(n), isEven(n), isMultipleOf10(n)]
+    # Return isPrime? isEven? isMultipleOf10?
+    # your code here
 
 
-    def is_prime(n):
-        if n > 1:
-            for i in range(2, int(n / 2) + 1):
-                if (n % i) == 0:
-                    lst.append(False)
-                    break
-            else:
-                lst.append(True)
-        else:
-            print(lst.append(False))
-    is_prime(n)
+def isPrime(n):
+    if n <= 3:
+        return n >= 2
+    if n % 2 == 0 or n % 3 == 0:
+        return False
+    for i in range(5, int(n ** 0.5) + 1, 6):
+        if n % i == 0 or n % (i + 2) == 0:
+            return False
+    return True
 
-    if n % 2 == 0:
-        lst.append(True)
-    else:
-        lst.append(False)
 
-    if str(n)[-1] in '0':
-        lst.append(True)
-    else:
-        lst.append(False)
+def isEven(n):
+    return n % 2 == 0
 
-    return lst
+
+def isMultipleOf10(n):
+    return n % 10 == 0
 
 
 print(number_property(-10), [False, True, True])
