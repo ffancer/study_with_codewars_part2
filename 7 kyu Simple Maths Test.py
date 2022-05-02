@@ -19,7 +19,13 @@ def number_property(n):
     else:
         lst.append(False)
 
+    if str(n)[-1] in '0':
+        lst.append(True)
+    else:
+        lst.append(False)
+
     return lst
+
 
 print(number_property(-10), [False, True, True])
 print(number_property(2), [True, True, False])
