@@ -1,5 +1,7 @@
 def consecutive_ducks(n):
-    pass
+    while n % 2 == 0:
+        n //= 2
+    return n
 
 
 print(consecutive_ducks(69), True)
