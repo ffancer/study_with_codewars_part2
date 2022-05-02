@@ -1,9 +1,5 @@
 def zipvalidate(postcode):
-    if len(postcode) == 6:
-        if postcode.isdigit():
-            if postcode[0] not in '05789':
-                return True
-    return False
+    return len(postcode) == 6 and postcode.isdigit() and postcode[0] not in '05789'
 
 
 print(zipvalidate('198328'), True)
