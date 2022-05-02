@@ -1,10 +1,11 @@
 def compound_array(a, b):
     lst = []
 
-    for i in a:
-        lst.append(i)
-        for j in b:
-            lst.append(j)
+    while a or b:
+        lst += a[:1] + b[:1]
+        a = a[1:]
+        b = b[1:]
+
     return lst
 
 
