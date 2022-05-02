@@ -5,7 +5,7 @@ def search(budget, prices):
         if budget >= i:
             lst.append(i)
 
-    return sorted(lst)
+    return ','.join(str(i) for i in sorted(lst))
 
 
 print(search(3, [6, 1, 2, 9, 2]), "1,2,2")
