@@ -1,5 +1,11 @@
 def factory(x):
-    return lambda ar: [x * i for i in ar]
+    def some(array):
+        new = []
+        for i in array:
+            new.append(i * x)
+        return new
+
+    return some
 
 
 my_arr = [1, 2, 3]
