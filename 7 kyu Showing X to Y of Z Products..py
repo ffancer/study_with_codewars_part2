@@ -1,8 +1,5 @@
 def pagination_text(page_number, page_size, total_products):
-    a = page_size * (page_number - 1) + 1
-    b = min(page_size * page_number, total_products)
-
-    return f"Showing {a} to {b} of {total_products} Products."
+    return f"Showing {page_size * (page_number - 1) + 1} to {min(page_size * page_number, total_products)} of {total_products} Products."
 
 
 print(pagination_text(1, 10, 30), "Showing 1 to 10 of 30 Products.")
