@@ -3,8 +3,8 @@
 
 
 def hamming_distance(a, b):
-    pass
 
+    return list(set(a) & set(b))
 
 print(hamming_distance('100101', '101001'), 2)
 print(hamming_distance('1010', '0101'), 4)
