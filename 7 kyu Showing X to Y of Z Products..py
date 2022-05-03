@@ -1,7 +1,7 @@
 def pagination_text(page_number, page_size, total_products):
     a = page_number * page_size
-    return a
-
+    b = page_number * page_size + page_size
+    return b
 
 print(pagination_text(1, 10, 30), "Showing 1 to 10 of 30 Products.")
 print(pagination_text(3, 10, 26), "Showing 21 to 26 of 26 Products.")
