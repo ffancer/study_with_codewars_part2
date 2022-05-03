@@ -1,5 +1,6 @@
 class HTMLGen:
-    pass
+    def a(self, text):
+        return f'<a>{text}</a>'
 
 
 htmlGen = HTMLGen()
