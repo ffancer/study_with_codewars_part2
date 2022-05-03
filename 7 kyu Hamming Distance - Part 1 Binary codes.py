@@ -3,8 +3,15 @@
 
 
 def hamming_distance(a, b):
+    cnt, i = 0, 0
 
-    return list(set(a) & set(b))
+    while i < len(a):
+        if a[i] != b[i]:
+            cnt += 1
+        i += 1
+
+    return cnt
+
 
 print(hamming_distance('100101', '101001'), 2)
 print(hamming_distance('1010', '0101'), 4)
