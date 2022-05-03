@@ -1,5 +1,5 @@
 def factory(x):
-    pass
+    return lambda ar: [x * i for i in ar]
 
 
 my_arr = [1, 2, 3]
