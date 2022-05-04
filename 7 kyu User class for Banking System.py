@@ -4,8 +4,8 @@ class User(object):
         self.balance = balance
         self.checking_account = checking_account
 
-    def withdraw(self, balance):
-        pass
+    def withdraw(self, num):
+        return f'{self.name} has {self.balance - num}.'
 
     def check(self, name, balance):
         pass
