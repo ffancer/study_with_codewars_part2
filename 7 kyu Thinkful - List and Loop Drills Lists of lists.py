@@ -1,14 +1,20 @@
 # 7 kyu
 # Thinkful - List and Loop Drills: Lists of lists
 
+
 from math import prod
+
+
 def process_data(data):
+    lst = []
 
     def diffr(items):
         return items[0] - sum(items[1:])
 
     for i in data:
-        print(prod(diffr(i)))
+        lst.append(diffr(i))
+
+    return prod(lst)
 
 
 print(process_data([[2, 5], [3, 4], [8, 7]]), 3)
