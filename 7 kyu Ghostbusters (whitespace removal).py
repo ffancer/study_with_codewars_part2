@@ -1,12 +1,6 @@
 def ghostbusters(building):
     if building.count(' ') > 0:
-        s = ''
-
-        for i in building:
-            if i != ' ':
-                s += i
-        return s
-
+        return building.replace(' ', '')
     return "You just wanted my autograph didn't you?"
 
 
