@@ -1,11 +1,13 @@
 def bin_rota(arr):
     lst = []
+
     for i, j in enumerate(arr):
         if i % 2 == 0:
             lst.append(j)
         else:
             lst.append(j[::-1])
-    return lst
+
+    return [item for i in lst for item in i]
 
 
 print(bin_rota([
