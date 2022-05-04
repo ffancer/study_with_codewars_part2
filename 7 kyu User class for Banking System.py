@@ -4,6 +4,15 @@ class User(object):
         self.balance = balance
         self.checking_account = checking_account
 
+    def withdraw(self, balance):
+        pass
+
+    def check(self, name, balance):
+        pass
+
+    def add_cash(self, balance):
+        pass
+
 
 Jeff = User('Jeff', 70, True)
 Joe = User('Joe', 70, True)
