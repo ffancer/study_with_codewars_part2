@@ -1,12 +1,10 @@
+from collections import Counter
+
+
 class List(object):
     def count_spec_digits(self, integers_list, digits_list):
-        lst = []
-
-
-        for i in digits_list:
-            lst.append((i, integers_list.count(i)))
-
-        return lst
+        counts = Counter(''.join(str(abs(a)) for a in integers_list))
+        return [(b, counts[str(b)]) for b in digits_list]
 
 
 l = List()
