@@ -1,7 +1,12 @@
 class List(object):
     def count_spec_digits(self, integers_list, digits_list):
-        # your code here
-        return
+        lst = []
+
+
+        for i in digits_list:
+            lst.append((i, integers_list.count(i)))
+
+        return lst
 
 
 l = List()
