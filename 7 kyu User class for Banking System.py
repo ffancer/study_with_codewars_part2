@@ -4,14 +4,37 @@ class User(object):
         self.balance = balance
         self.checking_account = checking_account
 
-    def withdraw(self, num):
-        return f'{self.name} has {self.balance - num}.'
+    def _is_enough_to_withdraw(self, balance, cash):
+        return balance-cash >= 0
 
-    def check(self, name, balance):
-        pass
+    def _validate_input(self, cash):
+        if not isinstance(cash, int) or cash < 0:
+            raise ValueError('Incorrect cash value')
 
-    def add_cash(self, balance):
-        pass
+    def withdraw(self, cash):
+        self._validate_input(cash)
+        if self._is_enough_to_withdraw(self.balance, cash) is False:
+            raise ValueError(f'{self.name} can\'t withdraw {cash}, he only has {self.balance}.')
+
+        self.balance -= cash
+        return f'{self.name} has {self.balance}.'
+
+    def check(self, user, cash):
+        self._validate_input(cash)
+        if user.checking_account is False:
+            raise ValueError(f'{self.name}\'s checking account is disabled.')
+
+        if self.checking_account is False:
+            raise ValueError(f'{user.name}\'s checking account is disabled.')
+
+        self.balance += cash
+        user.balance -= cash
+        return f'{self.name} has {self.balance} and {user.name} has {user.balance}.'
+
+    def add_cash(self, cash):
+        self._validate_input(cash)
+        self.balance += cash
+        return f'{self.name} has {self.balance}.'
 
 
 Jeff = User('Jeff', 70, True)
