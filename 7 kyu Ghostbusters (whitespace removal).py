@@ -1,7 +1,5 @@
 def ghostbusters(building):
-    if building.count(' ') > 0:
-        return building.replace(' ', '')
-    return "You just wanted my autograph didn't you?"
+    return building.replace(' ', '') if building.count(' ') > 0 else "You just wanted my autograph didn't you?"
 
 
 print(ghostbusters("Factor y"), "Factory", 'Nope, there may still be a ghost in the building. Try again.')
