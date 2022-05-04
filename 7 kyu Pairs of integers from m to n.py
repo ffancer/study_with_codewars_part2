@@ -1,8 +1,9 @@
 def generate_pairs(m, n):
+    lst = []
     for i in range(m, n+1):
-        for j in range(m, n+1):
-            print(i, j)
-
+        for j in range(i, n+1):
+            lst.append((i, j))
+    return lst
 
 print(generate_pairs(2, 4), [(2, 2), (2, 3), (2, 4), (3, 3), (3, 4), (4, 4)])
 # print(generate_pairs(0, 1), [(0, 0), (0, 1), (1, 1)])
