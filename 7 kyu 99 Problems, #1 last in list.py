@@ -3,9 +3,7 @@
 
 
 def last(lst):
-    if not lst:
-        return None
-    return lst[-1]
+    return None if not lst else lst[-1]
 
 
 print(last([1, 2, 3]), 3, "last([1,2,3]) == 3")
