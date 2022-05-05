@@ -1,5 +1,17 @@
 def pattern(n):
-    pass
+    s = ""
+    i = 1
+
+    while i <= n:
+        if len(s) != 0:
+            s = s + "\n"
+        j = 0
+        while j < i:
+            s = s + str(n - j)
+            j = j + 1
+        i = i + 1
+
+    return s
 
 
 print(pattern(1), "1")
