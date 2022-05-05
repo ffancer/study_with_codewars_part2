@@ -3,7 +3,7 @@
 
 
 def celsius_to_romer(temp):
-    pass
+    return temp * 0.52500 + 7.50
 
 
 print(celsius_to_romer(24), 20.1)
