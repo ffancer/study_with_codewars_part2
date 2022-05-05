@@ -1,5 +1,6 @@
 def area_code(text):
-    pass
+    point = text.find('(')
+    return text[point + 1: point + 4]
 
 
 print(area_code("The supplier's phone number is (555) 867-5309"), '555')
