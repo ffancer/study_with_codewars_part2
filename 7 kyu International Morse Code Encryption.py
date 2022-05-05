@@ -1,12 +1,11 @@
 # CHAR_TO_MORSE preloaded to convert characters into Morse code
 def encryption(string):
-    s = ''
+    lst = []
+
     for i in string:
-        if i in CHAR_TO_MORSE.keys():
-            s += CHAR_TO_MORSE[i] + ' '
-        if i == ' ':
-            s += '  '
-    return s[:-1]
+        lst.append(CHAR_TO_MORSE.get(i, i))
+
+    return ' '.join(lst)
 
 
 print(encryption("HELLO WORLD"), ".... . .-.. .-.. ---   .-- --- .-. .-.. -..")
