@@ -4,8 +4,7 @@ def sum_diagonals(matrix):
     for i, j in enumerate(matrix):
         total += j[i]
 
-    for i, j in enumerate(reversed(matrix)):
-        total += j[i]
+    total += sum(matrix[len(matrix) - i - 1][len(matrix)- i - 1] for i in range(len(matrix)))
 
     return total
 
