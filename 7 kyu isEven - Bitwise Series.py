@@ -3,7 +3,7 @@
 
 
 def is_even(n):
-    return str(n / 2)[-1] == '0'
+    return str(n)[-1] in '02468'
 
 
 print(is_even(2), True, "Expected 'True'")
