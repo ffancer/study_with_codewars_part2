@@ -1,5 +1,6 @@
 def connotation(strng):
-    return
+    for i in strng.split():
+        print(i[0].lower())
 
 
 print(connotation("A big brown fox caught a bad bunny"), True)
