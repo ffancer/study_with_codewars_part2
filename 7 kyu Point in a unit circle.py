@@ -1,5 +1,5 @@
 def point_in_circle(x, y):
-    pass
+    return x ** 2 + y ** 2 < 1
 
 
 print(point_in_circle(0, 0), True)
