@@ -1,5 +1,9 @@
 def transpose_two_strings(arr):
-    pass
+    first, second = arr[0], arr[1]
+    s = ''
+
+    for i in range(max(len(first), len(second))):
+        s +=
 
 
 print(transpose_two_strings(["Hello", "World"]), "H W\ne o\nl r\nl l\no d")
