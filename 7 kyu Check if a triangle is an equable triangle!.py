@@ -1,5 +1,6 @@
 def equable_triangle(a, b, c):
-    pass
+    # ½ (b × h)
+    return a + b + c, .5 * (b * c)
 
 
 print(equable_triangle(5, 12, 13), True)
