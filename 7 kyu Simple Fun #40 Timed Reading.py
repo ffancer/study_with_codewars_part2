@@ -4,9 +4,12 @@
 
 def timed_reading(max_length, text):
     cnt = 0
+    text = text.replace('?', '').replace("'",'')
+
     for i in text.split():
         if len(i) <= max_length:
             cnt += 1
+
     return cnt
 
 
