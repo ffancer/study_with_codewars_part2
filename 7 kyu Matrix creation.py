@@ -1,10 +1,16 @@
+import numpy as np
+
+
 def get_matrix(n):
-    lst = []
-
-    for i in range(n):
-        lst.append([0])
-
-    return lst
+    if n == 0:
+        return []
+    else:
+        zerom = np.zeros(((n, n)), dtype = int)
+        for i in range(n):
+            for j in range(n):
+                if i == j:
+                    zerom[i][j] += 1
+        return zerom.tolist()
 
 
 print(get_matrix(0), [])
