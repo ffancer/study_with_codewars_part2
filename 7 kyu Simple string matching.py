@@ -1,5 +1,15 @@
 def solve(a, b):
-    pass
+    if a == b:
+        return True
+    if len(a) > len(b) + 1:
+        return False
+    try:
+        i = a.index('*')
+        j = a[::-1].index('*')
+        k = a[-1:-j - 1: -1]
+        return a[:i] == b[:i] and k == b[::-1][:len(k)]
+    except ValueError:
+        return False
 
 
 print(solve("code*s", "codewars"), True)
