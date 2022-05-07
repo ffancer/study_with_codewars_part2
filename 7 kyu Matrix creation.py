@@ -1,16 +1,5 @@
-import numpy as np
-
-
 def get_matrix(n):
-    if n == 0:
-        return []
-    else:
-        zerom = np.zeros(((n, n)), dtype = int)
-        for i in range(n):
-            for j in range(n):
-                if i == j:
-                    zerom[i][j] += 1
-        return zerom.tolist()
+    return [[1 if i == j else 0 for i in range(n)] for j in range(n)]
 
 
 print(get_matrix(0), [])
