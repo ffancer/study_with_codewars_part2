@@ -1,12 +1,12 @@
 def alan(arr):
     lst = ['Rejection', 'Disappointment', 'Backstabbing Central', 'Shattered Dreams Parkway']
-    cnt = 0
 
     for i in arr:
         if i in lst:
-            cnt += 1
+            idx = lst.index(i)
+            del lst[idx]
 
-    return 'Smell my cheese you mother!' if cnt == 4 else 'No, seriously, run. You will miss it. '
+    return 'Smell my cheese you mother!' if len(lst) == 0 else 'No, seriously, run. You will miss it.'
 
 
 print(
