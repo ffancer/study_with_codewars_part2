@@ -3,7 +3,7 @@
 
 
 def letter_check(arr):
-    return arr[0], arr[1]
+    return list(set(arr[0].lower())), list(set(arr[1].lower()))
 
 
 print(letter_check(["abcd", "aaa"]), True)
