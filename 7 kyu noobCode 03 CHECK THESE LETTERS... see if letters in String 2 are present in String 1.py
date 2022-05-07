@@ -3,8 +3,7 @@
 
 
 def letter_check(arr):
-    # your code here
-    pass
+    return arr[0], arr[1]
 
 
 print(letter_check(["abcd", "aaa"]), True)
