@@ -1,5 +1,10 @@
 def get_matrix(n):
-    pass
+    lst = []
+
+    for i in range(n):
+        lst.append([0])
+
+    return lst
 
 
 print(get_matrix(0), [])
