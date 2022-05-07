@@ -3,7 +3,11 @@
 
 
 def timed_reading(max_length, text):
-    pass
+    cnt = 0
+    for i in text.split():
+        if len(i) <= max_length:
+            cnt += 1
+    return cnt
 
 
 print(timed_reading(4, "The Fox asked the stork, 'How is the soup?'"), 7)
