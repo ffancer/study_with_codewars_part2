@@ -2,7 +2,7 @@ def first_non_repeated(s):
     for i in s:
         if s.count(i) == 1:
             return i
-    return s[0]
+
 
 
 print(first_non_repeated("test"), 'e')
