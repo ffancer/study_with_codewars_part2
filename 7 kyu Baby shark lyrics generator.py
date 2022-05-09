@@ -1,5 +1,14 @@
 def baby_shark_lyrics():
-    pass
+    shark = ' shark'
+    dct = {'Baby': shark, 'Mommy': shark, 'Daddy': shark, 'Grandma': shark, 'Grandpa': shark, 'Let\'s go hunt': ''}
+    ans = ''
+
+    for i, j in dct.items():
+        ans += '{}{},{}\n'.format(i, j, ' doo' * 6) * 3
+        ans += '{}{}!\n'.format(i, j)
+    ans += 'Run away,…'
+
+    return ans
 
 
 babyshark = '''Baby shark, doo doo doo doo doo doo
@@ -27,6 +36,5 @@ Let's go hunt, doo doo doo doo doo doo
 Let's go hunt, doo doo doo doo doo doo
 Let's go hunt!
 Run away,…'''
-
 
 print(baby_shark_lyrics(), babyshark)
