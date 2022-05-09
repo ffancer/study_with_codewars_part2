@@ -1,5 +1,5 @@
 def square(number):
-    return pow(2, number - 1)
+    return 2 ** (number - 1)
 
 
 print(square(1), 1)
