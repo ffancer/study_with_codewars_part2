@@ -1,8 +1,5 @@
 def first_non_repeated(s):
-    for i in s:
-        if s.count(i) == 1:
-            return i
-
+    return next((i for i in s if s.count(i) == 1), None)
 
 
 print(first_non_repeated("test"), 'e')
