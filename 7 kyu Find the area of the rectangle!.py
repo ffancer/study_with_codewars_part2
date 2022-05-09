@@ -1,7 +1,6 @@
 def area(d, l):
-    # your code here
-    pass
-
+    side = d ** 2 - l ** 2
+    return (side ** 2 + l ** 2) * 0.5
 
 print(area(5, 4), 12)
 print(area(10, 6), 48)
