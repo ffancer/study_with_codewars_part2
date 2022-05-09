@@ -1,11 +1,6 @@
 def square(number):
-    total = 1
-    for i in range(number):
+    return pow(2, number - 1)
 
-        temp = i * 2
-        total += temp
-
-    return total
 
 print(square(1), 1)
 print(square(3), 4)
