@@ -3,10 +3,10 @@
 
 
 def take_umbrella(weather, rain_chance):
-    if weather in ['rainy', 'cloudy'] and rain_chance > 0.20:
+    if (weather == 'rainy') or (weather == 'cloudy' and rain_chance > 0.2) or (
+            weather == 'sunny' and rain_chance > 0.5):
         return True
     return False
-
 
 
 print(take_umbrella('sunny', 0.40), False)
