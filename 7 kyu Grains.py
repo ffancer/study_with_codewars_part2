@@ -1,6 +1,11 @@
 def square(number):
-    pass
+    total = 1
+    for i in range(number):
 
+        temp = i * 2
+        total += temp
+
+    return total
 
 print(square(1), 1)
 print(square(3), 4)
