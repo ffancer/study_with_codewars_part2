@@ -1,6 +1,5 @@
 def mispelled(word1, word2):
-    # write your code here
-    pass
+    return sorted(list(set(word1)))
 
 
 print(mispelled('versed', 'xersed'), True)
