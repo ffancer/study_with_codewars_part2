@@ -1,6 +1,11 @@
 def correctness(bobs_decisions, expert_decisions):
-    # result=list(set(Ans) & set(Word))
-    return len(sorted(list(set(bobs_decisions) & set(expert_decisions))))
+    cnt = 0
+    for i in bobs_decisions:
+        for j in expert_decisions:
+            # if i == j:
+            #     cnt += 1
+            print(j)
+    return cnt
 
 print(correctness(('M', 'F', '?'), ('M', 'F', '?')), 3)
 print(correctness(('M', '?', 'M'), ('M', 'F', '?')), 2)
