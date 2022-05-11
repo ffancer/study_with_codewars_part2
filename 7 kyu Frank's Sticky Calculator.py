@@ -1,10 +1,5 @@
 def sticky_calc(operation, val1, val2):
-    return {
-        '+': int(round(float(str(round(val1)) + str(round(val2)))) + val2),
-        '-': int(round(float(str(round(val1)) + str(round(val2)))) - val2),
-        '*': int(round(float(str(round(val1)) + str(round(val2)))) * val2),
-        '/': int(round(float(str(round(val1)) + str(round(val2)))) / val2)
-    }[operation]
+    return round(eval("{0}{1}{2}{1}".format(round(val1), round(val2), operation)))
 
 
 print(sticky_calc('+', 4, 7), 54)
