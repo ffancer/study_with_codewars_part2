@@ -1,5 +1,5 @@
 def red_knight(N, P):
-    pass
+    return (P - N) % 2
 
 
 print(red_knight(0, 8), ('White', 16))
