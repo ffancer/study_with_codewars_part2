@@ -1,10 +1,5 @@
 def red_knight(N, P):
-    ans = 'Black'
-
-    if (P - N) % 2 == 0:
-        ans = 'White'
-
-    return ans, P * 2
+    return 'White' if (P - N) % 2 == 0 else 'Black', P * 2
 
 
 print(red_knight(0, 8), ('White', 16))
