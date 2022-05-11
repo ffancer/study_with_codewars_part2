@@ -1,6 +1,9 @@
 def sticky_calc(operation, val1, val2):
     return {
-        '+': int(round(float(str(val1) + str(val2))) + val2)
+        '+': int(round(float(str(round(val1)) + str(round(val2)))) + val2),
+        '-': int(round(float(str(round(val1)) + str(round(val2)))) - val2),
+        '*': int(round(float(str(round(val1)) + str(round(val2)))) * val2),
+        '/': int(round(float(str(round(val1)) + str(round(val2)))) / val2)
     }[operation]
 
 
