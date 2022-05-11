@@ -4,10 +4,11 @@
 
 def any_odd(x):
     x = bin(x)[2:]
-    for i in range(len(x)):
-        if i % 2 != 0:
-            if x[i] == '1':
-                return True
+
+    for i, j in enumerate(x):
+        if i % 2 != 0 and j == '1':
+            return True
+
     return False
 
 
