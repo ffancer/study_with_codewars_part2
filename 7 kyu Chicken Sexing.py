@@ -1,11 +1,5 @@
 def correctness(bobs_decisions, expert_decisions):
-    cnt = 0
-    for i in bobs_decisions:
-        for j in expert_decisions:
-            # if i == j:
-            #     cnt += 1
-            print(j)
-    return cnt
+    return [i for i in bobs_decisions if i in expert_decisions]
 
 print(correctness(('M', 'F', '?'), ('M', 'F', '?')), 3)
 print(correctness(('M', '?', 'M'), ('M', 'F', '?')), 2)
