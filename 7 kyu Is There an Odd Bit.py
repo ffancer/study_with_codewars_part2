@@ -3,14 +3,13 @@
 
 
 def any_odd(x):
-    x = bin(x)[2:]
+    x = bin(x)[2:][::-1]
 
     for i, j in enumerate(x):
         if i % 2 != 0 and j == '1':
             return True
 
     return False
-
 
 
 print(any_odd(5), 0)
