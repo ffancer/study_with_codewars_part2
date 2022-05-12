@@ -3,7 +3,7 @@ def consonant_count(s):
     cnt = 0
 
     for i in s.lower():
-        if i not in consonants and i != ' ':
+        if i not in consonants and i != ' ' and i.isalpha():
             cnt += 1
 
     return cnt
