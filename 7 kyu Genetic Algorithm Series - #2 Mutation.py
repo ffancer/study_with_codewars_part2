@@ -1,5 +1,13 @@
+from random import random
+
+
 def mutate(chromosome, p):
-    return chromosome.replace('1', '0').replace('0', '1')
+    s = ''
+
+    for i in chromosome:
+        s += str(1 - int(i)) if random() < p else i
+
+    return s
 
 
 zero = '0' * 100
