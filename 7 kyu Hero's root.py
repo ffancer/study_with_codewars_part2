@@ -1,5 +1,5 @@
 def int_rac(n, guess):
-    pass
+    return (n + guess / n) / 2
 
 
 print(int_rac(25, 1), 4)
