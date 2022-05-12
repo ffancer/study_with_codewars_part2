@@ -1,10 +1,6 @@
 def reverse_it(data):
-    if type(data) is str:
-        return data[::-1]
-    elif type(data) is int:
-        return int(str(data)[::-1])
-    elif type(data) is float:
-        return float(str(data)[::-1])
+    if type(data) in [int, str, float]:
+        return type(data)(str(data)[::-1])
     return data
 
 
