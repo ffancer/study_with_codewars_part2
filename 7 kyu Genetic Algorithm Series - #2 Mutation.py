@@ -2,12 +2,7 @@ from random import random
 
 
 def mutate(chromosome, p):
-    s = ''
-
-    for i in chromosome:
-        s += str(1 - int(i)) if random() < p else i
-
-    return s
+    return ''.join(str(1 - int(i)) if random() < p else i for i in chromosome)
 
 
 zero = '0' * 100
