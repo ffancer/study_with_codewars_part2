@@ -1,5 +1,5 @@
 def mutate(chromosome, p):
-    pass  # Good Luck!
+    return chromosome.replace('1', '0').replace('0', '1')
 
 
 zero = '0' * 100
