@@ -2,10 +2,12 @@ def consonant_count(s):
     consonants = 'aeiou'
     cnt = 0
 
-    for i in s:
-        if i in consonants:
+    for i in s.lower():
+        if i not in consonants and i != ' ':
             cnt += 1
+
     return cnt
+
 
 print(consonant_count(''), 0, 'Test string is empty string')
 print(consonant_count('aaaaa'), 0, 'Test string: "aaaaa"')
