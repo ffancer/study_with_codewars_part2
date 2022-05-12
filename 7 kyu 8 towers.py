@@ -1,5 +1,8 @@
+from math import factorial as fac
+
+
 def tower_combination(n):
-    pass
+    return fac(n)
 
 
 print(tower_combination(2) == 2)
