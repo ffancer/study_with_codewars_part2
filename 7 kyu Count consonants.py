@@ -1,6 +1,11 @@
 def consonant_count(s):
-    pass
+    consonants = 'aeiou'
+    cnt = 0
 
+    for i in s:
+        if i in consonants:
+            cnt += 1
+    return cnt
 
 print(consonant_count(''), 0, 'Test string is empty string')
 print(consonant_count('aaaaa'), 0, 'Test string: "aaaaa"')
