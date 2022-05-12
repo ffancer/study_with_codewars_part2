@@ -3,7 +3,8 @@
 
 
 def odd_or_even(n):
-    return "Even"
+    if n % 2 == 1:
+        return 'Either'
 
 
 print(odd_or_even(1), "Either")
