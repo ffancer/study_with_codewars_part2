@@ -1,5 +1,5 @@
 def reverse_it(data):
-    pass
+    return str(data)[::-1] if type(data) in [str, int] else data
 
 
 print(reverse_it('Hello'), "olleH", 'Not quite')
