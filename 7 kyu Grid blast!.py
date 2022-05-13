@@ -4,8 +4,7 @@ grid = ['top left', 'top middle', 'top right',
 
 
 def fire(x, y):
-    for i, j in enumerate(grid):
-        print(j[x][y])
+    print(grid[x])
 
 
 print(fire(0, 0), "top left")
