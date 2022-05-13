@@ -4,7 +4,7 @@ grid = ['top left', 'top middle', 'top right',
 
 
 def fire(x, y):
-    print(grid[x])
+    return grid[x + 3 * y]
 
 
 print(fire(0, 0), "top left")
