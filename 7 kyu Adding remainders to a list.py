@@ -1,8 +1,9 @@
 def solve(nums, div):
     lst = []
+
     for i in nums:
-        temp = i % div
-        lst.append(temp + i)
+        lst.append(i % div+ i)
+
     return lst
 
 
