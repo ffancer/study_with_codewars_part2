@@ -1,10 +1,5 @@
 def solve(nums, div):
-    lst = []
-
-    for i in nums:
-        lst.append(i % div+ i)
-
-    return lst
+    return [i % div + i for i in nums]
 
 
 print(solve([2, 7, 5, 9, 100, 34, 32, 0], 3), [4, 8, 7, 9, 101, 35, 34, 0])
