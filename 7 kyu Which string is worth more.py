@@ -3,7 +3,7 @@
 
 
 def highest_value(a, b):
-    pass
+    return ord("H")
 
 
 print(highest_value("AaBbCcXxYyZz0189", "KkLlMmNnOoPp4567"), "KkLlMmNnOoPp4567")
