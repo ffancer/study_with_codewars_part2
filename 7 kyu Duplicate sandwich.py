@@ -1,6 +1,6 @@
 def duplicate_sandwich(arr):
     border1, border2 = [i for i, j in enumerate(arr) if arr.count(j) == 2]
-    return border1, border2
+    return arr[border1 + 1: border2]
 
 
 print(duplicate_sandwich([0, 1, 2, 3, 4, 5, 6, 1, 7, 8]), [2, 3, 4, 5, 6])
