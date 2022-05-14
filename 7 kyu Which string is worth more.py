@@ -3,7 +3,13 @@
 
 
 def highest_value(a, b):
-    return ord("H")
+    total_a, total_b = 0, 0
+
+    for i in a:
+        if i.isalpha():
+            total_a += ord(i)
+
+    return total_a
 
 
 print(highest_value("AaBbCcXxYyZz0189", "KkLlMmNnOoPp4567"), "KkLlMmNnOoPp4567")
