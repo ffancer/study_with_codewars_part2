@@ -1,5 +1,5 @@
 def no_ifs_no_buts(a, b):
-    pass
+    return f'{min(a, b)} is smaller than {max(a, b)}'
 
 
 print(no_ifs_no_buts(45,51),"45 is smaller than 51")
