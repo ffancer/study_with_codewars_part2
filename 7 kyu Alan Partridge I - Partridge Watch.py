@@ -6,7 +6,7 @@ def part(arr):
         if i in lst:
             cnt += 1
 
-    return "Mine's a Pint!" if cnt == 0 else f"Lynn, I've pierced my foot on a spike{cnt * '!'}"
+    return "Lynn, I've pierced my foot on a spike!!" if cnt == 0 else f"Mine's a Pint{cnt * '!'}"
 
 
 print(part(["Grouse", "Partridge", "Pheasant"]), "Mine's a Pint!")
