@@ -1,5 +1,10 @@
 def lineup_students(string):
-    pass
+    lst = []
+
+    for i in string:
+        lst.append(i)
+
+    return lst
 
 
 s1 = 'Tadashi Takahiro Takao Takashi Takayuki Takehiko Takeo Takeshi Takeshi'
