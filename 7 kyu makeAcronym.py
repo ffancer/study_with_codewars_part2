@@ -1,5 +1,8 @@
 def make_acronym(phrase):
-    pass
+    if not phrase:
+        return ''
+    for i in phrase.split():
+        print(i)
 
 
 print(make_acronym('My aunt sally'), 'MAS', 'Output not as expected')
