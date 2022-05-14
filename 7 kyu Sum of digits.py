@@ -1,16 +1,16 @@
 def sum_of_digits(digits):
-    if not digits:
+    try:
+        if type(digits) is not str:
+            digits = str(digits)
+
+        lst = []
+
+        for i in digits:
+            lst.append(i)
+
+        return ' + '.join(lst) + ' = ' + str(sum(int(i) for i in lst))
+    except ValueError:
         return ''
-    if type(digits) is not str:
-        digits = str(digits)
-
-    lst = []
-
-    for i in digits:
-        lst.append(i)
-
-    return ' + '.join(lst) + ' = ' + str(sum(int(i) for i in lst))
-
 
 
 
