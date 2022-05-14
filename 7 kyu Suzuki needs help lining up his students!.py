@@ -4,7 +4,7 @@ def lineup_students(string):
     for i in string.split():
         lst.append(i)
 
-    return sorted(lst, key=len, reverse=True)
+    return sorted(lst, key=lambda elem: (len(elem), elem), reverse=True)
 
 
 s1 = 'Tadashi Takahiro Takao Takashi Takayuki Takehiko Takeo Takeshi Takeshi'
