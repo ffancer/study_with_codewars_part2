@@ -9,7 +9,8 @@ def sum_of_digits(digits):
     for i in digits:
         lst.append(i)
 
-    return ' + '.join(lst)
+    return ' + '.join(lst) + ' = ' + str(sum(int(i) for i in lst))
+
 
 
 
