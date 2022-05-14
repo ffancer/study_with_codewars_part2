@@ -1,6 +1,13 @@
 def sum_of_digits(digits):
-    # your code here
-    pass
+    if not digits:
+        return ''
+    if type(digits) is not str:
+        digits = str(digits)
+
+    s = ''
+
+
+
 
 
 print(sum_of_digits("3433"), "3 + 4 + 3 + 3 = 13")
