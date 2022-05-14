@@ -1,10 +1,6 @@
 def lineup_students(string):
-    lst = []
 
-    for i in string.split():
-        lst.append(i)
-
-    return sorted(lst, key=lambda elem: (len(elem), elem), reverse=True)
+    return sorted([i for i in string.split()], key=lambda elem: (len(elem), elem), reverse=True)
 
 
 s1 = 'Tadashi Takahiro Takao Takashi Takayuki Takehiko Takeo Takeshi Takeshi'
