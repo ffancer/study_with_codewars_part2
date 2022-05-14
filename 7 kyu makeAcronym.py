@@ -1,19 +1,17 @@
 def make_acronym(phrase):
-    try:
-        s = ''
+    if type(phrase) != str:
+        return 'Not a string'
 
-        if not phrase:
-            return ''
+    s = ''
 
-        for i in phrase.split():
+    for i in phrase.split(' '):
+        for j in i:
+            if j.isdigit():
+                return 'Not letters'
+        if len(i):
             s += i[0].upper()
 
-        for i in s:
-            if i.isalpha():
-                return s
-            return 'Not letters'
-    except AttributeError:
-        return 'Not letters'
+    return s
 
 
 print(make_acronym('My aunt sally'), 'MAS', 'Output not as expected')
