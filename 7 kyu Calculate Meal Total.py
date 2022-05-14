@@ -1,5 +1,5 @@
 def calculate_total(subtotal, tax, tip):
-    pass
+    return round(subtotal * (1 + (tax + tip) / 100.0), 2)
 
 
 tests = [
