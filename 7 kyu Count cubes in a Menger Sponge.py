@@ -1,5 +1,5 @@
 def calc_ms(n):
-    pass
+    return 20 ** n
 
 
 print(calc_ms(0), 1)
