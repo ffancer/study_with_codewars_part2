@@ -1,5 +1,12 @@
 def part(arr):
-    pass
+    lst = ['Partridge', 'PearTree', 'Chat', 'Dan', 'Toblerone', 'Lynn', 'AlphaPapa', 'Nomad']
+    cnt = 0
+
+    for i in arr:
+        if i in lst:
+            cnt += 1
+
+    return "Mine's a Pint!" if cnt == 0 else f"Lynn, I've pierced my foot on a spike{cnt * '!'}"
 
 
 print(part(["Grouse", "Partridge", "Pheasant"]), "Mine's a Pint!")
