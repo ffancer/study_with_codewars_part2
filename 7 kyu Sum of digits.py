@@ -4,9 +4,12 @@ def sum_of_digits(digits):
     if type(digits) is not str:
         digits = str(digits)
 
-    s = ''
+    lst = []
 
+    for i in digits:
+        lst.append(i)
 
+    return ' + '.join(lst)
 
 
 
