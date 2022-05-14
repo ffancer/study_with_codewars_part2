@@ -1,6 +1,6 @@
 def duplicate_sandwich(arr):
-    pass
-
+    x = [i for i in arr if arr.count(i) == 2][0]
+    return x
 
 print(duplicate_sandwich([0, 1, 2, 3, 4, 5, 6, 1, 7, 8]), [2, 3, 4, 5, 6])
 print(duplicate_sandwich(['None', 'Hello', 'Example', 'hello', 'None', 'Extra']),
