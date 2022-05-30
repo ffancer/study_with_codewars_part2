@@ -1,5 +1,5 @@
 def vowel_start(st):
-    st = ''.join(i for i in st if i != ' ').lower()
+    st = ''.join(i for i in st if i.isalpha() or i.isdigit()).lower()
     return st
 
 
