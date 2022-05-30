@@ -1,6 +1,6 @@
 def vowel_start(st):
-    # your code here
-    pass
+    st = ''.join(i for i in st if i != ' ').lower()
+    return st
 
 
 print(vowel_start('It is beautiful weather today!'), 'it isb e a ut if ulw e ath ert od ay', )
