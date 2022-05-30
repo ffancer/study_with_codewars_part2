@@ -1,5 +1,5 @@
 def zebulans_nightmare(function):
-    pass
+    return function.split('_')
 
 
 print(zebulans_nightmare('camel_case'), 'camelCase')
