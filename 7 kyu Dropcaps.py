@@ -1,12 +1,5 @@
 def drop_cap(str_):
-    s = str_.split(' ')
-    lst = []
-    for i in s:
-        if len(i) > 2:
-            lst.append(i.title())
-        else:
-            lst.append(i)
-    return ' '.join(lst)
+    return ' '.join(i.title() if len(i) > 2 else i for i in str_.split(' '))
 
 
 print(drop_cap('Apple Banana'), "Apple Banana")
