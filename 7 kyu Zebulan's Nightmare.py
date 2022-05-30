@@ -1,5 +1,6 @@
 def zebulans_nightmare(function):
-    return function.split('_')
+    function = function.split('_')
+    return function[0] + ''.join(i.title() for i in function[1:])
 
 
 print(zebulans_nightmare('camel_case'), 'camelCase')
