@@ -3,8 +3,7 @@
 
 
 def give_change(amount):
-    # your code here
-    pass
+    ans = [0, 0, 0, 0, 0]
 
 
 print(give_change(365), (0, 1, 1, 0, 1, 3))
