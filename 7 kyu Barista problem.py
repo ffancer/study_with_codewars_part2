@@ -1,12 +1,12 @@
 def barista(coffees):
     clean = 2
     sorted_lst = sorted(coffees)
-    a = sorted_lst[0]
+    waiting_time = sorted_lst[0]
     total = 0
 
-    for i in sorted_lst[1:]:
-        total += clean + a + i
-        a = i
+    while sorted_lst:
+        total += sorted_lst[0] * len(sorted_lst)
+        total += len(sorted_lst) * 2
 
     return total
 
