@@ -1,15 +1,12 @@
 def barista(coffees):
-    clean = 2
-    sorted_lst = sorted(coffees)
-    waiting_time = sorted_lst[0]
-    total = 0
+    time, total = 0, 0
 
-    while sorted_lst:
-        total += sorted_lst[0] * len(sorted_lst)
-        total += len(sorted_lst) * 2
+    for e in sorted(coffees):
+        time += e
+        total += time
+        time += 2
 
     return total
-
 
 
 print(barista([2, 10, 5, 3, 9]), 85, 'Sorry, but the smallest waiting time possible is: 85')
