@@ -9,7 +9,7 @@ def passed(lst):
 
     if cnt == 0:
         return 'No pass scores registered.'
-    return int(total / cnt + .5)
+    return round(total / cnt)
 
 
 print(passed([10, 10, 10, 18, 20, 20]), 12)
