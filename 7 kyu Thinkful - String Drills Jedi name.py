@@ -3,7 +3,7 @@
 
 
 def greet_jedi(first, last):
-    pass
+    return f'Greetings, master {last[:3].title() + first[:2].title()}'
 
 
 print(greet_jedi('Beyonce', 'Knowles'), 'Greetings, master KnoBe')
