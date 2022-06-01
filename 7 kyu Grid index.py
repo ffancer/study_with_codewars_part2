@@ -1,6 +1,7 @@
 def grid_index(grid, indexes):
     letters = [j for i in grid for j in i]
-    return letters
+    return ''.join(letters[i-1] for i in indexes)
+
 
 results1 = grid_index([['m', 'y', 'e'], ['x', 'a', 'm'], ['p', 'l', 'e']], [1, 2, 3, 4, 5, 6, 7, 8, 9])
 print(results1, 'myexample')
