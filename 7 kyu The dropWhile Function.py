@@ -1,11 +1,10 @@
 def drop_while(arr, pred):
-    def is_even(arr):
-        return [i % 2 != 0 for i in arr]
-    def is_odd(arr):
-        return [i % 2 != 0 for i in arr]
-    if pred == is_even:
-        return is_even(arr)
-
+    for i, v in enumerate(arr):
+        if pred(v):
+            continue
+        else:
+            return arr[i:]
+    return []
 
 
 print(drop_while([2, 6, 4, 10, 1, 5, 4, 3], is_even), [1, 5, 4, 3])
