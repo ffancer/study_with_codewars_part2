@@ -1,5 +1,6 @@
 def count_salutes(hallway):
-    pass
+    return hallway.replace('-', '')
+
 
 
 print(count_salutes('>--->---<--<'), 8)
