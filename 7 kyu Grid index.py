@@ -1,5 +1,6 @@
 def grid_index(grid, indexes):
-    pass
+    for i, j in enumerate(grid):
+        print(i, j)
 
 
 results1 = grid_index([['m', 'y', 'e'], ['x', 'a', 'm'], ['p', 'l', 'e']], [1, 2, 3, 4, 5, 6, 7, 8, 9])
