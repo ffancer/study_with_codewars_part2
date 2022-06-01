@@ -1,13 +1,7 @@
 def matrix(array):
-    lst = []
-    for i, j in enumerate(array):
-        if j[i] < 0:
-            lst.append(0)
-        if j[i] > 0:
-            lst.append(1)
-        else:
-            lst.append(j[i])
-    return lst
+    for i in range(len(array)):
+        array[i][i] = int(array[i][i] >= 0)
+    return array
 
 
 print(matrix([[-1, 4, -5, -9, 3],
