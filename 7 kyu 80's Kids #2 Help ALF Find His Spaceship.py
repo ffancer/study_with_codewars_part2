@@ -1,5 +1,7 @@
 def find_spaceship(astromap):
-    pass
+    coordinates = []
+    for i, j in enumerate(astromap):
+        print(i, j)
 
 
 print(type(find_spaceship('X')), list, "Expected the return value to be a list")
