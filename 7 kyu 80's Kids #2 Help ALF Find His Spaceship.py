@@ -1,9 +1,6 @@
 def find_spaceship(astromap):
-    coordinates = [0, 0]
-    for i in len(astromap):
-        for j in len(astromap):
-            if astromap[i][j] == 'X':
-                coordinates = astromap[i][j]
+    coordinates = astromap.split('\n')[::-1]
+
     return coordinates
 
 
