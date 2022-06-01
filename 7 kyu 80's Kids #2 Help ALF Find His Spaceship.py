@@ -1,7 +1,10 @@
 def find_spaceship(astromap):
-    coordinates = astromap.split('\n')[::-1]
+    astromap = astromap.split('\n')[::-1]
 
-    return coordinates
+    for i in astromap:
+        if 'X' in i:
+            return [i.index('X'), astromap.index(i)]
+    return 'Spaceship lost forever.'
 
 
 print(type(find_spaceship('X')), list, "Expected the return value to be a list")
