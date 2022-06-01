@@ -1,11 +1,11 @@
 def find_spaceship(astromap):
     coordinates = [0, 0]
-    for i, j in enumerate(astromap):
-        if i == 'X':
-            coordinates[0] = i
-        if j == 'X':
-            coordinates[1] == j
+    for i in len(astromap):
+        for j in len(astromap):
+            if astromap[i][j] == 'X':
+                coordinates = astromap[i][j]
     return coordinates
+
 
 print(type(find_spaceship('X')), list, "Expected the return value to be a list")
 print(find_spaceship("X"), [0, 0], "Should work when there is only one place to be")
