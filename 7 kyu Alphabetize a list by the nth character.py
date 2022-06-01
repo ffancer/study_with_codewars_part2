@@ -1,5 +1,5 @@
 def sort_it(list_, n):
-    pass
+    return sorted(list_, key=n)
 
 
 print(sort_it('bill, bell, ball, bull', 2), 'ball, bell, bill, bull', 'Sort by the second letter')
