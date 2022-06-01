@@ -1,9 +1,9 @@
 def grid_index(grid, indexes):
     s = ''
-    for i in indexes:
-
-        print(grid[i][i])
-
+    for i in grid:
+        for j in indexes:
+            s += i[j]
+    return s
 
 results1 = grid_index([['m', 'y', 'e'], ['x', 'a', 'm'], ['p', 'l', 'e']], [1, 2, 3, 4, 5, 6, 7, 8, 9])
 print(results1, 'myexample')
