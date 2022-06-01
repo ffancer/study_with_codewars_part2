@@ -1,5 +1,5 @@
 def sort_it(list_, n):
-    return sorted(list_, key=lambda list_: list_[n - 1])
+    return sorted(list_.split(','), key=lambda list_: list_[n - 1])
 
 
 print(sort_it('bill, bell, ball, bull', 2), 'ball, bell, bill, bull', 'Sort by the second letter')
