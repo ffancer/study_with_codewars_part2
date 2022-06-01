@@ -3,8 +3,10 @@
 
 
 def my_add(a, b):
-    pass
-
+    try:
+        return a + b
+    except:
+        return 'fff'
 
 print(my_add(1, 3.414), 4.414)
 print(my_add(42, " is the answer."), None)
