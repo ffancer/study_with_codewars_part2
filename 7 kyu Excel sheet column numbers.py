@@ -1,11 +1,10 @@
 def title_to_number(title):
-    total = 0
-    # return ord('A') - 64
-    # for i in range(len(title)):
-    for j in title:
-        total += ord(j) - 64
+    ret = 0
 
-    return total
+    for i in title:
+        ret = ret * 26 + ord(i) - 64
+
+    return ret
 
 
 print(title_to_number('A'), 1)
