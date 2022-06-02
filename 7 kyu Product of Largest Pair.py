@@ -1,5 +1,8 @@
 def max_product(a):
-    pass
+    first_max = max(a)
+    print(len(a))
+    a.remove(first_max)
+    return len(a)
 
 
 print(max_product([56, 335, 195, 443, 6, 494, 252]), 218842)
