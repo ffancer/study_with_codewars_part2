@@ -1,5 +1,9 @@
 def substring_test(s1, s2):
-    return list(set(s1)) == list(set(s2))
+    for i in list(set(s1.lower())):
+        if i not in list(set(s2.lower())):
+            return False
+
+    return True
 
 
 print(substring_test("Something", "Home"), True)
