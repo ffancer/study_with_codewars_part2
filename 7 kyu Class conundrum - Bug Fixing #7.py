@@ -5,12 +5,11 @@ class List:
         self.count = 0
 
     def add(self, item):
-        if type(item) != self.type:
-            item_type = "str" if self.type == str else "int" if self.type == int else "float"
-            return "This item is not of type: %s" % (item_type)
-        self.items += [item]
+        if not isinstance(item, self.type):
+            return f"This item is not of type: {self.type.__name__}"
+        self.items.append(item)
         self.count += 1
-        return item
+        return self
 
 
 my_list = List(str)
