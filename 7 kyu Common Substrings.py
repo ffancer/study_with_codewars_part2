@@ -1,5 +1,5 @@
 def substring_test(s1, s2):
-    pass
+    return list(s1)
 
 
 print(substring_test("Something","Home"), True)
