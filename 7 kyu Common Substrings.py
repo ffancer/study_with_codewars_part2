@@ -1,9 +1,12 @@
-def substring_test(s1, s2):
-    for i in list(set(s1.lower())):
-        if i not in list(set(s2.lower())):
-            return False
+def substring_test(first, second):
+    first = first.lower()
+    second = second.lower()
 
-    return True
+    for i in range(len(first) - 2):
+        if first[i:i + 2] in second:
+            return True
+
+    return False
 
 
 print(substring_test("Something", "Home"), True)
