@@ -1,9 +1,5 @@
-from math import hypot
-
-
 def euclidean_distance(point1, point2):
-    for i in range(len(point1)):
-        return hypot(point1[i] - point1[i-1], point2[i] - point2[i-1])
+    return round(sum((b - a) ** 2 for a, b in zip(point1, point2)) ** 0.5, 2)
 
 
 point1 = (-1,)
