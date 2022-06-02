@@ -1,5 +1,5 @@
 def title_to_number(title):
-    pass
+    return ord('A') - 64
 
 
 print(title_to_number('A'), 1)
