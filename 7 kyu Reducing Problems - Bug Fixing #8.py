@@ -1,7 +1,5 @@
 def calculate_total(t1, t2):
-    t1s = sum(t1)
-    t2s = sum(t2)
-    return t1s > t2s
+    return sum(t1) > sum(t2)
 
 
 print(calculate_total([1, 2, 2], [1, 0, 0]), True, 'Calculate the Winner!')
