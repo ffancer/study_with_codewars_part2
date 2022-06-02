@@ -1,14 +1,5 @@
 def substring_test(s1, s2):
-    flag_1, flag_2 = True, True
-    for i in list(s1):
-        if i not in list(s2):
-            flag_1 = False
-
-    for j in list(s2):
-        if j not in list(s1):
-            flag_2 = False
-
-    return flag_1, flag_2
+    return list(set(s1)) == list(set(s2))
 
 
 print(substring_test("Something", "Home"), True)
