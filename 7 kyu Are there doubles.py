@@ -3,7 +3,7 @@
 
 
 def double_check(strng):
-    pass
+    return ''.join(list(set(strng)))
 
 
 print(double_check("abca"), False)
