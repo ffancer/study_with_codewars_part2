@@ -1,10 +1,10 @@
 def pattern(n):
-    s = ''
+    lst = []
 
     for i in range(2, n+1, 2):
-        s += i * str(i) + '\n'
+        lst.append(i * str(i))
 
-    return s
+    return lst
 
 
 print(pattern(2), "22")
