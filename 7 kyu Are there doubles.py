@@ -3,10 +3,11 @@
 
 
 def double_check(strng):
+    strng = strng.lower()
+
     for i in range(len(strng)-1):
         if strng[i] == strng[i + 1]:
             return True
-
     return False
 
 
