@@ -1,5 +1,12 @@
 def nerdify(txt):
-    pass
+    for i in txt:
+        if i in 'aA':
+            txt = txt.replace(i, '4')
+        if i in 'eE':
+            txt = txt.replace(i, '3')
+        if i in 'l':
+            txt = txt.replace(i, '1')
+    return txt
 
 
 print(nerdify("Fundamentals"),"Fund4m3nt41s")
