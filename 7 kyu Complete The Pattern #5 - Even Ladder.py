@@ -4,7 +4,7 @@ def pattern(n):
     for i in range(2, n+1, 2):
         lst.append(i * str(i))
 
-    return lst
+    return '\n'.join(lst)
 
 
 print(pattern(2), "22")
