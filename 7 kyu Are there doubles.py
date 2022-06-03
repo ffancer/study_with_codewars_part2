@@ -3,7 +3,11 @@
 
 
 def double_check(strng):
-    return ''.join(list(set(strng)))
+    for i in range(len(strng)-1):
+        if strng[i] == strng[i + 1]:
+            return True
+
+    return False
 
 
 print(double_check("abca"), False)
