@@ -1,5 +1,5 @@
 def reverse_list(lst):
-    pass
+    return lst[::-1]
 
 
 tests = (
