@@ -2,7 +2,6 @@ def char_concat(word):
     if len(word) % 2 != 0:
         word = word[:len(word)//2] + word[len(word)//2+1:]
 
-    word = ''.join(i for i in word if i != ' ')
     cnt = 1
     s = ''
 
