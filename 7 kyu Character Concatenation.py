@@ -1,5 +1,15 @@
 def char_concat(word):
-    pass
+    cnt = 1
+    s = ''
+
+    while word:
+        s += word[0]
+        s += word[-1]
+        s += str(cnt)
+        cnt += 1
+        word = word[1:-1]
+
+    return s
 
 
 print(char_concat("abc def"), 'af1be2cd3', "Should work for example test")
