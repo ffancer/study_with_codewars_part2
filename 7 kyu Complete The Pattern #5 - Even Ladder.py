@@ -1,5 +1,10 @@
 def pattern(n):
-    pass
+    s = ''
+
+    for i in range(2, n+1, 2):
+        s += i * str(i) + '\n'
+
+    return s
 
 
 print(pattern(2), "22")
