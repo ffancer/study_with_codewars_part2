@@ -1,5 +1,5 @@
 def to_binary(n):
-    return "{0:b}".format(int(n))
+    return '{:b}'.format(n & 4294967295)
 
 
 print(to_binary(2), "10")
