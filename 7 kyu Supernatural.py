@@ -19,7 +19,10 @@ def bob(what):
         'phoenix': 'Use the colt',
         'witch': 'They are humans'
     }
-
+    try:
+        return database[what] + ', idjits!'
+    except KeyError:
+        return 'I have friggin no idea yet, idjits!'
 
 print(bob('vampire'), 'Behead it with a machete, idjits!')
 print(bob('pagan god'), 'It depends on which one it is, idjits!')
