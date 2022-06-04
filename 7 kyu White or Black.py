@@ -2,7 +2,9 @@
 # White or Black?
 
 def square_color(file, rank):
-    return 'white'
+    if (file in 'aceg' and rank % 2 == 0) or (file in 'bdfh' and rank % 2 != 0):
+        return 'white'
+    return 'black'
 
 
 print(square_color("a", 8), "white")
