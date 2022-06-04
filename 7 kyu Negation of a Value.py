@@ -1,5 +1,9 @@
 def negation_value(s, val):
-    pass
+    if '!' in s and val is True:
+        return False
+    if '!' in s and val is False:
+        return True
+
 
 
 print(negation_value("!", False), True)
