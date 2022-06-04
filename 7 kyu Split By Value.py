@@ -1,15 +1,5 @@
 def split_by_value(k, elements):
-    first_lst, middle_lst, last_lst = [], [], []
-
-    for i in elements:
-        if i < k:
-            first_lst.append(i)
-        if i > k:
-            middle_lst.append(i)
-        if i == k:
-            last_lst.append(i)
-
-    return first_lst + middle_lst + last_lst
+    return [x for x in elements if x < k] + [x for x in elements if x >= k]
 
 
 print(split_by_value(5, [1, 3, 5, 7, 6, 4, 2]), [1, 3, 4, 2, 5, 7, 6])
