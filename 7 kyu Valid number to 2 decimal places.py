@@ -1,5 +1,6 @@
 def valid_number(n):
-    pass
+    return n.split('.')[-1].isdigit()
+
 
 
 print(valid_number("0.00"), True)
