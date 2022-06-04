@@ -3,13 +3,7 @@ CHANGE = {'penny': 0.01, 'nickel': 0.05, 'dime': 0.1, 'quarter': 0.25, 'dollar':
 
 
 def change_count(change):
-    total = 0
-
-    for i in change.split():
-        total += CHANGE[i]
-
-    res = "%.2f" % total
-    return '$' + res
+    return '$' + "%.2f" % sum(CHANGE[i] for i in change.split())
 
 
 print(change_count('dime penny dollar'), '$1.11')
