@@ -8,7 +8,8 @@ def change_count(change):
     for i in change.split():
         total += CHANGE[i]
 
-    return '$' + str(round(total, 2))
+    res = "%.2f" % total
+    return '$' + res
 
 
 print(change_count('dime penny dollar'), '$1.11')
