@@ -10,7 +10,13 @@ SCORES = {'A': 100, 'B': 14, 'C': 9, 'D': 28, 'E': 145, 'F': 12, 'G': 3,
 
 def sexy_name(name):
     name = ''.join(i.upper() for i in name)
-    return name
+    total = 0
+
+    for i in name:
+        if i == ' ':
+            continue
+        total += SCORES[i]
+    return total
 
 
 print(sexy_name('GUV'), 'NOT TOO SEXY')
