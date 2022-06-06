@@ -7,11 +7,15 @@ def type_of_triangle(a, b, c):
         if not i.isdigit():
             return "Not a valid triangle"
 
+    if max(a, b, c) * 2 >= sum([a, b, c]):
+        return "Not a valid triangle"
+
     if a == b == c:
         return "Equilateral"
     elif a == b or b == c or a == c:
         return "Isosceles"
-    return "Scalene"
+    elif a != b or b != c or c != a:
+        return "Scalene"
 
 
 print(type_of_triangle(1, 1, 1), "Equilateral")
