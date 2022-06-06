@@ -1,11 +1,5 @@
 def archers_ready(archers):
-    if not archers:
-        return False
-
-    for i in archers:
-        if i < 5:
-            return False
-    return True
+    return False if not archers else min(archers, default=0) > 4
 
 
 print(archers_ready([]), False, "Should handle no archers")
