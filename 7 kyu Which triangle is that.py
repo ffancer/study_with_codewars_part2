@@ -3,8 +3,9 @@
 
 
 def type_of_triangle(a, b, c):
-    # your code here
-    pass
+    for i in str(a) + str(b) + str(c):
+        if not i.isdigit():
+            return "Not a valid triangle"
 
 
 print(type_of_triangle(1, 1, 1), "Equilateral")
