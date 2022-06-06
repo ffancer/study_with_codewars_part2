@@ -1,10 +1,12 @@
 def get_number_of_squares(n):
     total = 0
+    cnt = 0
 
-    for i in range(1, n+1):
-        total += i ** 2
+    while total < n:
+        cnt += 1
+        total += pow(cnt, 2)
 
-    return total
+    return cnt - 1
 
 
 print(get_number_of_squares(1))
