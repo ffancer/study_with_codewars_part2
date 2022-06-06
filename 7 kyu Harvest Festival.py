@@ -1,8 +1,11 @@
 def plant(seed, water, fert, temp):
     s = ''
 
-    for _ in range(water):
-        s += water * '-' + seed * fert
+    if 20 <= temp <= 30:
+        for _ in range(water):
+            s += water * '-' + seed * fert
+    else:
+        s = f'{"-" * (water * water)}{seed}'
 
     return s
 
