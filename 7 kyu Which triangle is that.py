@@ -7,6 +7,12 @@ def type_of_triangle(a, b, c):
         if not i.isdigit():
             return "Not a valid triangle"
 
+    if a == b == c:
+        return "Equilateral"
+    elif a == b or b == c or a == c:
+        return "Isosceles"
+    return "Scalene"
+
 
 print(type_of_triangle(1, 1, 1), "Equilateral")
 print(type_of_triangle(3, 2, 4), "Scalene")
