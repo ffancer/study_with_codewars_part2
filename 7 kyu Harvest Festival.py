@@ -1,13 +1,5 @@
 def plant(seed, water, fert, temp):
-    s = ''
-
-    if 20 <= temp <= 30:
-        for _ in range(water):
-            s += water * '-' + seed * fert
-    else:
-        s = f'{"-" * (water * water)}{seed}'
-
-    return s
+    return ('-' * water + seed * fert) * water if 20 <= temp <= 30 else ('-' * water) * water + seed
 
 
 print(plant(",", 3, 7, 25), "---,,,,,,,---,,,,,,,---,,,,,,,")
