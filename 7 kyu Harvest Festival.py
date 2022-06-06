@@ -1,5 +1,10 @@
 def plant(seed, water, fert, temp):
-    pass
+    s = ''
+
+    for _ in range(water):
+        s += water * '-' + seed * fert
+
+    return s
 
 
 print(plant(",", 3, 7, 25), "---,,,,,,,---,,,,,,,---,,,,,,,")
