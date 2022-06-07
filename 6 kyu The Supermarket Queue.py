@@ -1,5 +1,12 @@
 def queue_time(customers, n):
-    pass
+    lst = [0]*n
+
+    for i in customers:
+        lst = sorted(lst)
+        lst[0] += i
+
+    return lst
+    # return max(lst)
 
 
 print(queue_time([], 1), 0, "wrong answer for case with an empty queue")
