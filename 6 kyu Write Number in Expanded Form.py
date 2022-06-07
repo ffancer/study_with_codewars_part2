@@ -1,10 +1,14 @@
 def expanded_form(num):
+    s = str(num)
+    len_s = len(s)
     lst = []
-    while len(str(num)) > 1:
-        lst.append(str(num % 10))
-        num = int(str(num)[:-1])
-    return lst
-    # return int(str(num)[:-1])
+
+    for i in range(0, len_s):
+        if s[i] != '0':
+            temp = s[i].ljust(len_s - i, '0')
+            lst.append(temp)
+
+    return ' + '.join(lst)
 
 
 print(expanded_form(12), '10 + 2')
