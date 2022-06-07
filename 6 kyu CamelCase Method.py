@@ -1,7 +1,5 @@
 def camel_case(string):
-    s = string.split()
-    s = [i.title() for i in s]
-    return ''.join(s)
+    return ''.join(i.title() for i in string.split())
 
 
 print(camel_case("test case"), "TestCase")
