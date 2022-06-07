@@ -1,5 +1,28 @@
+num_s = [
+    1000, 900, 500, 400,
+    100, 90, 50, 40,
+    10, 9, 5, 4,
+    1
+]
+let_s = [
+    "M", "CM", "D", "CD",
+    "C", "XC", "L", "XL",
+    "X", "IX", "V", "IV",
+    "I"
+]
+
+
 def solution(n):
-    pass
+    s = ''
+    i = 0
+
+    while n > 0:
+        for _ in range(n // num_s[i]):
+            s += let_s[i]
+            n -= num_s[i]
+        i += 1
+
+    return s
 
 
 print(solution(1), 'I', "solution(1),'I'")
