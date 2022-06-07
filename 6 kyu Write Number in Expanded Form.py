@@ -1,14 +1,5 @@
 def expanded_form(num):
-    s = str(num)
-    len_s = len(s)
-    lst = []
-
-    for i in range(0, len_s):
-        if s[i] != '0':
-            temp = s[i].ljust(len_s - i, '0')
-            lst.append(temp)
-
-    return ' + '.join(lst)
+    return ' + '.join(j + '0' * (len(str(num)) - i - 1) for i, j in enumerate(str(num)) if j != '0')
 
 
 print(expanded_form(12), '10 + 2')
