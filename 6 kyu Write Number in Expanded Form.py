@@ -1,5 +1,6 @@
 def expanded_form(num):
-    pass
+    dig = num % 10
+    return dig
 
 
 print(expanded_form(12), '10 + 2')
