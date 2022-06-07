@@ -1,5 +1,6 @@
 def camel_case(string):
-    pass
+    s = string.split()
+    return s
 
 
 print(camel_case("test case"), "TestCase")
