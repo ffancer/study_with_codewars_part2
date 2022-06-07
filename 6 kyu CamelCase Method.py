@@ -1,5 +1,5 @@
 def camel_case(string):
-    return ''.join(i.title() for i in string.split())
+    return string.title().replace(" ", "")
 
 
 print(camel_case("test case"), "TestCase")
