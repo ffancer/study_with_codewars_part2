@@ -1,6 +1,16 @@
-def sum_dig_pow(a, b):  # range(a, b + 1) will be studied by the function
-    # your code here
-    return []
+def sum_dig_pow(a, b):
+    lst = []
+
+    for i in range(a, b + 1):
+        j = 0
+        k = 1
+        for c in str(i):
+            j += int(c) ** k
+            k += 1
+        if j == i:
+            lst.append(j)
+
+    return lst
 
 
 print(sum_dig_pow(1, 10), [1, 2, 3, 4, 5, 6, 7, 8, 9])
