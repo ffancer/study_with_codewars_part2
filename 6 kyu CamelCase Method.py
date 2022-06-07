@@ -1,7 +1,8 @@
 def camel_case(string):
     s = string.split()
     s = [i.title() for i in s]
-    return s
+    return ''.join(s)
+
 
 print(camel_case("test case"), "TestCase")
 print(camel_case("camel case method"), "CamelCaseMethod")
