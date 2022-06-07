@@ -5,8 +5,7 @@ def queue_time(customers, n):
         lst = sorted(lst)
         lst[0] += i
 
-    return lst
-    # return max(lst)
+    return max(lst)
 
 
 print(queue_time([], 1), 0, "wrong answer for case with an empty queue")
