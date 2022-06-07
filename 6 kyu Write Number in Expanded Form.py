@@ -1,6 +1,10 @@
 def expanded_form(num):
-    dig = num % 10
-    return dig
+    lst = []
+    while len(str(num)) > 1:
+        lst.append(str(num % 10))
+        num = int(str(num)[:-1])
+    return lst
+    # return int(str(num)[:-1])
 
 
 print(expanded_form(12), '10 + 2')
