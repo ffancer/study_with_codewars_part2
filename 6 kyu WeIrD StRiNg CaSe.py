@@ -10,8 +10,9 @@ def to_weird_case(string):
             else:
                 s += j
         ans.append(s)
-        # s = ''
-    return ans
+
+    return ' '.join(ans)
+
 
 print(to_weird_case('This'), 'ThIs')
 print(to_weird_case('is'), 'Is')
