@@ -1,6 +1,10 @@
 def diamond(n):
-    # Make some diamonds!
-    return "*"
+    up_s, down_s, mid_s = '', '', n * '*'
+
+    for i in range(1, n, 1):
+        up_s += '*' * i + '\n'
+
+    return up_s
 
 
 expected = " *\n"
