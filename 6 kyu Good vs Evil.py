@@ -1,5 +1,7 @@
 def good_vs_evil(good, evil):
-    return
+    total_good, total_evil = 0, 0
+
+
 
 
 print(good_vs_evil('1 1 1 1 1 1', '1 1 1 1 1 1 1'), 'Battle Result: Evil eradicates all trace of Good')
