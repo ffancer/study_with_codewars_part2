@@ -1,5 +1,6 @@
 def race(v1, v2, g):
-    pass
+    if v1 >= v2:
+        return None
 
 
 print(race(720, 850, 70), [0, 32, 18])
