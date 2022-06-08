@@ -1,7 +1,9 @@
 def good_vs_evil(good, evil):
-    total_good, total_evil = sum(int(i) for i in good.split()), 0
+    total_good, total_evil = sum(int(i) for i in good.split()), sum(int(i) for i in evil.split())
 
-    return total_good
+    return 'Battle Result: No victor on this battle field' if total_good == total_evil else \
+        'Battle Result: Evil eradicates all trace of Good' if total_evil > total_good else \
+            'Battle Result: Good triumphs over Evil'
 
 
 print(good_vs_evil('1 1 1 1 1 1', '1 1 1 1 1 1 1'), 'Battle Result: Evil eradicates all trace of Good')
