@@ -1,5 +1,7 @@
 def stock_list(listOfArt, listOfCat):
-    pass
+    for i in listOfArt:
+        if listOfCat in i:
+            return i
 
 
 b = ["ABAR 200", "CDXE 500", "BKWR 250", "BTSQ 890", "DRTY 600"]
