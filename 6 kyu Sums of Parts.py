@@ -1,11 +1,10 @@
 def parts_sums(ls):
-    lst = []
+    res = [sum(ls)]
 
-    while ls:
-        lst.append(sum(ls))
-        ls = ls[1:]
+    for i in ls:
+        res.append(res[-1] - i)
 
-    return lst + [0]
+    return res
 
 
 print(parts_sums([]), [0])
