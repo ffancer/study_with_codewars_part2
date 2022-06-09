@@ -1,5 +1,11 @@
 def parts_sums(ls):
-    pass
+    lst = []
+
+    while ls:
+        lst.append(sum(ls))
+        ls = ls[1:]
+
+    return lst + [0]
 
 
 print(parts_sums([]), [0])
