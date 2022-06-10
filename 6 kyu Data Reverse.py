@@ -3,7 +3,11 @@ def data_reverse(data):
 
     for i in range(len(data) // 8):
         second_data = (len(data) - 8)
-        print(second_data)
+        for j in range(second_data, len(data)):
+            lst.append(data[second_data])
+            data.pop(second_data)
+
+    return lst
 
 
 data1 = [1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0]
