@@ -1,5 +1,8 @@
 def meeting(s):
-    pass
+    for i in s:
+        if i in ':;':
+            s = s.replace(i, ' ')
+    return s.upper()
 
 
 def testing(s, exp):
