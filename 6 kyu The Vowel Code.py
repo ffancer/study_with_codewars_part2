@@ -3,7 +3,7 @@ def encode(st):
 
 
 def decode(st):
-    return
+    return st.replace('1', 'a').replace('2', 'e').replace('3', 'i').replace('4', 'o').replace('5', 'u')
 
 
 print(encode('hello'), 'h2ll4')
