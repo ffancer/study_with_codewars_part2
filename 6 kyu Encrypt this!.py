@@ -2,13 +2,16 @@ def encrypt_this(text):
     if not text:
         return text
 
-    text = text.split()
+    text = text.strip().split()
     lst = []
 
-    # return ord(text[0])
     for i in text:
-        lst.append(str(ord(i[0])) + i[-1] + i[1:-1])
+        first = str(ord(i[0]))
+        second = i[1:]
+        third = second[-1] + second[1:-1] + second[0]
+        lst.append(first + third)
     return lst
+
 
 tests = [
     ("", ""),
