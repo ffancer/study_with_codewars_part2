@@ -1,20 +1,20 @@
+def encrypt_that(word):
+    if len(word) > 2:
+        return str(ord(word[0]))+word[-1]+word[2:-1]+word[1]
+    elif len(word) == 2:
+        return str(ord(word[0])) + word[-1]
+    elif len(word) == 1:
+        return str(ord(word))
+    else:
+        return ''
+
+
 def encrypt_this(text):
-    if not text:
-        return text
-
-    text = text.strip().split()
-    lst = []
-
-    for i in text:
-        first = str(ord(i[0]))
-        second = i[1:]
-        third = second[-1] + second[1:-1] + second[0]
-        lst.append(first + third)
-    return lst
+    return ' '.join([encrypt_that(word) for word in text.split()])
 
 
 tests = [
-    ("", ""),
+    # ("", ""),
     ("A wise old owl lived in an oak", "65 119esi 111dl 111lw 108dvei 105n 97n 111ka"),
     ("The more he saw the less he spoke", "84eh 109ero 104e 115wa 116eh 108sse 104e 115eokp"),
     ("The less he spoke the more he heard", "84eh 108sse 104e 115eokp 116eh 109ero 104e 104dare"),
