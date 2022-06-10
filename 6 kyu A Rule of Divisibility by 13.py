@@ -1,16 +1,10 @@
+array = [1, 10, 9, 12, 3, 4]
+
 def thirt(n):
-    number = n
-
-    while True:
-        stationary_number = 0
-
-        for key, digit in enumerate(str(number)[::-1]):
-            stationary_number += int(digit) * (10 ** key % 13)
-
-        if number == stationary_number:
-            return stationary_number
-
-        number = int(stationary_number)
+    total = sum([int(c) * array[i % 6] for i, c in enumerate(reversed(str(n)))])
+    if n == total:
+        return total
+    return thirt(total)
 
 
 print(thirt(8529), 79)
