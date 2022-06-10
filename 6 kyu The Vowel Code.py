@@ -1,5 +1,5 @@
 def encode(st):
-    return
+    return st.replace('a', '1').replace('e', '2').replace('i', '3').replace('o', '4').replace('u', '5')
 
 
 def decode(st):
