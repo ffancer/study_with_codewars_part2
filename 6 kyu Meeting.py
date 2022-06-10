@@ -1,8 +1,18 @@
 def meeting(s):
-    for i in s:
-        if i in ':;':
-            s = s.replace(i, ' ')
-    return s.upper()
+    s_lower = s.lower()
+    lst = s_lower.split(';')
+    ret = []
+    ans = ""
+
+    for i in lst:
+        ret.append(i.split(":"))
+    for name in ret:
+        name.reverse()
+    ret.sort()
+    for name2 in ret:
+        ans += "(" + str(name2[0].upper()) + "," + " " + str(name2[1].upper()) + ")"
+
+    return ans
 
 
 def testing(s, exp):
