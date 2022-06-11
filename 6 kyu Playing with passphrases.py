@@ -2,7 +2,7 @@ def play_pass(s, n):
     ans = ''
 
     for i in s:
-        ans += chr(ord(i + n))
+        ans += chr(ord(i) + n)
     return ans
 
 print(play_pass("I LOVE YOU!!!", 1), "!!!vPz fWpM J")
