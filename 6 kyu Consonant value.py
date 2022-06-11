@@ -1,8 +1,16 @@
 def solve(s):
-    val = 0
-
+    ans = 0
     s = s.translate(str.maketrans('aeiou', '00000'))
-    return s
+    s = s.split('0')
+
+    for i in s:
+        total = 0
+        for j in i:
+            total += ord(j) - 96
+        if total > ans:
+            ans = total
+
+    return ans
 
 
 print(solve("zodiac"), 26)
