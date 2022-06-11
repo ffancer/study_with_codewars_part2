@@ -1,16 +1,10 @@
 def triple_double(num1, num2):
-    triple = ''
     num1, num2 = str(num1), str(num2)
 
-    for i in range(len(num1)-2):
-        if num1[i] == num1[i+1] == num1[i+2]:
-            triple += num1[i] + num1[i+1] + num1[i+2]
-
-    while num2:
-        if triple == num2[:3]:
+    for i in num1:
+        if i * 3 in num1 and i * 2 in num2:
             return 1
-        num2 = num2[3::]
-    # return 0
+    return 0
 
 
 print(triple_double(451999277, 41177722899), 1)
