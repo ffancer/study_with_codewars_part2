@@ -1,10 +1,9 @@
-def fold_array(arr, runs):
+def fold_array(array, runs):
+    nums = list(array)
     for _ in range(runs):
-        mid_len = len(arr) // 2
-        lst = [arr[i] + arr[-1-i] for i in range(mid_len)] + [arr[mid_len]]*(len(arr)%2)
-        arr = lst.copy()
-    return arr
-
+        for a in range(len(nums) // 2):
+            nums[a] += nums.pop()
+    return nums
 
 
 arr = [1, 2, 3, 4, 5]
