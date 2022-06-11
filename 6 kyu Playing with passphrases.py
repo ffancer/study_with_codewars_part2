@@ -1,6 +1,9 @@
 def play_pass(s, n):
-    pass
+    ans = ''
 
+    for i in s:
+        ans += chr(ord(i + n))
+    return ans
 
 print(play_pass("I LOVE YOU!!!", 1), "!!!vPz fWpM J")
 print(play_pass("MY GRANMA CAME FROM NY ON THE 23RD OF APRIL 2015", 2),
