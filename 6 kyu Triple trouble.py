@@ -1,8 +1,12 @@
 def triple_double(num1, num2):
     cnt = 0
-    num1 = str(num1)
+    num1, num2 = str(num1), str(num2)
+
     for i in range(len(num1)-2):
         if num1[i] == num1[i+1] == num1[i+2]:
+            cnt += 1
+    for i in range(len(num2)-2):
+        if num2[i] == num2[i+1] == num2[i+2]:
             cnt += 1
     return cnt
 
