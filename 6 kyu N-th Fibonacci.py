@@ -1,11 +1,8 @@
-def fibonacci_of(n):
-    if n in {0, 1}:
-        return n
-    return fibonacci_of(n - 1) + fibonacci_of(n - 2)
-
-
 def nth_fib(n):
-    return [fibonacci_of(n) for n in range(n)][n-1]
+    a, b = 0, 1
+    for i in range(n - 1):
+        a, b = b, a + b
+    return a
 
 
 print(nth_fib(1), 0, "1-st Fibo")
