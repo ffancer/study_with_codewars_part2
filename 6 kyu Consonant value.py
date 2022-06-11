@@ -1,9 +1,8 @@
 def solve(s):
-    vowels = 'aeiou'
-    for i in range(len(s)):
-        if s[i] + s[i+1] in vowels:
+    val = 0
 
-
+    s = s.translate(str.maketrans('aeiou', '00000'))
+    return s
 
 
 print(solve("zodiac"), 26)
