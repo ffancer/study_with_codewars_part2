@@ -1,5 +1,9 @@
 def solve(s):
-    pass
+    vowels = 'aeiou'
+    for i in range(len(s)):
+        if s[i] + s[i+1] in vowels:
+
+
 
 
 print(solve("zodiac"), 26)
