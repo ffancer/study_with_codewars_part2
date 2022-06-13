@@ -1,14 +1,12 @@
 def sum_pairs(ints, s):
-    lst = []
-    for i in range(len(ints)):
-        for j in range(len(ints)):
-            if i != j:
-                if ints[i] + ints[j] == s:
-                    if ints[i] not in lst:
-                        lst.append(ints[i])
-                        lst.append(ints[j])
-    return lst
+    dct = {}
 
+    for i in range(len(ints)):
+        num = s - ints[i]
+        if num in dct:
+            return [num, ints[i]]
+        dct[ints[i]] = True
+    return None
 
 
 l1 = [1, 4, 8, 7, 3, 15]
