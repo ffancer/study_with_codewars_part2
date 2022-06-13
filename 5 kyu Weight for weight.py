@@ -11,6 +11,7 @@ def order_weight(strng):
 
     sort_dct = sorted(dct.items())
 
+    return sort_dct
     for i, j in sort_dct:
         lst.append(j)
 
