@@ -1,14 +1,14 @@
 def sum_pairs(ints, s):
-    i, j = 0, 1
+    lst = []
+    for i in range(len(ints)):
+        for j in range(len(ints)):
+            if i == j:
+                continue
+            else:
+                lst.append(ints[i])
+                lst.append(ints[j])
+    return lst
 
-    while i < len(ints):
-        if ints[i] >= s:
-            i += 1
-        if ints[i] + ints[j] == s:
-            return [ints[i], ints[j]]
-        j += 1
-        if j == len(ints):
-            i += 1
 
 
 l1 = [1, 4, 8, 7, 3, 15]
@@ -28,3 +28,7 @@ print(sum_pairs(l5, 10) == [3, 7], "First Match From Left REDUX!: %s should retu
 print(sum_pairs(l6, 8) == [4, 4], "Duplicates: %s should return [4, 4] for sum = 8" % l6)
 print(sum_pairs(l7, 0) == [0, 0], "Zeroes: %s should return [0, 0] for sum = 0" % l7)
 print(sum_pairs(l8, 10) == [13, -3], "Subtraction: %s should return [13, -3] for sum = 10" % l8)
+print(sum_pairs([11, 3, 7, 5], 10), [3, 7])
+
+
+
