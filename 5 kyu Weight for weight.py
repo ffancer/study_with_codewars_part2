@@ -4,18 +4,16 @@ def sum_dig(n):
 
 def order_weight(strng):
     dct = {}
-    lst = []
 
     for i in strng.split():
-        dct.update({sum_dig(i): int(i)})
+        dct.update({int(i):sum_dig(i)})
 
-    sort_dct = sorted(dct.items())
+    lst = sorted(dct, key=sum_dig)
 
-    return sort_dct
-    for i, j in sort_dct:
-        lst.append(j)
+    # sort_dct = sorted(dct.items())
 
     return lst
+
 
 
 
