@@ -1,11 +1,11 @@
 def sum_pairs(ints, s):
     i, j = 0, 1
 
-    while True:
+    while i < len(ints):
         if ints[i] >= s:
             i += 1
         if ints[i] + ints[j] == s:
-            return ints[i], ints[j]
+            return [ints[i], ints[j]]
         j += 1
         if j == len(ints):
             i += 1
