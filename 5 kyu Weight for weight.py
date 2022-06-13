@@ -5,19 +5,7 @@ def sum_dig(n):
 def order_weight(strng):
     weight_lst = sorted(strng.split())
     lst = sorted(weight_lst, key=sum_dig)
-    return lst
-    dct = {}
-
-    for i in strng.split():
-        dct.update({int(i):sum_dig(i)})
-
-    lst = sorted(dct, key=sum_dig)
-
-    # sort_dct = sorted(dct.items())
-
-    return lst
-
-
+    return ' '.join(lst)
 
 
 print(order_weight("103 123 4444 99 2000"), "2000 103 123 4444 99")
