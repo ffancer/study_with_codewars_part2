@@ -1,11 +1,13 @@
 def sum_pairs(ints, s):
-    already_seen = set()
-    pairs = []
-    for x in ints:
-        if (s - x) in already_seen:
-            pairs.append((x, s - x))
-        already_seen.add(x)
-    return pairs
+    lst = []
+    for i in range(len(ints)):
+        for j in range(len(ints)):
+            if i != j:
+                if ints[i] + ints[j] == s:
+                    if ints[i] not in lst:
+                        lst.append(ints[i])
+                        lst.append(ints[j])
+    return lst
 
 
 
