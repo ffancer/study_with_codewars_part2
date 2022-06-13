@@ -1,12 +1,14 @@
 def sum_pairs(ints, s):
-    for i in range(len(ints)-1):
+    i, j = 0, 1
+
+    while True:
         if ints[i] >= s:
-            continue
-        j = i + 1
-        if ints[i] + ints[i+1] == s:
-            return ints[i], ints[i+1]
-        else:
-            j += 1
+            i += 1
+        if ints[i] + ints[j] == s:
+            return ints[i], ints[j]
+        j += 1
+        if j == len(ints):
+            i += 1
 
 
 l1 = [1, 4, 8, 7, 3, 15]
