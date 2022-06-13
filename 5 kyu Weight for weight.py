@@ -3,6 +3,9 @@ def sum_dig(n):
 
 
 def order_weight(strng):
+    weight_lst = sorted(strng.split())
+    lst = sorted(weight_lst, key=sum_dig)
+    return lst
     dct = {}
 
     for i in strng.split():
