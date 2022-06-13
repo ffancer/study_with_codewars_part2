@@ -1,5 +1,10 @@
 def sum_pairs(ints, s):
-    return
+    for i in range(len(ints)-1):
+        if ints[i] >= s:
+            continue
+        if ints[i] + ints[i+1] == s:
+            return ints[i], ints[i+1]
+
 
 
 l1 = [1, 4, 8, 7, 3, 15]
