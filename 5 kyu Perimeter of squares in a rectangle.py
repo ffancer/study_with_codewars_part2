@@ -1,12 +1,10 @@
-def fibonacci_of(num):
-    if num in {0, 1}:
-        return num
-    return fibonacci_of(num - 1) + fibonacci_of(num - 2)
-
-
-
 def perimeter(n):
-    return sum(fibonacci_of(i) for i in range(1, n+1)) * 4
+    fibo = [1, 1]
+
+    for i in range(2, n + 1):
+        fibo.append(fibo[i-1] + fibo[i-2])
+
+    return fibo
 
 
 print(perimeter(5), 80)
