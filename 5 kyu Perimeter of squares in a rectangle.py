@@ -2,14 +2,10 @@
 #     pass
 
 
-cache = {0: 0, 1: 1}
-
-
 def fibonacci_of(n):
-    if n in cache:
-        return cache[n]
-    cache[n] = fibonacci_of(n - 1) + fibonacci_of(n - 2)
-    return cache[n]
+    if n in {0, 1}:
+        return n
+    return fibonacci_of(n - 1) + fibonacci_of(n - 2)
 
 
 print([fibonacci_of(i) for i in range(1, 7)])
