@@ -12,7 +12,7 @@ def fibonacci_of(n):
     return cache[n]
 
 
-print(fibonacci_of(6))
+print([fibonacci_of(i) for i in range(1, 7)])
 # print(perimeter(5), 80)
 # print(perimeter(7), 216)
 # print(perimeter(20), 114624)
