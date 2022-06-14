@@ -1,7 +1,13 @@
 import re
 
-s = 'fjd3IR9'
-print(re.findall('\d', s))
+# s = 'fjd3IR9'
+# match = re.match('\d', s)
+#
+# if match:
+#     print(match)
+
+valid = re.compile(r"^[a2-9tjqk]{5}$")
+print(valid.match("akt5q"))
 
 # regex = ""
 #
