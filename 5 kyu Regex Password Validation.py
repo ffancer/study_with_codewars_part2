@@ -1,6 +1,11 @@
-regex = ""
+import re
 
-print(regex, 'fjd3IR9'), True
+s = 'fjd3IR9'
+print(re.findall('\d', s))
+
+# regex = ""
+#
+# print(regex, 'fjd3IR9'), True
 # print(bool(search(regex, 'ghdfj32')), False)
 # print(bool(search(regex, 'DSJKHD23')), False)
 # print(bool(search(regex, 'dsF43')), False)
