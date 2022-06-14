@@ -1,10 +1,10 @@
 def perimeter(n):
-    fibo = [1, 1]
+    fib = [1, 1]
 
     for i in range(2, n + 1):
-        fibo.append(fibo[i-1] + fibo[i-2])
+        fib.append(fib[i-1] + fib[i-2])
 
-    return fibo
+    return sum(fib) * 4
 
 
 print(perimeter(5), 80)
