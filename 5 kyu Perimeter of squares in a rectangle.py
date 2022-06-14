@@ -6,7 +6,7 @@ def fibonacci_of(num):
 
 
 def perimeter(n):
-    return [fibonacci_of(i) for i in range(1, n+1)]
+    return sum(fibonacci_of(i) for i in range(1, n+1)) * 4
 
 
 print(perimeter(5), 80)
