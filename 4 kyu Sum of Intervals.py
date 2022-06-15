@@ -1,6 +1,6 @@
 def sum_of_intervals(intervals):
     for i in intervals:
-        print(list(i))
+        print(i[1] - i[0])
 
 
 print(sum_of_intervals([(1, 5)]), 4)
