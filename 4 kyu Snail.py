@@ -1,5 +1,6 @@
 def snail(snail_map):
-    pass
+    for i, j in enumerate(snail_map):
+        print(i, j)
 
 
 array = [[1, 2, 3],
