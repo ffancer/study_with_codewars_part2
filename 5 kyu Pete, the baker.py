@@ -4,7 +4,8 @@ def cakes(recipe, available):
     for i in recipe:
         if i in available:
             lst.append(available[i] // recipe[i])
-        return 0
+        else:
+            return 0
 
     return min(lst)
 
