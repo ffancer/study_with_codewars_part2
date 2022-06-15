@@ -1,6 +1,9 @@
 def snail(snail_map):
+    lst = []
     for i, j in enumerate(snail_map):
-        print(i, j)
+        if i == 0:
+            lst.append(j)
+    return lst
 
 
 array = [[1, 2, 3],
