@@ -1,10 +1,20 @@
 def sum_of_intervals(intervals):
-    total = 0
+    max_num, min_num = 0, 0
+    lst = []
 
     for i in intervals:
-        total += i[1] - i[0]
+        if i[1] > max_num:
+            max_num = i[1]
+        if i[0] < min_num:
+            min_num = i[0]
 
-    return total
+    for i in range(0, max_num - min_num):
+        lst.append(0)
+    for i in intervals:
+        for j in range(i[0]-min_num, i[1]-min_num):
+            lst[j] = 1
+
+    return sum(lst)
 
 
 print(sum_of_intervals([(1, 5)]), 4)
