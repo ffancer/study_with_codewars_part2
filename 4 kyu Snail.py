@@ -1,26 +1,9 @@
-def snail(snail_map):
-    if snail_map == [[]]:
-        return []
-    lst = []
-
-    while len(snail_map) > 0:
-        lst += snail_map[0]
-        del snail_map[0]
-        if len(snail_map) <= 0:
-            break
-        for row in snail_map:
-            lst += [row[-1]]
-            del row[-1]
-        if len(snail_map) <= 0:
-            break
-        lst += snail_map[-1][::-1]
-        del snail_map[-1]
-        if len(snail_map) <= 0:
-            break
-        for row in reversed(snail_map):
-            lst += [row[0]]
-            del row[0]
-    return lst
+def snail(array):
+    out = []
+    while len(array):
+        out += array.pop(0)
+        array = list(zip(*array))[::-1] # Rotate
+    return out
 
 
 array = [[1, 2, 3],
