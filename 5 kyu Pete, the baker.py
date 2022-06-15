@@ -1,5 +1,6 @@
 def cakes(recipe, available):
-    return 5
+    for i, j in recipe.items():
+        print(i, j)
 
 
 recipe = {"flour": 500, "sugar": 200, "eggs": 1}
