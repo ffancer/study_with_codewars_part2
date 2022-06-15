@@ -2,8 +2,8 @@ def cakes(recipe, available):
     lst = []
 
     for i in recipe:
-        for j in available:
-            lst.append(recipe[i] / available[j])
+        if i in available:
+            lst.append(recipe[i] // available[i])
 
     return lst
 
