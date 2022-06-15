@@ -1,13 +1,11 @@
 def cakes(recipe, available):
-    dct = {}
-    for i, j in recipe.items():
-        # print(i, j)
-        for k, l in available.items():
-            # print(k, l)
-            if i == k:
-                dct.update({k : l - j})
-    return dct
+    lst = []
 
+    for i in recipe:
+        for j in available:
+            lst.append(recipe[i] / available[j])
+
+    return lst
 
 recipe = {"flour": 500, "sugar": 200, "eggs": 1}
 available = {"flour": 1200, "sugar": 1200, "eggs": 5, "milk": 200}
