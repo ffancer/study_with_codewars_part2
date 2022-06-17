@@ -1,5 +1,5 @@
 def prime_factors(n):
-    f = []
+    lst = []
     n = abs(n)
     i = 2
     while i * i <= n:
@@ -7,14 +7,33 @@ def prime_factors(n):
             i += 1
         else:
             n /= i
-            f.append(i)
+            lst.append(i)
     if n > 1:
-        f.append(n)
-    return f
+        lst.append(n)
+    return lst
+
+
+def combine(lst_1, lst_2):
+    for i in lst_1:
+        if not i in lst_2:
+            lst_2.append(i)
+    return lst_2
 
 
 def sum_for_list(lst):
-    pass
+    factors = []
+    total = []
+
+    for i in range(len(lst)):
+        combine(prime_factors(lst[i]), factors)
+    for i in range(len(factors)):
+        cnt = 0
+        for j in range(len(lst)):
+            if not lst[j] % factors[i]:
+                cnt += lst[j]
+        total.append([factors[i], cnt])
+    total.sort(key=lambda x: x[0])
+    return total
 
 
 a = [12, 15]
