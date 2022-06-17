@@ -1,5 +1,6 @@
 def top_3_words(text):
-    return
+    return text.split()
+
 
 
 print(top_3_words("a a a  b  c c  d d d d  e e e e e"), ["e", "d", "a"])
