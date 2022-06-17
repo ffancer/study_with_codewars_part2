@@ -1,4 +1,8 @@
 def top_3_words(text):
+    for i in "//\\,/\ ..?!1234567890:-_;":
+        if i in text:
+            text = text.replace(i, ' ')
+
     dct = {}
 
     for i in text.split():
