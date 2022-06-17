@@ -1,6 +1,8 @@
 def top_3_words(text):
-    return text.split()
-
+    dct = {}
+    for i in text.split():
+        dct.update({i: text.count(i)})
+    return dct
 
 
 print(top_3_words("a a a  b  c c  d d d d  e e e e e"), ["e", "d", "a"])
