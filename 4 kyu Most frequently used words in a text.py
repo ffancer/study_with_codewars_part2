@@ -4,9 +4,23 @@ def top_3_words(text):
             text = text.replace(i, ' ')
 
     dct = {}
+    text = text.split()
 
-    for i in text.lower().split():
-        dct.update({i: text.count(i)})
+    for j in text:
+        j = j.lower()
+        if j == '':
+            continue
+        if "'" in j:
+            flag = False
+            for k in j:
+                if k.isalpha():
+                    flag = True
+            if not flag:
+                continue
+        if j not in dct:
+            dct[j] = 1
+        else:
+            dct[j] += 1
 
     return sorted(dct, key=dct.get, reverse=True)[:3]
 
