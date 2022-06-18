@@ -1,5 +1,47 @@
+def temp_check(board):
+    temp = [i for i in range(1, 10)]
+
+    for i in board:
+        if sorted(i) != temp:
+            return False
+
+
 def valid_solution(board):
-    pass
+    if temp_check(board) == 0:
+        return False
+
+    alt_board = [[] for i in range(1, 10)]
+    for i, j in enumerate(board):
+        for k in range(0, 9):
+            alt_board[i].append(board[k][i])
+
+    if temp_check(alt_board) == 0:
+        return False
+
+    alt_board = []
+    for i in board:
+        for j in i:
+            alt_board.append(j)
+
+    square_board = [[] for i in range(0, 3)]
+    x_board = []
+    for i in alt_board:
+        for j in range(0, 3):
+            for k in range(0, 3):
+                for h in range(0, 3):
+                    square_board[k].append(alt_board.pop(0))
+        x_board.append(square_board)
+        square_board = [[] for i in range(0, 3)]
+
+    square_board = []
+    for i in x_board:
+        for j in i:
+            square_board.append(j)
+
+    if temp_check(square_board) == 0:
+        return False
+
+    return True
 
 
 print(valid_solution([[5, 3, 4, 6, 7, 8, 9, 1, 2],
