@@ -12,9 +12,11 @@ def smaller(arr):
             if arr[i] > arr[j]:
                 cnt += 1
                 j += 1
-            elif arr[i] < arr[j]:
-                j += 1
-            elif arr[i] == arr[j]:
+            # elif arr[i] < arr[j]:
+            #     j += 1
+            # elif arr[i] == arr[j]:
+            #     j += 1
+            else:
                 j += 1
         lst.append(cnt)
         cnt = 0
