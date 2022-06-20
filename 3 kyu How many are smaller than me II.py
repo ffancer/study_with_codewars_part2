@@ -8,15 +8,15 @@ def smaller(arr):
     i, j = 0, 1
 
     while arr:
+        if j == arr[-1]:
+            lst.append(cnt)
+            cnt = 0
+            arr = arr[1:]
+            j = i
+            i += 1
         if arr[i] > arr[j]:
             cnt += 1
-        j += 1
-        if j == arr[len(arr) - 1]:
-            i += 1
             j += 1
-        arr = arr[1:]
-        lst.append(cnt)
-        cnt = 0
 
     return lst
 
