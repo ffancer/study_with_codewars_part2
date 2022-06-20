@@ -3,7 +3,7 @@
 
 
 def smaller(arr):
-    pass
+    return [len(list(filter(lambda x: x < num, arr))) for num in arr]
 
 
 print(smaller([5, 4, 3, 2, 1]), [4, 3, 2, 1, 0])
