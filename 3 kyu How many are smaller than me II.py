@@ -15,8 +15,7 @@ def smaller(arr):
         lst.append(cnt)
         cnt = 0
         arr = arr[1:]
-        i += 1
-        j = i + 1
+        j = 1
 
 
     return lst
