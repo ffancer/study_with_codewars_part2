@@ -90,18 +90,38 @@
 #         lst.remove(i)
 # print(lst)
 
-def smaller(arr):
-    lst = []
-    while arr:
-        for i in arr:
-            target = arr[0]
-            if i > target:
-                arr.remove(i)
-        lst.append(len(arr))
-        arr = arr[1:]
-    return lst
+def smaller(xs):
+    # prepare list "ys" containing item's numeric order
+    ys = sorted((x,i) for i,x in enumerate(xs))
+    zs = [0] * len(ys)
+
+    for i in range(1, len(ys)):
+        zs[ys[i][1]] = zs[ys[i-1][1]]
+        if ys[i][0] != ys[i-1][0]: zs[ys[i][1]] += 1
+
+    # use list "ts" as binary search tree, every element keeps count of
+    # number of children with value less than the current element's value
+    ts = [0] * (zs[ys[-1][1]]+1)
+    us = [0] * len(xs)
+
+    for i in range(len(xs)-1,-1,-1):
+        x = zs[i]+1
+        while True:
+            us[i] += ts[x-1]
+            x -= (x & (-x))
+            if x <= 0: break
+
+        x = zs[i]+1
+        while True:
+            x += (x & (-x))
+            if x > len(ts): break
+            ts[x-1] += 1
+
+    return us
+
 
 
 
 
 print(smaller([5, 4, 3, 2, 1]), [4, 3, 2, 1, 0])
+print(smaller([40, 20, 10, 50, 20, 40, 30]), [4, 3, 2, 1, 0])
