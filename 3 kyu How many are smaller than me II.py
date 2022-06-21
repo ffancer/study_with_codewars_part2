@@ -59,35 +59,31 @@
 #         cnt = 0
 #     return lst
 
+import numpy as np
 
-# def smaller(arr):
-#     lst = []
-#     while arr:
-#         for i in arr:
-#             target = arr[0]
-#             if target > i:
-#                 del arr[i]
-#         lst.append(len(arr))
-#         arr = arr[1:]
-#     return lst
-#
-#
-#
-#
-# print(smaller([5, 4, 3, 2, 1]), [4, 3, 2, 1, 0])
-# print(smaller([5, 4, 7, 9, 2, 4, 1, 4, 5, 6]), [5, 2, 6, 6, 1, 1, 0, 0, 0, 0])
-# print(smaller([1, 2, 3]), [0, 0, 0])
+
+def smaller(arr):
+    lst = []
+    while arr:
+        target = arr[0]
+        ar = np.array(arr)
+        lst.append(len(ar[ar < target]))
+        arr = arr[1:]
+    return lst
+
+
+print(smaller([5, 4, 3, 2, 1]), [4, 3, 2, 1, 0])
+print(smaller([5, 4, 7, 9, 2, 4, 1, 4, 5, 6]), [5, 2, 6, 6, 1, 1, 0, 0, 0, 0])
+print(smaller([1, 2, 3]), [0, 0, 0])
 
 
 # list(filter(lambda x: x % 2 == 1, [10, 111, 102, 213, 314, 515]))
-lst = [1,2,3,4,5]
+
 
 # a = filter(lambda x: max(lst), lst)
 # print(a)
 
-import numpy as np
-ar = np.array(lst)
-print(len(ar[ar > 5]))
+
 # def smaller(xs):
 #     # prepare list "ys" containing item's numeric order
 #     ys = sorted((x,i) for i,x in enumerate(xs))
