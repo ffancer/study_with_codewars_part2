@@ -54,10 +54,13 @@ def smaller(arr):
         for i in arr:
             if target > i:
                 cnt += 1
+        # if target == arr[-1]:
+        #     break
         arr = arr[1:]
-        target = arr[0]
         lst.append(cnt)
         cnt = 0
+        target = arr[0]
+
     return lst
 
 print(smaller([5, 4, 3, 2, 1]), [4, 3, 2, 1, 0])
