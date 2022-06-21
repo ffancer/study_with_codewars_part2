@@ -80,48 +80,42 @@
 
 
 # list(filter(lambda x: x % 2 == 1, [10, 111, 102, 213, 314, 515]))
-# lst = [5, 4, 7, 9, 2, 4, 1, 4, 5, 6]
+lst = [1,2,3,4,5]
 
 # a = filter(lambda x: max(lst), lst)
 # print(a)
 
-# for i in lst:
-#     if i < 5:
-#         lst.remove(i)
-# print(lst)
+import numpy as np
+ar = np.array(lst)
+print(len(ar[ar > 5]))
+# def smaller(xs):
+#     # prepare list "ys" containing item's numeric order
+#     ys = sorted((x,i) for i,x in enumerate(xs))
+#     zs = [0] * len(ys)
+#
+#     for i in range(1, len(ys)):
+#         zs[ys[i][1]] = zs[ys[i-1][1]]
+#         if ys[i][0] != ys[i-1][0]: zs[ys[i][1]] += 1
+#
+#     # use list "ts" as binary search tree, every element keeps count of
+#     # number of children with value less than the current element's value
+#     ts = [0] * (zs[ys[-1][1]]+1)
+#     us = [0] * len(xs)
+#
+#     for i in range(len(xs)-1,-1,-1):
+#         x = zs[i]+1
+#         while True:
+#             us[i] += ts[x-1]
+#             x -= (x & (-x))
+#             if x <= 0: break
+#
+#         x = zs[i]+1
+#         while True:
+#             x += (x & (-x))
+#             if x > len(ts): break
+#             ts[x-1] += 1
+#
+#     return us
 
-def smaller(xs):
-    # prepare list "ys" containing item's numeric order
-    ys = sorted((x,i) for i,x in enumerate(xs))
-    zs = [0] * len(ys)
-
-    for i in range(1, len(ys)):
-        zs[ys[i][1]] = zs[ys[i-1][1]]
-        if ys[i][0] != ys[i-1][0]: zs[ys[i][1]] += 1
-
-    # use list "ts" as binary search tree, every element keeps count of
-    # number of children with value less than the current element's value
-    ts = [0] * (zs[ys[-1][1]]+1)
-    us = [0] * len(xs)
-
-    for i in range(len(xs)-1,-1,-1):
-        x = zs[i]+1
-        while True:
-            us[i] += ts[x-1]
-            x -= (x & (-x))
-            if x <= 0: break
-
-        x = zs[i]+1
-        while True:
-            x += (x & (-x))
-            if x > len(ts): break
-            ts[x-1] += 1
-
-    return us
-
-
-
-
-
-print(smaller([5, 4, 3, 2, 1]), [4, 3, 2, 1, 0])
-print(smaller([40, 20, 10, 50, 20, 40, 30]), [4, 3, 2, 1, 0])
+# print(smaller([5, 4, 3, 2, 1]), [4, 3, 2, 1, 0])
+# print(smaller([40, 20, 10, 50, 20, 40, 30]), [4, 3, 2, 1, 0])
