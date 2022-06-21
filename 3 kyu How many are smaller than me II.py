@@ -47,13 +47,19 @@
 
 
 def smaller(arr):
-    a = arr[0]
+    target = arr[0]
     cnt = 0
     lst = []
-    for i in arr:
-        if i >= arr[i]: cnt += 1
-        else: continue
+    while arr:
+        for i in arr:
+            if target > i:
+                cnt += 1
+        arr = arr[1:]
+        target = arr[0]
         lst.append(cnt)
         cnt = 0
-    return cnt
+    return lst
+
 print(smaller([5, 4, 3, 2, 1]), [4, 3, 2, 1, 0])
+print(smaller([5, 4, 7, 9, 2, 4, 1, 4, 5, 6]), [5, 2, 6, 6, 1, 1, 0, 0, 0, 0])
+print(smaller([1, 2, 3]), [0, 0, 0])
