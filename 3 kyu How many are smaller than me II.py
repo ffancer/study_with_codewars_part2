@@ -65,14 +65,15 @@
 def smaller(arr):
     lst = []
     cnt = 0
+
     while arr:
-        x = arr.pop()
-        for i in arr[::-1]:
+        x = arr.pop(0)
+        for i in arr:
             if x > i:
                 cnt += 1
-            lst.append(cnt)
-            cnt = 0
-        arr = arr[:-1]
+        lst.append(cnt)
+        cnt = 0
+
     return lst
 
 
