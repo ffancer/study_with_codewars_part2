@@ -1,7 +1,11 @@
+import sympy
+
+
 def calc(expression):
     # return eval("-7 * -(6 / 3)")
-    return compile(expression)
+    # return compile(expression)
     # return exec(expression)
+    return sympy.sympify(expression)
 
 
 print(calc("1 + 1"), 2)
