@@ -1,5 +1,7 @@
 def calc(expression):
-    return
+    # return eval("-7 * -(6 / 3)")
+    return compile(expression)
+    # return exec(expression)
 
 
 print(calc("1 + 1"), 2)
