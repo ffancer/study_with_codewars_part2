@@ -3,18 +3,22 @@ OPERATORS = {'+': (1, lambda x, y: x + y), '-': (1, lambda x, y: x - y),
 
 
 def eval_(formula):
-    def parse(formula_string):
-        number = ''
-        for s in formula_string:
-            if s in '1234567890.':
-                number += s
-            elif number:
-                yield float(number)
-                number = ''
-            if s in OPERATORS or s in "()":
-                yield s
-        if number:
-            yield float(number)
+    def parse(line):
+        line = line.replace(' ', '')
+        num = ''
+        for i in line:
+            if not num and i in '-':
+                num += i
+                continue
+            if i in '1234567890.':
+                num += i
+            elif num:
+                yield float(num)
+                num = ''
+            if i in OPERATORS or i in '()':
+                yield i
+        if num:
+            yield float(num)
 
     def shunting_yard(parsed_formula):
         stack = []
@@ -49,7 +53,9 @@ def eval_(formula):
     return calc(shunting_yard(parse(formula)))
 
 
+
 def calc(expression):
+    # expression = expression.replace(' ', '')
     return eval_(expression)
 
 
