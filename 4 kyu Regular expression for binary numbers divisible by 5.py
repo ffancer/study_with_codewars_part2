@@ -1,6 +1,7 @@
 import re
 
-PATTERN = r'0|(101(0)*)$'
+
+PATTERN = r'^(0|1(10)*(0|11)(01*01|01*00(10)*(0|11))*1)+$'
 
 tests = [(False, ""),
          (False, "abc"),
