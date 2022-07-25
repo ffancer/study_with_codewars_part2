@@ -3,7 +3,7 @@
 
 
 def how_much_water(L, X, N):
-    pass
+    return L * 1.1 ** (N - X)
 
 
 print(how_much_water(10, 10, 21), 'Too much clothes', '')
