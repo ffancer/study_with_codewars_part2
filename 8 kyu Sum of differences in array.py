@@ -1,14 +1,16 @@
 def sum_of_differences(arr):
     if not arr or len(arr) == 1:
         return 0
+
     arr = sorted(arr, reverse=True)
     i, j = 0, 1
     lst = []
+
     while j < len(arr):
         lst.append(arr[i] - arr[j])
         i += 1
         j += 1
-    return lst
+    return sum(lst)
 
 
 print(sum_of_differences([1, 2, 10]), 9)
