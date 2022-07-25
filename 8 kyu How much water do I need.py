@@ -3,11 +3,7 @@
 
 
 def how_much_water(L, X, N):
-    if N > X * 2:
-        return 'Too much clothes'
-    elif N < X:
-        return 'Not enough clothes'
-    return L * 1.1 ** (N - X)
+    return 'Too much clothes' if N > X * 2 else 'Not enough clothes' if N < X else L * 1.1 ** (N - X)
 
 
 print(how_much_water(10, 10, 21), 'Too much clothes')
