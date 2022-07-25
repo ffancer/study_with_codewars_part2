@@ -1,5 +1,6 @@
 def sum_of_differences(arr):
-    return 0
+    if not arr or len(arr) == 1:
+        return 0
 
 
 print(sum_of_differences([1, 2, 10]), 9)
