@@ -1,5 +1,5 @@
 def wrap(value):
-    return {value: value}
+    return {'value': value}
 
 
 print(wrap(res["value"]), "my_test")
