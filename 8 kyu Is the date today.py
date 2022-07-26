@@ -2,8 +2,7 @@ from datetime import datetime
 
 
 def is_today(date):
-    # your code here
-    pass
+    return datetime.today()
 
 
 print(is_today(datetime(2020, 10, 1, 1, 1, 1, 1)), False)
