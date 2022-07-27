@@ -1,9 +1,13 @@
 def to_camel_case(text):
     if '-' in text:
         text = text.split('-')
+        if text[0][0].islower():
+
+        return ''.join(text)
     elif '_' in text:
         text = text.split('_')
-    return text
+        return ''.join(text)
+    return ''
 
 
 print(to_camel_case(''), '', "An empty string was provided but not returned")
