@@ -1,7 +1,5 @@
 def approx_equals(a, b):
-    a = a * 1000 // 1 / 1000
-    b = b * 1000 // 1 / 1000
-    return a == b
+    return abs(a - b)
 
 
 print(approx_equals(175.9827, 82.25))
