@@ -1,7 +1,7 @@
 def approx_equals(a, b):
-    a = round(a, 3)
-    b = round(b, 3)
-    return a == b
+    a = f"{a}"
+    b = f"{b}"
+    return type(a), b
 
 
 print(approx_equals(175.9827, 82.25))
