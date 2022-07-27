@@ -1,5 +1,5 @@
 def approx_equals(a, b):
-    return abs(a - b)
+    return abs(a - b) < 0.001
 
 
 print(approx_equals(175.9827, 82.25))
