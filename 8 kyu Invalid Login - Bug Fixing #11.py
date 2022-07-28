@@ -1,7 +1,5 @@
 def validate(username, password):
-    if username.lower() != password.lower() or password.lower() != 'password' or '//' in password or '||' in password:
-        return 'Wrong username or password!'
-    return 'Successfully Logged in!'
+    return Database().login(username, password)
 
 
 
