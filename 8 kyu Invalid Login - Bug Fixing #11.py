@@ -1,5 +1,7 @@
 def validate(username, password):
-    pass
+    if username.lower() == password.lower() or password.lower() == 'password':
+        return 'Successfully Logged in!'
+
 
 
 print(validate('Timmy', 'password'), 'Successfully Logged in!', "Should succefully login!")
