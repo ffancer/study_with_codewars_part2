@@ -6,8 +6,8 @@ greek_alphabet = (
 
 
 def greek_comparator(lhs, rhs):
-    return "result should be negative" if greek_alphabet.index(lhs) < greek_alphabet.index(
-        rhs) else "result should be positive" if greek_alphabet.index(lhs) > greek_alphabet.index(rhs) else 0
+    return -1 if int(greek_alphabet.index(lhs)) < int(greek_alphabet.index(
+        rhs)) else 1 if int(greek_alphabet.index(lhs)) > int(greek_alphabet.index(rhs)) else 0
 
 
 print(greek_comparator('alpha', 'beta'), "result should be negative")
