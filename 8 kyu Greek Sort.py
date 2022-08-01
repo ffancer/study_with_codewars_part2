@@ -6,7 +6,7 @@ greek_alphabet = (
 
 
 def greek_comparator(lhs, rhs):
-    return
+    return greek_alphabet.index(lhs)
 
 
 print(greek_comparator('alpha', 'beta'), "result should be negative")
