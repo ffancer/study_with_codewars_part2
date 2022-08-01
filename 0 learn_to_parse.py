@@ -6,7 +6,7 @@ lst_card_url = []
 # хэдерс делается чтобы сайт думла что действует человек
 headers = {'User-Agent': 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.5) Gecko/20091102 Firefox/3.5.5 (.NET CLR 3.5.30729)'}
 
-for count in range(1, 2):
+for count in range(1, 8):
     sleep(1)
     url = f'https://scrapingclub.com/exercise/list_basic/?page={count}'
 
@@ -42,8 +42,11 @@ for card_url in lst_card_url:
     response = requests.get(card_url, headers=headers)
     soup = BeautifulSoup(response.text, 'lxml')
     data = soup.find('div', class_='card mt-4 my-4')
-    print(data)
-
+    name = data.find('h3', class_='card-title').text
+    price = data.find('h4').text
+    text = data.find('p', class_='card-text').text
+    url_img = 'https://scrapingclub.com' + data.find('img').get('src') # , class_='card-img-top img-fluid'
+    print(name, price, text, url_img, sep='\n', end='\n\n')
 
 # 47-23
 
