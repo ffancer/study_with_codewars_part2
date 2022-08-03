@@ -1,6 +1,8 @@
+import math
+
+
 def circle_diameter(sides, side_length):
-    # your code here
-    pass
+    return side_length // (math.tan((180 / sides) * math.pi / 180))
 
 
 print(circle_diameter(4, 5), 5.000)
