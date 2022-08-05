@@ -7,8 +7,10 @@ weapons_dct = {
 
 
 def mag_number(str_, int_):
-    return weapons_dct[str_]
+    # return weapons_dct[str_] * 3 / int_
+    # return weapons_dct[int_]
 
+    return int_ * 3 / weapons_dct[str_]
 
 print(mag_number("PT92", 6), 2)
 print(mag_number("M4A1", 8), 1)
