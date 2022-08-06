@@ -16,6 +16,7 @@ import requests
 #     file.write(src)
 
 
+# без энкодинга ошибка
 with open('index.html', encoding='utf-8-sig') as file:
     src = file.read()
 
@@ -23,4 +24,9 @@ soup = BeautifulSoup(src, 'lxml')
 all_products_href = soup.find_all(class_='mzr-tc-group-item-href')
 
 for item in all_products_href:
-    print(item)
+    item_text = item.text
+    item_href = "http://health-diet.ru" + item.get('href')
+    print(f'{item_text}: {item_href}')
+
+
+# 6-27
