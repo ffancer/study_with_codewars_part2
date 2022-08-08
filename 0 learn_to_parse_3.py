@@ -1,3 +1,6 @@
+import random
+from time import sleep
+
 from bs4 import BeautifulSoup
 import requests
 import json
@@ -48,40 +51,85 @@ with open('all_categories_dct.json', encoding='utf-8') as file:
 
 
 # это делается что бы не бомбить запросами сайт
+iteration_cnt = int(len(all_categories)) - 1
 cnt = 0
+print(f'Всего итерация {iteration_cnt}')
 for category_name, category_href in all_categories.items():
-    if cnt == 0:
-        lst = [',', '-', ' ', "'"]
-        for item in lst:
-            if item in category_name:
-                category_name = category_name.replace(item, '_')
-        req = requests.get(url=category_href, headers=headers)
-        src = req.text
 
-        with open(f'data/{cnt}_{category_name}.html', 'w', encoding='utf-8') as file:
-            file.write(src)
-        with open(f'data/{cnt}_{category_name}.html', encoding='utf-8') as file:
-            src = file.read()
-        soup = BeautifulSoup(src, 'lxml')
-        # собираем загаловки таблицы
-        table_head = soup.find(class_='mzr-tc-group-table').find('tr').find_all('th')
-        # print(table_head)  тут метод .text не сработает но сработает ниже
-        product = table_head[0].text
-        calories = table_head[1].text
-        proteins = table_head[2].text
-        fats = table_head[3].text
-        carbohydrates = table_head[4].text
-        # , encoding='utf-8' в видео, но у меня и без него ок
-        with open(f'data/{cnt}_{category_name}.csv', 'w') as file:
+    lst = [',', '-', ' ', "'"]
+    for item in lst:
+        if item in category_name:
+            category_name = category_name.replace(item, '_')
+    req = requests.get(url=category_href, headers=headers)
+    src = req.text
+
+    with open(f'data/{cnt}_{category_name}.html', 'w', encoding='utf-8') as file:
+        file.write(src)
+    with open(f'data/{cnt}_{category_name}.html', encoding='utf-8') as file:
+        src = file.read()
+    soup = BeautifulSoup(src, 'lxml')
+
+    # проверка таблицы на наличие таблицы с продуктами
+    alert_block = soup.find(class_='uk-alert-danger')
+    if alert_block is not None:
+        continue
+
+
+    # собираем загаловки таблицы
+    table_head = soup.find(class_='mzr-tc-group-table').find('tr').find_all('th')
+    # print(table_head)  тут метод .text не сработает но сработает ниже
+    product = table_head[0].text
+    calories = table_head[1].text
+    proteins = table_head[2].text
+    fats = table_head[3].text
+    carbohydrates = table_head[4].text
+    # , encoding='utf-8' в видео, но у меня и без него ок
+    with open(f'data/{cnt}_{category_name}.csv', 'w') as file:
+        writer = csv.writer(file)
+        # сделав кортеж мы обошли то, что можно засунуть только один файл
+        writer.writerow(
+            (
+                product,
+                calories,
+                proteins,
+                fats,
+                carbohydrates
+            )
+        )
+    # собираем данные продуктов
+    products_data = soup.find(class_='mzr-tc-group-table').find('tbody').find_all('tr')
+    product_info = []
+    for item in products_data:
+        product_tds = item.find_all('td')
+        title = product_tds[0].find('a').text
+        calories = product_tds[1].text
+        proteins = product_tds[2].text
+        fats = product_tds[3].text
+        carbohydrates = product_tds[4].text
+        product_info.append(
+            {
+                "Title": title,
+                # 18-16
+            }
+        )
+        with open(f'data/{cnt}_{category_name}.csv', 'a') as file:
             writer = csv.writer(file)
+            # сделав кортеж мы обошли то, что можно засунуть только один файл
             writer.writerow(
                 (
-                    product,
+                    title,
                     calories,
                     proteins,
                     fats,
                     carbohydrates
                 )
             )
+    cnt += 1
+    print(f'Итерация {cnt}, {category_name} записан...')
+    iteration_cnt -= 1
+    if iteration_cnt == 0:
+        print('Работа завершена')
+        break
+    print(f'Осталось итерация {iteration_cnt}')
+    sleep(random.randrange(2, 4))
 
-        cnt += 1
