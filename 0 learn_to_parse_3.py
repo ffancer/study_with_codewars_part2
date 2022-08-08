@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
 import json
+import csv
 # url = 'http://health-diet.ru/table_calorie/?utm_source=leftMenu&utm_medium=table_calorie'
 #
 headers = {
@@ -46,10 +47,41 @@ with open('all_categories_dct.json', encoding='utf-8') as file:
 # print(all_categories)  # проверяем файл
 
 
+# это делается что бы не бомбить запросами сайт
+cnt = 0
 for category_name, category_href in all_categories.items():
-    lst = [',', '-', ' ', "'"]
+    if cnt == 0:
+        lst = [',', '-', ' ', "'"]
+        for item in lst:
+            if item in category_name:
+                category_name = category_name.replace(item, '_')
+        req = requests.get(url=category_href, headers=headers)
+        src = req.text
 
-    for item in lst:
-        if item in category_name:
-            category_name = category_name.replace(item, '_')
-    print(category_name)
+        with open(f'data/{cnt}_{category_name}.html', 'w', encoding='utf-8') as file:
+            file.write(src)
+        with open(f'data/{cnt}_{category_name}.html', encoding='utf-8') as file:
+            src = file.read()
+        soup = BeautifulSoup(src, 'lxml')
+        # собираем загаловки таблицы
+        table_head = soup.find(class_='mzr-tc-group-table').find('tr').find_all('th')
+        # print(table_head)  тут метод .text не сработает но сработает ниже
+        product = table_head[0].text
+        calories = table_head[1].text
+        proteins = table_head[2].text
+        fats = table_head[3].text
+        carbohydrates = table_head[4].text
+        # , encoding='utf-8' в видео, но у меня и без него ок
+        with open(f'data/{cnt}_{category_name}.csv', 'w') as file:
+            writer = csv.writer(file)
+            writer.writerow(
+                (
+                    product,
+                    calories,
+                    proteins,
+                    fats,
+                    carbohydrates
+                )
+            )
+
+        cnt += 1
