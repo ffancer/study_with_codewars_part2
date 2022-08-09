@@ -5,6 +5,7 @@ from bs4 import BeautifulSoup
 import requests
 import json
 import csv
+
 # url = 'http://health-diet.ru/table_calorie/?utm_source=leftMenu&utm_medium=table_calorie'
 #
 headers = {
@@ -44,7 +45,6 @@ headers = {
 #     json.dump(all_categories_dct, file, indent=4, ensure_ascii=False)
 
 
-
 with open('all_categories_dct.json', encoding='utf-8') as file:
     all_categories = json.load(file)
 # print(all_categories)  # проверяем файл
@@ -73,7 +73,6 @@ for category_name, category_href in all_categories.items():
     alert_block = soup.find(class_='uk-alert-danger')
     if alert_block is not None:
         continue
-
 
     # собираем загаловки таблицы
     table_head = soup.find(class_='mzr-tc-group-table').find('tr').find_all('th')
@@ -109,7 +108,10 @@ for category_name, category_href in all_categories.items():
         product_info.append(
             {
                 "Title": title,
-                # 18-16
+                "Calories": calories,
+                "Proteins": proteins,
+                "Fats": fats,
+                "Carbohydrates": carbohydrates
             }
         )
         with open(f'data/{cnt}_{category_name}.csv', 'a') as file:
@@ -124,6 +126,9 @@ for category_name, category_href in all_categories.items():
                     carbohydrates
                 )
             )
+
+    with open(f'data/{cnt}_{category_name}.json', 'a') as file:
+        json.dump(product_info, file, indent=4, ensure_ascii=False)
     cnt += 1
     print(f'Итерация {cnt}, {category_name} записан...')
     iteration_cnt -= 1
@@ -132,4 +137,3 @@ for category_name, category_href in all_categories.items():
         break
     print(f'Осталось итерация {iteration_cnt}')
     sleep(random.randrange(2, 4))
-
