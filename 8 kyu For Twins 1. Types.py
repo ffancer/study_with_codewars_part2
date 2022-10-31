@@ -1,8 +1,5 @@
 def type_validation(variable, _type):
-    types = {'int': int,
-             'float': float}
-    if _type in types:
-        return types[_type]
+    return type(variable) == int
 
 
 print(type_validation(42, "int"), True)
