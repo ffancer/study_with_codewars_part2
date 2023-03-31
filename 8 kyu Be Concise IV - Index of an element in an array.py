@@ -2,12 +2,8 @@ from math import pi
 
 
 def find(array, element):
-    # for i in range(len(array)):
-    #     if array[i] == element:
-    #         return i
-    # return 'Not found'
     if element in array:
-        return element
+        return array.index(element)
     return 'Not found'
 
 
