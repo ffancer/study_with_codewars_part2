@@ -2,10 +2,10 @@ from math import pi
 
 
 def find(array, element):
-    if element in array:
-        return array.index(element)
-    return 'Not found'
-
+    # if element in array:
+    #     return array.index(element)
+    # return 'Not found'
+    return array.index(element) if element in array else 'Not found'
 
 array = [2, 3, 5, 7, 11]
 print(find(array, 5), 2)
