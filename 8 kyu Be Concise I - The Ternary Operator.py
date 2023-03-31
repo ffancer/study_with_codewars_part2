@@ -1,7 +1,5 @@
 def describe_age(a):
-    b = "You're a(n) "
-    # return f"You're a(n) "+('kid'if{a<13}else"teenager"if{a<18}else"adult"if{a<65}else"elderly")
-    return f"You're a(n) "+('kid'if{a<13}else"teenager"if{a<18}else"adult"if{a<65}else"elderly")
+    return "You're a(n) "+('kid'if a<13else"teenager"if a<18else"adult"if a<65else"elderly")
 
 
 print(describe_age(9), "You're a(n) kid")
