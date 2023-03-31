@@ -7,7 +7,14 @@ def describe_age(age):
     #     return "You're a(n) adult"
     # else:
     #     return "You're a(n) elderly"
-    return "You're a(n) kid" if age <= 12 else ("You're a(n) teenager" if 13 <= age <= 17) else ("You're a(n) adult" if 64 => age >= 18)
+    dct = {
+        (i for i in range(0, 13)): "You're a(n) kid",
+        13 <= age <= 17: "You're a(n) teenager",
+        18 <= age <= 64: "You're a(n) adult",
+        age > 64: "You're a(n) elderly",
+        9: 'good'
+    }
+    return dct.get(age)
 
 
 print(describe_age(9), "You're a(n) kid")
