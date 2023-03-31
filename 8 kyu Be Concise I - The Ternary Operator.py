@@ -1,12 +1,13 @@
 def describe_age(age):
-    if (age <= 12):
-        return "You're a(n) kid"
-    elif (age >= 13 and age <= 17):
-        return "You're a(n) teenager"
-    elif (age >= 18 and age <= 64):
-        return "You're a(n) adult"
-    else:
-        return "You're a(n) elderly"
+    # if (age <= 12):
+    #     return "You're a(n) kid"
+    # elif (age >= 13 and age <= 17):
+    #     return "You're a(n) teenager"
+    # elif (age >= 18 and age <= 64):
+    #     return "You're a(n) adult"
+    # else:
+    #     return "You're a(n) elderly"
+    return "You're a(n) kid" if age <= 12 else ("You're a(n) teenager" if 13 <= age <= 17) else ("You're a(n) adult" if 64 => age >= 18)
 
 
 print(describe_age(9), "You're a(n) kid")
