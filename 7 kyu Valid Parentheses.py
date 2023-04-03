@@ -1,10 +1,11 @@
 def valid_parentheses(paren_str):
-    while paren_str != '':
-        if paren_str[0] == '(':
-            if paren_str[1] != ')':
-                paren_str = paren_str[1:]
-        return True
-    return False
+    lst = []
+    for i in paren_str:
+        if i == '(':
+            lst.append(i)
+            continue
+        lst.pop()
+    return lst
 
 # all True
 print(valid_parentheses("()"))
