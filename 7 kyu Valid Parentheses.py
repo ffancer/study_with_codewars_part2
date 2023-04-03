@@ -1,15 +1,15 @@
 def valid_parentheses(paren_str):
-    lst = []
+    cnt = 0
 
     for i in paren_str:
         if i == '(':
-            lst.append(i)
-            continue
-        if len(lst) == 0:
-            return False
-        lst.pop()
+            cnt += 1
+        elif i == ')':
+            cnt -= 1
+            if cnt < 0:
+                return False
 
-    return True if len(lst) == 0 else False
+    return cnt == 0
 
 
 # all True
