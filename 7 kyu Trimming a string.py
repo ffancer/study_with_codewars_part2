@@ -1,4 +1,8 @@
 def trim(phrase, size):
+    if len(phrase) == 2:
+        return phrase[:size] + '...'
+    elif len(phrase) > size:
+        return phrase[:size-3] + '...'
     return phrase[:size]
 
 
