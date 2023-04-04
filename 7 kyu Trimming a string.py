@@ -1,5 +1,5 @@
 def trim(phrase, size):
-    return phrase
+    return phrase[:size]
 
 
 print(trim("Creating kata is fun", 14), "Creating ka...")
