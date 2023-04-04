@@ -1,9 +1,10 @@
 def trim(phrase, size):
-    if len(phrase) == 2:
+    if len(phrase) <= size:
+        return phrase
+    elif size <= 3:
         return phrase[:size] + '...'
     elif len(phrase) > size:
         return phrase[:size-3] + '...'
-    return phrase[:size]
 
 
 print(trim("Creating kata is fun", 14), "Creating ka...")
