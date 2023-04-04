@@ -1,7 +1,9 @@
 def keep_order(ary, val):
     lst = sorted(ary + [val])
-    return lst
 
+    for i, j in enumerate(lst):
+        if j == val:
+            return i
 
 
 print(keep_order([1, 2, 3, 4, 7], 5), 4, "Testing keep_order([1, 2, 3, 4, 7], 5)")
