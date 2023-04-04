@@ -1,9 +1,7 @@
 def keep_order(ary, val):
-    for i, j in enumerate(ary):
-        # if j < val < j[i + 1]:
-        #     return val
-        print(i+1)
-    return 'gg'
+    lst = sorted(ary + [val])
+    return lst
+
 
 
 print(keep_order([1, 2, 3, 4, 7], 5), 4, "Testing keep_order([1, 2, 3, 4, 7], 5)")
