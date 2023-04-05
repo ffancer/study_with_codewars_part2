@@ -3,12 +3,12 @@ def array_packing(arr):
     num = ''
 
     for i in arr:
-        lst.append(bin(i)[2:])
+        i_in_2 = bin(i)[2:]
+        if len(i_in_2) < 8:
+            i_in_2 = i_in_2.zfill(8)
+        lst.append(i_in_2)
 
-    for j in lst:
-        num += j
-
-    return int(num, 2)
+    return lst
 
 
 print(array_packing([24, 85, 0]), 21784)
