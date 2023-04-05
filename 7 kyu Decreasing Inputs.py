@@ -1,7 +1,8 @@
 def add(*args):
     total = 0
     for i, j in enumerate(args):
-        print(i, j)
+        total += j / (i + 1)
+    return round(total)
 
 
 print(add(), 0, 'No arguments should return 0')
