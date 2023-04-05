@@ -1,6 +1,6 @@
 def array_packing(arr):
     lst = []
-    num = ''
+    total = ''
 
     for i in arr:
         i_in_2 = bin(i)[2:]
@@ -8,7 +8,10 @@ def array_packing(arr):
             i_in_2 = i_in_2.zfill(8)
         lst.append(i_in_2)
 
-    return lst
+    for i in lst:
+        total += i
+
+    return total
 
 
 print(array_packing([24, 85, 0]), 21784)
