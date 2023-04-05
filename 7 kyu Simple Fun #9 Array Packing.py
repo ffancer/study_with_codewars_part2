@@ -1,5 +1,10 @@
 def array_packing(arr):
-    pass
+    lst = []
+
+    for i in arr:
+        lst.append(bin(i)[2:])
+
+    return lst
 
 
 print(array_packing([24, 85, 0]), 21784)
