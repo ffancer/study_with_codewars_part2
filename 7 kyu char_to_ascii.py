@@ -1,11 +1,5 @@
 def char_to_ascii(s):
-    dct = {}
-
-    for i in s:
-        if i.isalpha():
-            dct[i] = ord(i)
-
-    return None if dct == {} else dct
+    return {i: ord(i) for i in s if i.isalpha()} or None
 
 
 print(char_to_ascii(""), None, "deals with an empty string")
