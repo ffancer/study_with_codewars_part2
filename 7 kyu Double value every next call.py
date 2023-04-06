@@ -1,7 +1,14 @@
 class Class:
+    value = 0
+
     @staticmethod
     def get_number():
-        return 1
+        if Class.value == 0:
+            Class.value = 1
+            return 1
+        else:
+            Class.value *= 2
+            return Class.value
 
 
 print(Class.get_number(),  1, "1st call should return 1")
