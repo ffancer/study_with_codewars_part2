@@ -1,13 +1,14 @@
 def char_to_ascii(s):
     dct = {}
+
     for i in s:
         if i.isalpha():
-            # dct = {i: chr(i)}
-            print(i, ord(i))
-    # return dct
+            dct[i] = ord(i)
+
+    return None if dct == {} else dct
 
 
-# print(char_to_ascii(""), None, "deals with an empty string")
+print(char_to_ascii(""), None, "deals with an empty string")
 print(char_to_ascii("a"), {"a": 97}, "deals with one char")
 print(char_to_ascii("aaa"), {"a": 97}, "deals with repeated characters")
 print(char_to_ascii("hello world"), {"h": 104, "e": 101, "l": 108, "o": 111, "w": 119, "r": 114, "d": 100},
