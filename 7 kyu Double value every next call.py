@@ -1,14 +1,9 @@
 class Class:
-    value = 0
+    value = 1
 
-    @staticmethod
     def get_number():
-        if Class.value == 0:
-            Class.value = 1
-            return 1
-        else:
-            Class.value *= 2
-            return Class.value
+        Class.value *= 2
+        return Class.value // 2
 
 
 print(Class.get_number(),  1, "1st call should return 1")
