@@ -1,5 +1,10 @@
 def char_to_ascii(s):
-    pass
+    dct = {}
+    for i in s:
+        if i.isalpha():
+            print('good')
+        else:
+            print('no')
 
 
 print(char_to_ascii(""), None, "deals with an empty string")
