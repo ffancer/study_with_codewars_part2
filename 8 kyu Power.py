@@ -1,6 +1,5 @@
 def number_to_pwr(number, p):
-    # your code here
-    pass
+    return number ** p
 
 
 print(number_to_pwr(4, 2), 16)
