@@ -1,5 +1,5 @@
 def number_to_pwr(number, p):
-    return number ** p
+    return pow(number, p)
 
 
 print(number_to_pwr(4, 2), 16)
