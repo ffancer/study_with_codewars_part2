@@ -1,10 +1,5 @@
 def is_it_a_num(s: str) -> str:
-    tel_number = ''
-
-    for i in s:
-        if i.isdigit():
-            tel_number += i
-
+    tel_number = ''.join(i for i in s if i.isdigit())
     return tel_number if len(tel_number) == 11 and tel_number[0] == '0' else "Not a phone number"
 
 
