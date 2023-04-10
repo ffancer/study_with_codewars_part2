@@ -5,7 +5,7 @@ def is_it_a_num(s: str) -> str:
         if i.isdigit():
             tel_number += i
 
-    return tel_number
+    return tel_number if len(tel_number) == 11 and tel_number[0] == '0' else "Not a phone number"
 
 
 print(is_it_a_num("S:)0207ERGQREG88349F82!efRF)"), "02078834982")
