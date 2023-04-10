@@ -1,5 +1,12 @@
 def is_it_a_num(s: str) -> str:
-    pass
+    tel_number = ''
+
+    for i in s:
+        if i == '0':
+            if i.isdigit():
+                tel_number += i
+
+    return tel_number
 
 
 print(is_it_a_num("S:)0207ERGQREG88349F82!efRF)"), "02078834982")
