@@ -2,9 +2,8 @@ def is_it_a_num(s: str) -> str:
     tel_number = ''
 
     for i in s:
-        if i == '0':
-            if i.isdigit():
-                tel_number += i
+        if i.isdigit():
+            tel_number += i
 
     return tel_number
 
